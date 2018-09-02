@@ -1,0 +1,409 @@
+//
+var global = {
+ banner: function(){//Used when only the title is needed
+  $.ajax({
+   url: websiteDataUrl+"playerDetails.ws?names=[" + JSON.stringify(plname)+"]",
+   dataType: "jsonp",
+   timeout: 3000,
+   success: function(response){
+    if(response[0].title){
+     $('#js-title').html(response[0].title);
+    }
+   }
+  });
+ }
+},
+profile = {
+ chart: function(){
+  var ctx = document.getElementById("combat-chart__canvas").getContext("2d"), options = {segmentShowStroke: true, segmentStrokeColor: "#000", segmentStrokeWidth: 1, percentageInnerCutout: 70};
+  var combatChart = new Chart(ctx).Doughnut(data,options);
+ },
+ clan: function(){//used to populate clan and title data
+  $.ajax({
+   url: websiteDataUrl+"playerDetails.ws?names=[" + JSON.stringify(plname)+"]",
+   dataType: "jsonp",
+   timeout: 3000,
+   success: function(response){
+    if(response[0].title){
+     $('#js-title').html(response[0].title);
+    }
+    if(response[0].clan){
+     $('#stats-box--activity').addClass('stats-box--activity-small');
+     $('#clanName').html(response[0].clan);
+     $('#clanLink').attr('href', clanUrl+'/clan/'+response[0].clan);
+     var events = $('.event');
+     if(events.length > 3){
+      events.slice(events.length-4).remove();
+     }
+    }
+    else{
+     $('#stats-box--clan').remove();
+    }
+    $('#profile-stats__right').addClass('profile-stats__right--show');
+   },
+   fail: function(){
+    $('#stats-box--clan').remove();
+    $('#profile-stats__right').addClass('profile-stats__right--show');
+   },
+   error: function(){
+    $('#stats-box--clan').remove();
+    $('#profile-stats__right').addClass('profile-stats__right--show');
+   }
+  });
+ },
+ init: function(){
+  this.clan();
+  this.chart();
+ }
+},
+filters = {
+ dropDown: function(){
+  $('.drop-filter').on('click',function(ev){
+   $(this).toggleClass('drop-filter--dropped');
+  });
+ }
+},
+friends = {
+ results: {},
+ type: 'all',
+ loadContent: function(pageNumber){
+  if ($('.friend').length){// check player has any friends from WS
+   var resultsPage = 24;
+   if (pageNumber == 'undefined'){
+    var pageNumber = 1;
+   }
+   else{
+    var pageNumber = parseInt(pageNumber);
+   }
+   //build the cache name for the key of the results object
+   var cacheName = 'page_'+pageNumber+'_size_'+resultsPage+'_display_'+friends.type;
+   // empty results ready for caching
+   if (friends.results[cacheName]){
+    $('#friendsTableContent').hide();
+    friends.parseContent(friends.results[cacheName],pageNumber);
+   }
+   else{
+    $('#friends').hide();
+    // build the url depending on user selections
+    var buildURL = websiteDataUrl+"playerFriendsDetails.json?resultsPerPage="+resultsPage+"&currentPage="+pageNumber;
+    if (friends.type == 'online'){
+     buildURL += '&display=online';
+    }
+    else if (friends.type == 'offline'){
+     buildURL += '&display=offline';
+    }
+    var ajaxURL = RS3.global.addCToLink(buildURL+'&callback=?');
+    var friendList = $.getJSON(ajaxURL, function(data) {
+     if (data.friends != null){
+      if(data.friends.length > 0){
+       friends.results[cacheName] = data; // cache the results
+       friends.parseContent(data,pageNumber);
+      }
+      else{
+       $('#friends').html("<p class='friends__error'>" + noFriendsStr + "</p>").show();
+      }
+     }
+     else{
+      $('#friends').html("<p class='friends__error'>" + noFriendsStr + "</p>").show();
+     }
+    }).fail(function() {
+     $('#friends').show();
+    }).always(function() {
+    });
+   }
+  }
+ },
+ parseContent : function(data,pageNumber) {
+  var tableContent = [],nextPage = (pageNumber+1),prevPage = (pageNumber-1), upperPagination = [], lowerPagination = [], friendsEle = $('#friends');
+  if (data.pageFriends > 0){
+   $('#onlineFriends').html(parseInt(data.online)+" / "+parseInt(data.allFriends)+" "+onlineStr);//Set online friends
+   //pagination
+   if (parseInt(data.totalPages) > 1){
+    //Upper
+    upperPagination.push('<div id="pageNumberFinder" class="paginationOuter" data-pagenumber="'+pageNumber+'">');
+    upperPagination.push('<div class="pagination simple');
+    if (pageNumber == 1){
+     upperPagination.push(' noFirst">');
+    }
+    else if (pageNumber == parseInt(data.totalPages)){
+     upperPagination.push(' noLast">');
+    }
+    else{
+     upperPagination.push('">');
+    }
+    if (pageNumber != 1){
+     upperPagination.push('<a id="topPaginationPrev" data-page="'+ prevPage +'" class="previous ajaxClick" href="?page='+ prevPage +'">'+previousStr+'</a>');
+    }
+    upperPagination.push('<span>'+ pageStr +' '+ pageNumber +'/'+data.totalPages +'</span>');
+    if (pageNumber != parseInt(data.totalPages)){
+     upperPagination.push('<a id="topPaginationNext" data-page="'+ nextPage +'" class="next ajaxClick" href="?page='+ nextPage +'">'+ nextStr +'</a>');
+    }
+    upperPagination.push('</div></div>');
+    //Lower
+    lowerPagination.push('<div class="paginationWrap clear">');
+    lowerPagination.push('<div class="pagination">');
+    lowerPagination.push('<div class="paging">');
+    lowerPagination.push('<ul id="ajaxPaginationBot" class="pageNumbers ' + pageNumber + '">');
+    for (var i = 1; i <= data.totalPages; i++){
+     var className='';
+     if (i == pageNumber){
+      var className=' class="current"';
+     }
+     lowerPagination.push('<li'+className+'><a class="ajaxClick" data-page="'+i+'" id="paginationListItem'+i+'" href="?page='+i+'">'+i+'</a></li>');
+    }
+    lowerPagination.push('</ul></div></div></div>');
+   }
+   //draw all friends
+   $.each(data.friends,function(index,item) {
+    if(item.name != ''){
+     var avatarClass = '';
+     if (item.status == 'offline'){
+      avatarClass = ' friend__avatar--offline';
+     }
+     tableContent.push('<article class="friend"><figure class="friend__figure">');
+     tableContent.push('<a href="'+advlogUrl+'profile?searchName='+item.name+'"><img class="friend__avatar'+avatarClass+'" alt="'+item.name+'" src="http://services.runescape.com/m=avatar-rs/'+escape($.trim(item.name))+'/chat.png?w=60&h=60"/></a></figure>');
+     tableContent.push('<div class="friend__meta"><a href="'+advlogUrl+'profile?searchName='+item.name+'"><h2 class="friend__name">'+item.name+'</h2></a>');
+     if (item.status == 'offline'){
+      tableContent.push('<div class="friend__player-state"><span class="friend__location">'+offlineStr+'</span></div>');
+     }
+     else{
+      tableContent.push('<div class="friend__player-state"><img class="friend__state-icon" src="'+imgRootStr+'/adventurers-log/friend_online.png" alt="'+onlineStr+'" title="'+onlineStr+'"/><span class="friend__location">'+onlineStr+' | '+item.world+'</span></div>');
+     }
+     tableContent.push('<a class="friend__compare" href="'+compareUrl+'compare?user1='+plname+'&user2='+item.name+'">'+compareStr+'</a></div>');
+     tableContent.push('</article>');
+    }
+   });
+  }
+  else{
+   $('#upperPaginationBox').remove();
+   $('#onlineFriends').remove();
+  }
+  $('#upperPaginationBox').html(upperPagination.join(''));
+  $('#lowerPaginationBox').html(lowerPagination.join(''));
+  friendsEle.html(tableContent.join(''));
+  friendsEle.fadeIn(500);
+ },
+ events: function(){// pagination links
+  $('.friends-pagination').on('click','a.ajaxClick', function() {
+   var $ele = $(this);
+   var page = parseInt($ele.data('page'));
+   var currentPage = $('#pageNumberFinder').data('pagenumber');
+   if (page != currentPage)
+   {
+    friends.loadContent(page);
+   }
+   return false;
+  });
+ },
+ init: function(){
+  this.loadContent(1);
+  this.events();
+ }
+},
+avatarViewer = {
+ canvas_resize: function(){
+  //Needed to overide the client else it will resize the canvas to be too large
+        var avatarCanvas=$('#canvas');
+        if(avatarCanvas.length){
+         avatarCanvas.attr('width',1000).attr('height',700);
+        }
+    },
+    canvas_onload: function(){
+        window.avatarViewer.canvas_resize();
+        Module.avatar.SetName();
+    },
+    canvasReady: function(){
+     //Toggle the hide/show classes of the loading bar and canvas
+     $('#avatarLoading').addClass('avatar-viewer__loading--hide');
+     $('#canvas').addClass('avatar-viewer__canvas--show');
+     clearTimeout(avatarLoadTimout);
+    },
+    avatarAppearanceError: function(responseCode, username) {
+     var avatarCanvas = $('#canvas');
+     avatarPhotoReady = false;
+        // responseCode is the HTTP response from the AJAX request
+        // username is the display name that caused the failure
+     avatarCanvas.removeClass('avatar-viewer__canvas--show');
+     avatarCanvas.addClass('avatar-viewer__canvas--hide');
+     $('#avatarLoading').remove();
+     $('#avatarControls').addClass('avatar-viewer__controls--hide');
+        $('#appearanceError').addClass('avatar-viewer__appearance-error--show');
+    },
+ avatarDetailsError: function(responseCode, avatarAppearance) {
+        //
+    },
+    avatarBrowserError: function(){
+     //Show the browser error message
+     $('#canvas').remove();
+     $('#avatarLoading').remove();
+     $('#avatarControls').remove();
+     $('#supportError').remove();
+     $('#browserError').addClass('avatar-viewer__browser-error--show');
+    },
+    avatarStorageError: function(){
+     //Show the browser error message
+     $('#canvas').remove();
+     $('#avatarLoading').remove();
+     $('#avatarControls').remove();
+     $('#browserError').remove();
+     $('#supportError').addClass('avatar-viewer__browser-error--show');
+    },
+    avatarControls: function(){
+     var resetLink = $('#resetColor'), avatarContainer = $('.avatar-viewer__container');
+     $('#animateReady').on('click',function(){
+   Module.avatar.SetReady();
+  });
+  $('#animateWalk').on('click',function(){
+   Module.avatar.SetWalk();
+  });
+  $('#animateRun').on('click',function(){
+   Module.avatar.SetRun();
+  });
+  $('#animateAttack').on('click',function(){
+   Module.avatar.SetAttack();
+  });
+  $('#selectColor').on('change',function(){
+   avatarContainer.css('background',$(this).val());
+   resetLink.addClass('avatar-viewer__color-reset--show');
+  });
+  resetLink.on('click',function(){
+   avatarContainer.css('background','');
+   resetLink.removeClass('avatar-viewer__color-reset--show');
+  });
+    },
+    avatarChange: function(avatarName){
+        Module.avatar.SetReady();
+        Module.ccall('SetParam','void',['string','string'],['username',avatarName]);
+    },
+    viewChange: function(data){
+     var avatarCanvas = $('#canvas'), navUrl = '', navOption = null, urlDisplayName = encodeURI(data.searchedName);
+     //Set the open scope var to the new player
+     plname = data.searchedName;
+     //Update DOM elements
+     $('#plog-displayname').text(data.searchedName);
+     $('#plog-totallevel').text(data.totalLevel);
+     $('#plog-totalxp').text(data.totalXP);
+     $('#plog-avatarhead').attr('src',avatarBaseUrl+urlDisplayName+'/chat.png');
+     global.banner();
+     //Change the current url
+     this.avatarChange(data.searchedName);
+     window.history.pushState('','','/m=adventurers-log/character?searchName='+urlDisplayName);
+     $('#plog-nav .tabbednav__link').each(function(){
+      navOption = $(this);
+      navUrl = navOption.data('url');
+      navOption.attr('href',navUrl+'?searchName='+urlDisplayName);
+  });
+     if(avatarPhotoReady){
+      avatarCanvas.addClass('avatar-viewer__canvas--show');
+      avatarCanvas.removeClass('avatar-viewer__canvas--hide');
+      $('#avatarControls').removeClass('avatar-viewer__controls--hide');
+      $('#appearanceError').removeClass('avatar-viewer__appearance-error--show');
+     }
+    },
+    canRun: function(){
+     var canRun = true, browser = JXGLOBAL.user.browser();
+     if(browser.isIE || browser.isSafari || browser.isOpera || browser.isEdge){
+      canRun = false;
+     }
+     else if(!Modernizr.webworkers || !Modernizr.webgl || !Modernizr.localstorage){ //Used to check Modernizr.websockets here but this appears now to be incorrect in Modernzir /*! modernizr 3.0.0-alpha.4 (Custom Build) | MIT * 01/04/2016
+      canRun = false;
+     }
+     else if(Modernizr.localstorage){
+      var uid = new Date, storage;
+      try{
+       (storage = window.localStorage).setItem(uid,uid);
+       localStorageAvailable = storage.getItem(uid) == uid;
+       storage.removeItem(uid);
+      }
+      catch (exception){
+       localStorageAvailable = false
+      }
+     }
+     return canRun;
+    },
+ init: function(){
+     var browser = JXGLOBAL.user.browser();
+     //For IE do not try to load the canvas as it will OOM
+     if(browser.isIE || browser.isSafari){
+      this.avatarBrowserError();
+     }
+     else{
+      this.avatarControls();
+     }
+     //Check if we support the colour picker and if not remove it
+     if(!Modernizr.inputtypes.color){
+      $('#selectColor').remove();
+     }
+     //Change the search box behaviour for the avatar page
+     $('#advlog-search').on('submit',function(ev){
+      ev.preventDefault();
+      avatarPhotoReady = true;
+      var playerName = $('#advlog-searchinput').val(), urlPlayerName = encodeURI(playerName);
+   $.ajax({
+    type: "GET",
+    url: advlogBaseUrl+'playerData?searchName='+urlPlayerName,
+    dataType:'json',
+    success: function(data){
+     if(typeof(data.error) !== 'undefined'){
+      switch(data.error){
+       case 'NOT_A_MEMBER':
+        window.location = advlogBaseUrl+'character?searchName='+urlPlayerName;
+        break;
+       case 'NO_PROFILE':
+        window.location = advlogBaseUrl+'character?searchName='+urlPlayerName;
+        break;
+       default:
+        window.location = advlogBaseUrl+'character?searchName='+urlPlayerName;
+        break;
+      }
+     }
+     else{
+      avatarViewer.viewChange(data);
+     }
+       },
+    error: function(){
+        window.location = advlogBaseUrl+'character?searchName='+urlPlayerName;
+       }
+      });
+
+     });
+ }
+},
+expand = {
+ init: function(){
+  $('.item__expand').on('click',function(ev){
+   $(this).toggleClass('item--expanded');
+  });
+ }
+},
+onLoad = {
+ init: function(){
+  var id = document.getElementsByTagName('body')[0].id;
+  switch(id){
+   case "advprofile" :
+    profile.init();
+   break;
+   case "advquests":
+   case "advskills" :
+    global.banner();
+    filters.dropDown();
+    expand.init();
+   break;
+   case "advactivity":
+    global.banner();
+   break;
+   case "advfriends":
+    global.banner();
+    friends.init();
+   break;
+   case "advfriendsact":
+    global.banner();
+   break;
+   case "advavatar":
+    global.banner();
+    avatarViewer.init();
+   break;
+  }
+ }
+};
+$(function(){onLoad.init()});

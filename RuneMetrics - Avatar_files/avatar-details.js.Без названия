@@ -1,0 +1,109 @@
+var AvatarDetails = function(json) {
+	//wrapper for AvatarDetails
+	this.details = json;
+	this.GetMainHand = function() {
+		var mainWep = this.details.worn[3];
+		if (mainWep === "undefined") {
+			//check for sheathed weapons
+			mainWep = this.details.worn[15];
+		}
+		if (mainWep === "undefined") {
+			return null;
+		}
+		return mainWep;
+	};
+
+	this.GetOffHand = function() {
+		var offWep = this.details.worn[5];
+		if (offWep === "undefined") {
+			//check for sheathed weapons
+			offWep = this.details.worn[16];
+		}
+		if (offWep === "undefined") {
+			return null;
+		}
+		return offWep;
+	};
+
+	this.GetAttackAnimID = function(offHand, legacy) {
+		var anims = offHand ? this.details.leftAnims : this.details.rightAnims;
+		if (anims != null) {
+			var id = legacy ? anims.attackAnimLegacy : anims.attackAnim;
+			if (legacy && id == -1) {
+				id = anims.attackAnim;
+			}
+			return id;
+		}
+		return -1;
+	};
+
+	this.GetDefenceAnimID = function(offHand, legacy) {
+		var anims = offHand ? this.details.leftAnims : this.details.rightAnims;
+		if (anims != null) {
+			var id = legacy ? anims.defendAnimLegacy : anims.defendAnim;
+			if (legacy && id == -1) {
+				id = anims.defendAnim;
+			}
+			return id;
+		}
+		return -1;
+	};
+	
+	this.IsSheathed = function() {
+		return this.details[15] !== "undefined" || this.details[16] !== "undefined";
+	};
+
+	this.GetAppearance = function() {
+		return this.details.worn;
+	};
+
+	this.GetCleanWorn = function() {
+		return this.details.worn.filter(function(item) { return item != null; });
+	};
+	
+	this.GetBAS = function(legacy) {
+		if (this.details["combatBas"]) {
+			var combatBas = this.details["combatBas"];
+			if (legacy) {
+				return combatBas["basIDLegacy"];
+			}
+			else {
+				return combatBas["basID"];
+			}
+		}
+		return null;
+	};
+	
+	AvatarDetails.HasStrengthBoost = function(item) {
+		//strength boosts are referred to as damage boosts in game
+		return item.magicStrength !== null || item.rangedStrength !== null || item.meleeStrength !== null;
+	};
+	
+	AvatarDetails.HasAttackBoost = function(item) {
+		return item.magicAttack !== null || item.rangedAttack !== null || item.meleeAttack !== null;
+	};
+	
+	AvatarDetails.GetParams = function(item, possibleParams) {
+		var params = {};
+		for (var i = 0; i < possibleParams.length; i++) {
+			if (item[possibleParams[i]] !== null) {
+				params[possibleParams[i]] = item[possibleParams[i]];
+			}
+		}
+		return params;
+	};
+	
+	AvatarDetails.GetAttackBoosts = function(item) {
+		return AvatarDetails.GetParams(item, ["magicAttack", "rangedAttack", "meleeAttack"]);
+	};
+	
+	AvatarDetails.GetStrengthBoosts = function(item) {
+		return AvatarDetails.GetParams(item, ["magicStrength", "rangedStrength", "meleeStrength"]);
+	};
+	
+	AvatarDetails.GetDefenceBoosts = function(item) {
+		return AvatarDetails.GetParams(item, ["magicDefence", "rangedDefence", "meleeDefence"]);
+	};
+	
+
+};

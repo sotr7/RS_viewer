@@ -1,0 +1,61 @@
+var Avatar = function(mod) {
+	this.details = null;
+	this.module = mod;
+
+	this.SetAnim = function(val) {
+		this.module.ccall('SetParam', 'void', ['string', 'string'], ['animation', val]);
+	};
+
+	this.SetWalk = function() {
+		this.SetAnim('walk');
+	};
+
+	this.SetRun = function() {
+		this.SetAnim('run');
+	};
+	this.SetReady = function() {
+		this.SetAnim('ready');
+	};
+
+	this.SetAnimID = function(id) {
+		this.module.ccall('SetParam', 'void', ['string', 'string'], ['animationId', id.toString()]);
+	};
+
+	this.SetName = function() {
+		this.module.ccall('SetParam', 'void', ['string', 'string'], ['username', avname]);
+		this.details = null;
+		this.SetReady();
+	};
+
+	this.SetAttack = function() {
+		var details = this.GetDetails();
+		if (details != null) {
+			var anim = details.GetAttackAnimID(false, false);
+			if (anim !== -1) {
+				this.module.ccall('SetParam', 'void', ['string', 'string'], ['attack', anim.toString()]);
+			}
+		}
+	};
+
+	this.GetDetails = function() {
+		//Use this to get details as it will update the details 
+		//as necessary
+		if (this.details === null) {
+			//_SetDetails();
+			var ptr = this.module.ccall('GetDetailsString', 'string', [], []);
+			if (ptr) {
+				this.details = new AvatarDetails(JSON.parse(ptr));
+				if (this.details.details["combatAppearance"]) {
+					var combatapp = this.details.details["combatAppearance"];
+					Module.ccall('SetCombatAppearance', 'void', ['string'], [combatapp]);
+				}
+				if (this.details.GetBAS(false)) {
+					var basID = this.details.GetBAS(false);
+					Module.ccall('SetCombatBAS', 'void', ['number'], [basID]);
+				}
+			}
+		}
+		return this.details;
+	};
+	
+}
