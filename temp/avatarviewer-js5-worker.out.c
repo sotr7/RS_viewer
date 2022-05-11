@@ -102,65 +102,65 @@ int32_t em__x(int32_t a, int32_t b, int32_t d);
 
 void em__y(int32_t a);
 
-typedef AUNKNOWN (*fp_Ac)(cUNKNOWN);
-fp_Ac Ac[] = { em_Oz,em_ dq,em_ hq,em_ br,em_ fr,em_ kr,em_ mr,em_ Oz };
+typedef void (*fp_viiiii)(int32_t,int32_t,int32_t,int32_t,int32_t);
+fp_viiiii FUNCTION_TABLE_viiiii[] = { em_qz,em_ kx,em_ jx,em_ gx };
 
-typedef void (*fp_vc)(cUNKNOWN);
-fp_vc vc[] = { em_Jz,em_ Mk,em_ Nk,em_ Vk,em_ Hk,em_ Nl,em_ Gn,em_ Bh,em_ Bg,em_ qi,em_ Nh,em_ Rh,em_ Bi,em_ Ci,em_ Di,em_ Fi,em_ Ei,em_ Oi,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz };
+typedef void (*fp_viiiiiiiii)(int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t);
+fp_viiiiiiiii FUNCTION_TABLE_viiiiiiiii[] = { em_Az,em_ qp,em_ Pp,em_ Az };
 
-typedef wUNKNOWN (*fp_wc)(cUNKNOWN);
-fp_wc wc[] = { em_Kz,em_ Po,em_ So,em_ ap,em_ cp,em_ Kz,em_ Kz,em_ Kz };
+typedef void (*fp_viiiiiiii)(int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t);
+fp_viiiiiiii FUNCTION_TABLE_viiiiiiii[] = { em_Oz,em_ dq,em_ hq,em_ br,em_ fr,em_ kr,em_ mr,em_ Oz };
 
-typedef lUNKNOWN (*fp_lc)(cUNKNOWN);
-fp_lc lc[] = { em_Zy,em_ $c,em_ _y,em_ $y,em_ az,em_ pd,em_ od,em_ wd,em_ Bd,em_ Cd,em_ Fd,em_ Gd,em_ Ad,em_ Id,em_ Jd,em_ Kd,em_ Gw,em_ Ld,em_ af,em_ bf,em_ ff,em_ bz,em_ cz,em_ dz,em_ nf,em_ of,em_ pf,em_ ez,em_ fz,em_ gz,em_ hz,em_ iz,em_ jz,em_ kz,em_ lz,em_ mz,em_ If,em_ Jf,em_ Kf,em_ Lf,em_ Mf,em_ Nf,em_ Of,em_ Pf,em_ Qf,em_ Ik,em_ Jk,em_ Qk,em_ Rk,em_ Tk,em_ Wk,em_ Zk,em_ $k,em_ Vm,em_ Nt,em_ St,em_ Fm,em_ Xt,em_ au,em_ Ul,em_ Tl,em_ Em,em_ Dm,em_ Um,em_ Tm,em_ jn,em_ hn,em_ ln,em_ kn,em_ pn,em_ on,em_ rn,em_ qn,em_ un,em_ tn,em_ wn,em_ vn,em_ An,em_ zn,em_ Cn,em_ Bn,em_ Kn,em_ Jn,em_ xm,em_ Ln,em_ Vl,em_ fu,em_ Nn,em_ Mn,em_ _r,em_ Tn,em_ Sn,em_ Yn,em_ Xn,em_ mo,em_ lo,em_ Go,em_ Fo,em_ Vo,em_ Uo,em_ gp,em_ fp,em_ Fp,em_ Ep,em_ bq,em_ aq,em_ gq,em_ fq,em_ kq,em_ jq,em_ vq,em_ uq,em_ Gq,em_ Fq,em_ Rq,em_ Qq,em_ ar,em_ $q,em_ jr,em_ ir,em_ pr,em_ or,em_ vr,em_ ur,em_ Br,em_ Ar,em_ Gr,em_ Fr,em_ Pr,em_ Or,em_ ss,em_ rs,em_ Lt,em_ Ks,em_ jt,em_ it,em_ lt,em_ kt,em_ On,em_ Zr,em_ as,em_ Bs,em_ Ss,em_ _s,em_ gt,em_ ht,em_ Cw,em_ Bw,em_ Jw,em_ Iw,em_ Mw,em_ Lw,em_ Ow,em_ Sw,em_ Rw,em_ Uw,em_ Xw,em_ Vw,em_ Ww,em_ Yw,em_ Zw,em_ Md,em_ Od,em_ Zj,em_ ig,em_ kg,em_ lg,em_ mg,em_ Ph,em_ Qh,em_ Oh,em_ pi,em_ xg,em_ wx,em_ ll,em_ Pi,em_ Qi,em_ Ri,em_ nj,em_ oj,em_ rj,em_ sj,em_ xl,em_ Bl,em_ El,em_ cr,em_ $r,em_ xv,em_ Ev,em_ Fv,em_ Gv,em_ Hv,em_ Iv,em_ Jv,em_ bm,em_ pm,em_ Gl,em_ ux,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy };
+typedef void (*fp_vid)(int32_t,double);
+fp_vid FUNCTION_TABLE_vid[] = { em_pz,em_ ud,em_ Qe,em_ pz };
 
-typedef mUNKNOWN (*fp_mc)(cUNKNOWN);
-fp_mc mc[] = { em_nz,em_ Ym,em_ bn,em_ Qt,em_ fn,em_ Im,em_ Nm,em_ _t,em_ Rm,em_ Ol,em_ Pl,em_ Rn,em_ Wn,em_ Cr,em_ Hr,em_ us,em_ ws,em_ zs,em_ bs,em_ is,em_ ls,em_ os,em_ _w,em_ cy,em_ bh,em_ oz,em_ Fg,em_ pk,em_ Bk,em_ xw,em_ nz,em_ nz };
+typedef int32_t (*fp_iiiiii)(int32_t,int32_t,int32_t,int32_t,int32_t);
+fp_iiiiii FUNCTION_TABLE_iiiiii[] = { em_Wz,em_ Lk,em_ Pn,em_ Un,em_ As,em_ Ns,em_ Qs,em_ ps,em_ Es,em_ Hs,em_ Vs,em_ Ys,em_ bt,em_ et,em_ Wz,em_ Wz };
 
-typedef BUNKNOWN (*fp_Bc)(cUNKNOWN);
-fp_Bc Bc[] = { em_Pz,em_ Qz,em_ Rz,em_ Sz,em_ Tz,em_ Zm,em_ Jm,em_ Ho,em_ Io,em_ No,em_ To,em_ Wo,em_ Xo,em_ _o,em_ dp,em_ Dr,em_ Ir,em_ nx,em_ mx,em_ lx,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz };
+typedef void (*fp_vi)(int32_t);
+fp_vi FUNCTION_TABLE_vi[] = { em_Zy,em_ $c,em_ _y,em_ $y,em_ az,em_ pd,em_ od,em_ wd,em_ Bd,em_ Cd,em_ Fd,em_ Gd,em_ Ad,em_ Id,em_ Jd,em_ Kd,em_ Gw,em_ Ld,em_ af,em_ bf,em_ ff,em_ bz,em_ cz,em_ dz,em_ nf,em_ of,em_ pf,em_ ez,em_ fz,em_ gz,em_ hz,em_ iz,em_ jz,em_ kz,em_ lz,em_ mz,em_ If,em_ Jf,em_ Kf,em_ Lf,em_ Mf,em_ Nf,em_ Of,em_ Pf,em_ Qf,em_ Ik,em_ Jk,em_ Qk,em_ Rk,em_ Tk,em_ Wk,em_ Zk,em_ $k,em_ Vm,em_ Nt,em_ St,em_ Fm,em_ Xt,em_ au,em_ Ul,em_ Tl,em_ Em,em_ Dm,em_ Um,em_ Tm,em_ jn,em_ hn,em_ ln,em_ kn,em_ pn,em_ on,em_ rn,em_ qn,em_ un,em_ tn,em_ wn,em_ vn,em_ An,em_ zn,em_ Cn,em_ Bn,em_ Kn,em_ Jn,em_ xm,em_ Ln,em_ Vl,em_ fu,em_ Nn,em_ Mn,em_ _r,em_ Tn,em_ Sn,em_ Yn,em_ Xn,em_ mo,em_ lo,em_ Go,em_ Fo,em_ Vo,em_ Uo,em_ gp,em_ fp,em_ Fp,em_ Ep,em_ bq,em_ aq,em_ gq,em_ fq,em_ kq,em_ jq,em_ vq,em_ uq,em_ Gq,em_ Fq,em_ Rq,em_ Qq,em_ ar,em_ $q,em_ jr,em_ ir,em_ pr,em_ or,em_ vr,em_ ur,em_ Br,em_ Ar,em_ Gr,em_ Fr,em_ Pr,em_ Or,em_ ss,em_ rs,em_ Lt,em_ Ks,em_ jt,em_ it,em_ lt,em_ kt,em_ On,em_ Zr,em_ as,em_ Bs,em_ Ss,em_ _s,em_ gt,em_ ht,em_ Cw,em_ Bw,em_ Jw,em_ Iw,em_ Mw,em_ Lw,em_ Ow,em_ Sw,em_ Rw,em_ Uw,em_ Xw,em_ Vw,em_ Ww,em_ Yw,em_ Zw,em_ Md,em_ Od,em_ Zj,em_ ig,em_ kg,em_ lg,em_ mg,em_ Ph,em_ Qh,em_ Oh,em_ pi,em_ xg,em_ wx,em_ ll,em_ Pi,em_ Qi,em_ Ri,em_ nj,em_ oj,em_ rj,em_ sj,em_ xl,em_ Bl,em_ El,em_ cr,em_ $r,em_ xv,em_ Ev,em_ Fv,em_ Gv,em_ Hv,em_ Iv,em_ Jv,em_ bm,em_ pm,em_ Gl,em_ ux,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy,em_ Zy };
 
-typedef CUNKNOWN (*fp_Cc)(cUNKNOWN);
-fp_Cc Cc[] = { em_Uz,em_ _e,em_ en,em_ Rt,em_ Wt,em_ gn,em_ Qm,em_ $t,em_ eu,em_ Sm,em_ ts,em_ vs,em_ xs,em_ gs,em_ js,em_ ms,em_ xx,em_ Hg,em_ Vz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz };
+typedef void (*fp_viiiiiid)(int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,double);
+fp_viiiiiid FUNCTION_TABLE_viiiiiid[] = { em_Iz,em_ qr,em_ wr,em_ Iz };
 
-typedef xUNKNOWN (*fp_xc)(cUNKNOWN);
-fp_xc xc[] = { em_Lz,em_ rx,em_ ad,em_ sx };
+typedef int32_t (*fp_iii)(int32_t,int32_t);
+fp_iii FUNCTION_TABLE_iii[] = { em_Uz,em_ _e,em_ en,em_ Rt,em_ Wt,em_ gn,em_ Qm,em_ $t,em_ eu,em_ Sm,em_ ts,em_ vs,em_ xs,em_ gs,em_ js,em_ ms,em_ xx,em_ Hg,em_ Vz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz,em_ Uz };
 
-typedef yUNKNOWN (*fp_yc)(cUNKNOWN);
-fp_yc yc[] = { em_Mz,em_ Ls,em_ Ms,em_ Cs,em_ Ds,em_ Ts,em_ Us,em_ $s,em_ at,em_ Mz,em_ Mz,em_ Mz,em_ Mz,em_ Mz,em_ Mz,em_ Mz };
+typedef int32_t (*fp_iiiii)(int32_t,int32_t,int32_t,int32_t);
+fp_iiiii FUNCTION_TABLE_iiiii[] = { em_Nz,em_ Kk,em_ ys,em_ ds,em_ es,em_ fs,em_ ns,em_ Ch,em_ wg,em_ Nz,em_ Nz,em_ Nz,em_ Nz,em_ Nz,em_ Nz,em_ Nz };
 
-typedef nUNKNOWN (*fp_nc)(cUNKNOWN);
-fp_nc nc[] = { em_pz,em_ ud,em_ Qe,em_ pz };
+typedef void (*fp_viii)(int32_t,int32_t,int32_t);
+fp_viii FUNCTION_TABLE_viii[] = { em_Jz,em_ Mk,em_ Nk,em_ Vk,em_ Hk,em_ Nl,em_ Gn,em_ Bh,em_ Bg,em_ qi,em_ Nh,em_ Rh,em_ Bi,em_ Ci,em_ Di,em_ Fi,em_ Ei,em_ Oi,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz,em_ Jz };
 
-typedef oUNKNOWN (*fp_oc)(cUNKNOWN);
-fp_oc oc[] = { em_qz,em_ kx,em_ jx,em_ gx };
+typedef int32_t (*fp_iiiiiiiiii)(int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t);
+fp_iiiiiiiiii FUNCTION_TABLE_iiiiiiiiii[] = { em_rz,em_ ch };
 
-typedef DUNKNOWN (*fp_Dc)(cUNKNOWN);
-fp_Dc Dc[] = { em_Wz,em_ Lk,em_ Pn,em_ Un,em_ As,em_ Ns,em_ Qs,em_ ps,em_ Es,em_ Hs,em_ Vs,em_ Ys,em_ bt,em_ et,em_ Wz,em_ Wz };
+typedef void (*fp_viiiiii)(int32_t,int32_t,int32_t,int32_t,int32_t,int32_t);
+fp_viiiiii FUNCTION_TABLE_viiiiii[] = { em_Pz,em_ Qz,em_ Rz,em_ Sz,em_ Tz,em_ Zm,em_ Jm,em_ Ho,em_ Io,em_ No,em_ To,em_ Wo,em_ Xo,em_ _o,em_ dp,em_ Dr,em_ Ir,em_ nx,em_ mx,em_ lx,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz,em_ Pz };
 
-typedef EUNKNOWN (*fp_Ec)(cUNKNOWN);
-fp_Ec Ec[] = { em_Xz,em_ _m,em_ Km,em_ Qn,em_ Vn,em_ ax,em_ bx,em_ dx,em_ zj,em_ Aj,em_ Bj,em_ Xz,em_ Xz,em_ Xz,em_ Xz,em_ Xz };
+typedef void (*fp_viiiiid)(int32_t,int32_t,int32_t,int32_t,int32_t,double);
+fp_viiiiid FUNCTION_TABLE_viiiiid[] = { em_Kz,em_ Po,em_ So,em_ ap,em_ cp,em_ Kz,em_ Kz,em_ Kz };
 
-typedef zUNKNOWN (*fp_zc)(cUNKNOWN);
-fp_zc zc[] = { em_Nz,em_ Kk,em_ ys,em_ ds,em_ es,em_ fs,em_ ns,em_ Ch,em_ wg,em_ Nz,em_ Nz,em_ Nz,em_ Nz,em_ Nz,em_ Nz,em_ Nz };
+typedef void (*fp_v)();
+fp_v FUNCTION_TABLE_v[] = { em_Lz,em_ rx,em_ ad,em_ sx };
 
-typedef pUNKNOWN (*fp_pc)(cUNKNOWN);
-fp_pc pc[] = { em_rz,em_ ch };
+typedef int32_t (*fp_iiii)(int32_t,int32_t,int32_t);
+fp_iiii FUNCTION_TABLE_iiii[] = { em_nz,em_ Ym,em_ bn,em_ Qt,em_ fn,em_ Im,em_ Nm,em_ _t,em_ Rm,em_ Ol,em_ Pl,em_ Rn,em_ Wn,em_ Cr,em_ Hr,em_ us,em_ ws,em_ zs,em_ bs,em_ is,em_ ls,em_ os,em_ _w,em_ cy,em_ bh,em_ oz,em_ Fg,em_ pk,em_ Bk,em_ xw,em_ nz,em_ nz };
 
-typedef qUNKNOWN (*fp_qc)(cUNKNOWN);
-fp_qc qc[] = { em_sz,em_ Zn,em_ _n,em_ $n,em_ ao,em_ bo,em_ co,em_ eo,em_ fo,em_ go,em_ ho,em_ io,em_ no,em_ oo,em_ po,em_ qo,em_ ro,em_ so,em_ to,em_ uo,em_ vo,em_ wo,em_ xo,em_ Mo,em_ Oo,em_ Zo,em_ $o,em_ ip,em_ jp,em_ kp,em_ mp,em_ op,em_ Hp,em_ Ip,em_ Jp,em_ Lp,em_ Np,em_ tr,em_ zr,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz };
+typedef int32_t (*fp_iiiiiiiii)(int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t);
+fp_iiiiiiiii FUNCTION_TABLE_iiiiiiiii[] = { em_Mz,em_ Ls,em_ Ms,em_ Cs,em_ Ds,em_ Ts,em_ Us,em_ $s,em_ at,em_ Mz,em_ Mz,em_ Mz,em_ Mz,em_ Mz,em_ Mz,em_ Mz };
 
-typedef rUNKNOWN (*fp_rc)(cUNKNOWN);
-fp_rc rc[] = { em_tz,em_ uz,em_ qd,em_ rd,em_ vd,em_ xd,em_ Ed,em_ Hd,em_ $e,em_ cf,em_ df,em_ Ce,em_ ef,em_ vz,em_ wz,em_ xz,em_ yz,em_ Yk,em_ _k,em_ Ot,em_ Tt,em_ Yt,em_ bu,em_ Hm,em_ Xm,em_ nq,em_ oq,em_ pq,em_ qq,em_ sq,em_ tq,em_ yq,em_ zq,em_ Aq,em_ Bq,em_ Dq,em_ Eq,em_ Jq,em_ Kq,em_ Lq,em_ Mq,em_ Oq,em_ Pq,em_ Uq,em_ Vq,em_ Wq,em_ Xq,em_ Zq,em_ _q,em_ Er,em_ Jr,em_ qt,em_ st,em_ ut,em_ rt,em_ tt,em_ vt,em_ zg,em_ Ag,em_ Dh,em_ Lh,em_ Mh,em_ zz,em_ Gg,em_ Cj,em_ qk,em_ Ck,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz };
+typedef void (*fp_viiiiiii)(int32_t,int32_t,int32_t,int32_t,int32_t,int32_t,int32_t);
+fp_viiiiiii FUNCTION_TABLE_viiiiiii[] = { em_sz,em_ Zn,em_ _n,em_ $n,em_ ao,em_ bo,em_ co,em_ eo,em_ fo,em_ go,em_ ho,em_ io,em_ no,em_ oo,em_ po,em_ qo,em_ ro,em_ so,em_ to,em_ uo,em_ vo,em_ wo,em_ xo,em_ Mo,em_ Oo,em_ Zo,em_ $o,em_ ip,em_ jp,em_ kp,em_ mp,em_ op,em_ Hp,em_ Ip,em_ Jp,em_ Lp,em_ Np,em_ tr,em_ zr,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz,em_ sz };
 
-typedef sUNKNOWN (*fp_sc)(cUNKNOWN);
-fp_sc sc[] = { em_Az,em_ qp,em_ Pp,em_ Az };
+typedef void (*fp_vii)(int32_t,int32_t);
+fp_vii FUNCTION_TABLE_vii[] = { em_tz,em_ uz,em_ qd,em_ rd,em_ vd,em_ xd,em_ Ed,em_ Hd,em_ $e,em_ cf,em_ df,em_ Ce,em_ ef,em_ vz,em_ wz,em_ xz,em_ yz,em_ Yk,em_ _k,em_ Ot,em_ Tt,em_ Yt,em_ bu,em_ Hm,em_ Xm,em_ nq,em_ oq,em_ pq,em_ qq,em_ sq,em_ tq,em_ yq,em_ zq,em_ Aq,em_ Bq,em_ Dq,em_ Eq,em_ Jq,em_ Kq,em_ Lq,em_ Mq,em_ Oq,em_ Pq,em_ Uq,em_ Vq,em_ Wq,em_ Xq,em_ Zq,em_ _q,em_ Er,em_ Jr,em_ qt,em_ st,em_ ut,em_ rt,em_ tt,em_ vt,em_ zg,em_ Ag,em_ Dh,em_ Lh,em_ Mh,em_ zz,em_ Gg,em_ Cj,em_ qk,em_ Ck,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz,em_ tz };
 
-typedef tUNKNOWN (*fp_tc)(cUNKNOWN);
-fp_tc tc[] = { em_Bz,em_ Cz,em_ Dz,em_ sd,em_ Dd,em_ Hw,em_ Ez,em_ Fz,em_ Gz,em_ Hz,em_ Ok,em_ Pk,em_ Sk,em_ Uk,em_ Xk,em_ Pt,em_ an,em_ cn,em_ dn,em_ $m,em_ Ut,em_ Vt,em_ Zt,em_ Mm,em_ Om,em_ Pm,em_ Lm,em_ cu,em_ du,em_ Nw,em_ Fn,em_ hp,em_ xt,em_ zt,em_ Bt,em_ Ht,em_ Jt,em_ Dt,em_ Ft,em_ Gp,em_ yt,em_ At,em_ Ct,em_ It,em_ Kt,em_ Et,em_ Gt,em_ lq,em_ mq,em_ rq,em_ wq,em_ xq,em_ Cq,em_ Hq,em_ Iq,em_ Nq,em_ Sq,em_ Tq,em_ Yq,em_ Os,em_ Ps,em_ Rs,em_ mt,em_ ot,em_ nt,em_ pt,em_ Fs,em_ Gs,em_ Is,em_ Ws,em_ Xs,em_ Zs,em_ ct,em_ dt,em_ ft,em_ Dw,em_ Kw,em_ Tw,em_ Jg,em_ vx,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz };
+typedef void (*fp_viiii)(int32_t,int32_t,int32_t,int32_t);
+fp_viiii FUNCTION_TABLE_viiii[] = { em_Xz,em_ _m,em_ Km,em_ Qn,em_ Vn,em_ ax,em_ bx,em_ dx,em_ zj,em_ Aj,em_ Bj,em_ Xz,em_ Xz,em_ Xz,em_ Xz,em_ Xz };
 
-typedef uUNKNOWN (*fp_uc)(cUNKNOWN);
-fp_uc uc[] = { em_Iz,em_ qr,em_ wr,em_ Iz };
+typedef int32_t (*fp_ii)(int32_t);
+fp_ii FUNCTION_TABLE_ii[] = { em_Bz,em_ Cz,em_ Dz,em_ sd,em_ Dd,em_ Hw,em_ Ez,em_ Fz,em_ Gz,em_ Hz,em_ Ok,em_ Pk,em_ Sk,em_ Uk,em_ Xk,em_ Pt,em_ an,em_ cn,em_ dn,em_ $m,em_ Ut,em_ Vt,em_ Zt,em_ Mm,em_ Om,em_ Pm,em_ Lm,em_ cu,em_ du,em_ Nw,em_ Fn,em_ hp,em_ xt,em_ zt,em_ Bt,em_ Ht,em_ Jt,em_ Dt,em_ Ft,em_ Gp,em_ yt,em_ At,em_ Ct,em_ It,em_ Kt,em_ Et,em_ Gt,em_ lq,em_ mq,em_ rq,em_ wq,em_ xq,em_ Cq,em_ Hq,em_ Iq,em_ Nq,em_ Sq,em_ Tq,em_ Yq,em_ Os,em_ Ps,em_ Rs,em_ mt,em_ ot,em_ nt,em_ pt,em_ Fs,em_ Gs,em_ Is,em_ Ws,em_ Xs,em_ Zs,em_ ct,em_ dt,em_ ft,em_ Dw,em_ Kw,em_ Tw,em_ Jg,em_ vx,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz,em_ Bz };
 
 //===
 
@@ -430,10 +430,10 @@ void em__f(int32_t b, int32_t d) {
       if (k == (d + 40)) {
         *((int32_t*)(((int32_t)MEM) + (b + 56))) = h;
         l = *((int32_t*)(((int32_t)MEM) + (j)));
-        (*((rcunknown*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (l)))) + 12)))) & 127))))(l, h);
+        FUNCTION_TABLE_vii[((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (l)))) + 12)))) & 127)](l, h);
         break;
       } else {
-        *((int32_t*)(((int32_t)MEM) + (b + 56))) = (*((tcunknown*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (k)))) + 8)))) & 127))))(k);
+        *((int32_t*)(((int32_t)MEM) + (b + 56))) = FUNCTION_TABLE_ii[((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (k)))) + 8)))) & 127)](k);
         break;
       }
     } else {
@@ -469,7 +469,7 @@ void em__r(int32_t a) {
     i = b;
     return ;
   }
-  (*((lcunknown*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (a)))) + 4)))) & 255))))(a);
+  FUNCTION_TABLE_vi[((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (a)))) + 4)))) & 255)](a);
   i = b;
   return ;
 }
@@ -503,7 +503,7 @@ int32_t em__t(int32_t b, int32_t e, int32_t f) {
     return h;
   }
   while (1) {
-    if ((*((Ccunknown*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (b)))) + 52)))) & 31))))(b, *((int8_t*)(((int32_t)MEM) + (j)))) == (-1)) {
+    if (FUNCTION_TABLE_iii[((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (b)))) + 52)))) & 31)](b, *((int8_t*)(((int32_t)MEM) + (j)))) == (-1)) {
       h = k;
       l = 6;
       break;
@@ -641,7 +641,7 @@ void em__h(int32_t e, int32_t f, int32_t g) {
     q = 12;
   }
   if ((((q == 12)) ? ((q = *((int32_t*)(((int32_t)MEM) + (g + 172))), (q != 0))) : (0))) {
-    (*((rcunknown*)(((int32_t)MEM) + (q & 127))))(g, 4016);
+    FUNCTION_TABLE_vii[(q & 127)](g, 4016);
     i = h;
     return ;
   }
@@ -728,7 +728,7 @@ int32_t em__w(int32_t a, int32_t b, int32_t d) {
   *((int32_t*)(((int32_t)MEM) + (f + 8))) = a;
   *((int32_t*)(((int32_t)MEM) + (f + 12))) = (-1);
   *((int32_t*)(((int32_t)MEM) + (f + 48))) = 1;
-  (*((Ecunknown*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (h)))) + 28)))) & 15))))(h, f, *((int32_t*)(((int32_t)MEM) + (d))), 1);
+  FUNCTION_TABLE_viiii[((*((int32_t*)(((int32_t)MEM) + ((*((int32_t*)(((int32_t)MEM) + (h)))) + 28)))) & 15)](h, f, *((int32_t*)(((int32_t)MEM) + (d))), 1);
   if ((*((int32_t*)(((int32_t)MEM) + (f + 24)))) != 1) {
     g = 0;
     i = e;

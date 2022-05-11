@@ -5802,7 +5802,7 @@ function $(oa) {
 			var e = 0,
 			f = 0;
 			e = i;
-			f = Xx(a, b, c, d) | 0;
+			f = _vsnprintf(a, b, c, d) | 0;
 			i = e;
 			return f | 0
 		}
@@ -42070,7 +42070,7 @@ function $(oa) {
 			h = g;
 			c[h >> 2] = f;
 			f = zb(d | 0) | 0;
-			d = Xx(a, b, e, h) | 0;
+			d = _vsnprintf(a, b, e, h) | 0;
 			if (!f) {
 				i = g;
 				return d | 0
@@ -84296,7 +84296,7 @@ function $(oa) {
 			do
 				if (g) {
 					c[f >> 2] = c[d >> 2];
-					h = Xx(g, 240, b, f) | 0;
+					h = _vsnprintf(g, 240, b, f) | 0;
 					if (h >>> 0 < 240) {
 						j = yx(g, h + 1 | 0) | 0;
 						c[a >> 2] = (j | 0) != 0 ? j : g;
@@ -84305,7 +84305,7 @@ function $(oa) {
 					}
 					wx(g);
 					if ((h | 0) >= 0 ? (j = h + 1 | 0, h = vx(j) | 0, c[a >> 2] = h, (h | 0) != 0) : 0)
-						k = Xx(h, j, b, d) | 0;
+						k = _vsnprintf(h, j, b, d) | 0;
 					else
 						k = -1
 				} else
@@ -91219,7 +91219,7 @@ function $(oa) {
 			i = c;
 			return +d
 		}
-		function Lx(a, b) {
+		function _frexp(a, b) {
 			a = +a;
 			b = b | 0;
 			var d = 0,
@@ -91239,7 +91239,7 @@ function $(oa) {
 			j = g & 2047;
 			if (!j) {
 				if (a != 0.0) {
-					l = +Lx(a * 18446744073709551616.0, b);
+					l = +_frexp(a * 18446744073709551616.0, b);
 					m = l;
 					n = (c[b >> 2] | 0) + -64 | 0
 				} else {
@@ -91264,13 +91264,13 @@ function $(oa) {
 			}
 			return  + (0.0)
 		}
-		function Mx(a, b) {
+		function _frexpl(a, b) {
 			a = +a;
 			b = b | 0;
 			var c = 0,
 			d = 0.0;
 			c = i;
-			d = +Lx(a, b);
+			d = +_frexp(a, b);
 			i = c;
 			return +d
 		}
@@ -91561,11 +91561,11 @@ function $(oa) {
 			i = i + 16 | 0;
 			g = f;
 			c[g >> 2] = e;
-			e = Xx(a, b, d, g) | 0;
+			e = _vsnprintf(a, b, d, g) | 0;
 			i = f;
 			return e | 0
 		}
-		function Wx(a, b, d) {
+		function _MUSL_vfprintf(a, b, d) {
 			a = a | 0;
 			b = b | 0;
 			d = d | 0;
@@ -91595,7 +91595,7 @@ function $(oa) {
 				k = k + 4 | 0
 			} while ((k | 0) < (l | 0));
 			c[f >> 2] = c[d >> 2];
-			if ((hy(0, b, f, h, g) | 0) < 0) {
+			if ((_printf_core(0, b, f, h, g) | 0) < 0) {
 				m = -1;
 				i = e;
 				return m | 0
@@ -91612,7 +91612,7 @@ function $(oa) {
 				c[d >> 2] = 80;
 				p = a + 16 | 0;
 				c[p >> 2] = j + 80;
-				j = hy(a, b, f, h, g) | 0;
+				j = _printf_core(a, b, f, h, g) | 0;
 				if (!l)
 					q = j;
 				else {
@@ -91626,12 +91626,12 @@ function $(oa) {
 					q = r
 				}
 			} else
-				q = hy(a, b, f, h, g) | 0;
+				q = _printf_core(a, b, f, h, g) | 0;
 			m = q;
 			i = e;
 			return m | 0
 		}
-		function Xx(b, d, e, f) {
+		function _vsnprintf(b, d, e, f) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -91681,7 +91681,7 @@ function $(oa) {
 			n = j + 16 | 0;
 			c[n >> 2] = d;
 			c[j + 28 >> 2] = d;
-			d = Wx(j, e, f) | 0;
+			d = _MUSL_vfprintf(j, e, f) | 0;
 			if (!b) {
 				p = d;
 				i = g;
@@ -93073,7 +93073,7 @@ function $(oa) {
 			i = e;
 			return p | 0
 		}
-		function hy(e, f, g, j, l) {
+		function _printf_core(e, f, g, j, l) {
 			e = e | 0;
 			f = f | 0;
 			g = g | 0;
@@ -93986,7 +93986,7 @@ function $(oa) {
 								P = ta;
 								continue a
 							}
-							Ja = +Mx(Ta, o) * 2.0;
+							Ja = +_frexpl(Ta, o) * 2.0;
 							_a = Ja != 0.0;
 							if (_a)
 								c[o >> 2] = (c[o >> 2] | 0) + -1;
