@@ -10,6 +10,7 @@ var params = {
     wait: 1000, // Waits for all changes, before reloading. Defaults to 0 sec. 
     mount: [['/components', './node_modules'], ], // Mount a directory to a route.  , '/dojoroot'
     logLevel: 2, // 0 = errors only, 1 = some, 2 = lots 
+    cors: true,
     middleware: [function(req, res, next) { next(); }] // Takes an array of Connect-compatible middleware that are injected into the server middleware stack 
 };
 liveServer.start(params);

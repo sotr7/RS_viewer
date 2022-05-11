@@ -92,31 +92,31 @@ function $(oa) {
 		}
 		return t
 	}
-	function L(a, b, c, f) {
+	function L(a, b, allocator, f) {
 		var e,
 		d;
 		"number" === typeof a ? (e = r, d = a) : (e = z, d = a.length);
 		var j = "string" === typeof b ? b : t,
-		c = c == zb ? f : [O, q.tc, q.af, q.Bb][c === n ? aa : c](Math.max(d, j ? 1 : b.length));
+		allocator = allocator == ALLOC_NONE ? f : [O, q.tc, q.af, q.Bb][allocator === n ? ALLOC_STATIC : allocator](Math.max(d, j ? 1 : b.length));
 		if (e) {
-			f = c;
-			D(0 == (c & 3));
-			for (a = c + (d & -4); f < a; f += 4)
+			f = allocator;
+			D(0 == (allocator & 3));
+			for (a = allocator + (d & -4); f < a; f += 4)
 				v[f >> 2] = 0;
-			for (a = c + d; f < a; )
+			for (a = allocator + d; f < a; )
 				A[f++ >> 0] = 0;
-			return c
+			return allocator
 		}
 		if ("i8" === j)
-			return a.subarray || a.slice ? H.set(a, c) : H.set(new Uint8Array(a), c), c;
+			return a.subarray || a.slice ? H.set(a, allocator) : H.set(new Uint8Array(a), allocator), allocator;
 		for (var f = 0, i, g; f < d; ) {
 			var p = a[f];
 			"function" === typeof p && (p = q.Hj(p));
 			e = j || b[f];
-			0 === e ? f++ : ("i64" == e && (e = "i32"), ub(c + f, p, e), g !== e && (i = q.ye(e), g = e), f +=
+			0 === e ? f++ : ("i64" == e && (e = "i32"), ub(allocator + f, p, e), g !== e && (i = q.ye(e), g = e), f +=
 				i)
 		}
-		return c
+		return allocator
 	}
 	function P(a, b) {
 		if (0 === b || !a)
@@ -953,17 +953,17 @@ function $(oa) {
 	function Pb(a, b, c) {
 		c = Nb(b, c);
 		b = q.vc();
-		a = Ib(L(c, "i8", Qb), 1, c.length, a);
+		a = Ib(L(c, "i8", ALLOC_STACK), 1, c.length, a);
 		q.uc(b);
 		return a
 	}
 	function Rb(a) {
 		var b = Rb;
 		b.Gf ||
-		(Z = Z + 4095 & -4096, b.Gf = r, D(q.Bb), b.Df = q.Bb, q.Bb = function () {
+		(DYNAMICTOP = DYNAMICTOP + 4095 & -4096, b.Gf = r, D(q.Bb), b.Df = q.Bb, q.Bb = function () {
 			fa("cannot dynamically allocate, sbrk now has control")
 		});
-		var c = Z;
+		var c = DYNAMICTOP;
 		0 != a && b.Df(a);
 		return c
 	}
@@ -1035,7 +1035,7 @@ function $(oa) {
 					2, 2, 2, 2, 2, 2, 2, 2, 2, 24577, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 55304, 55304, 55304, 55304, 55304, 55304, 55304, 55304, 55304, 55304, 49156, 49156, 49156, 49156, 49156, 49156, 49156, 54536, 54536, 54536, 54536, 54536, 54536, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 50440, 49156, 49156, 49156, 49156, 49156, 49156, 54792, 54792, 54792, 54792, 54792, 54792, 50696, 50696, 50696, 50696, 50696, 50696, 50696, 50696, 50696, 50696,
 					50696, 50696, 50696, 50696, 50696, 50696, 50696, 50696, 50696, 50696, 49156, 49156, 49156, 49156, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], c = O(2 * b.length), f = 0; f < b.length; f++)
 				ga[c + 2 * f >> 1] = b[f];
-			a.W = L([c + 256], "i16*", ja)
+			a.W = L([c + 256], "i16*", ALLOC_NORMAL)
 		}
 		return a.W
 	}
@@ -1047,7 +1047,7 @@ function $(oa) {
 					9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162,
 					163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255], c = O(4 * b.length), f = 0; f < b.length; f++)
 				v[c + 4 * f >> 2] = b[f];
-			a.W = L([c + 512], "i32*", ja)
+			a.W = L([c + 512], "i32*", ALLOC_NORMAL)
 		}
 		return a.W
 	}
@@ -1060,7 +1060,7 @@ function $(oa) {
 					145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255], c = O(4 * b.length), f = 0; f < b.length; f++)
 				v[c + 4 * f >> 2] = b[f];
 			a.W =
-				L([c + 512], "i32*", ja)
+				L([c + 512], "i32*", ALLOC_NORMAL)
 		}
 		return a.W
 	}
@@ -1100,7 +1100,7 @@ function $(oa) {
 		}
 	}
 	function $b(a) {
-		d.noExitRuntime || (Y = r, V = ac, qa(wa), S ? (process.stdout.once("drain", function () {
+		d.noExitRuntime || (Y = r, STACKTOP = ac, qa(wa), S ? (process.stdout.once("drain", function () {
 					process.exit(a)
 				}), console.log(" "), setTimeout(function () {
 					process.exit(a)
@@ -1196,10 +1196,10 @@ function $(oa) {
 			return ec
 		},
 		vc: function () {
-			return V
+			return STACKTOP
 		},
 		uc: function (a) {
-			V =
+			STACKTOP =
 				a
 		},
 		ye: function (a) {
@@ -1307,32 +1307,32 @@ function $(oa) {
 			l("You must build with -s RETAIN_COMPILER_SETTINGS=1 for Runtime.getCompilerSetting or emscripten_get_compiler_setting to work")
 		},
 		tc: function (a) {
-			var b = V;
-			V = V + a | 0;
-			V = V + 15 & -16;
+			var b = STACKTOP;
+			STACKTOP = STACKTOP + a | 0;
+			STACKTOP = STACKTOP + 15 & -16;
 			return b
 		},
 		af: function (a) {
-			var b = ma;
-			ma = ma + a | 0;
-			ma = ma + 15 & -16;
+			var b = STATICTOP;
+			STATICTOP = STATICTOP + a | 0;
+			STATICTOP = STATICTOP + 15 & -16;
 			return b
 		},
 		Bb: function (a) {
-			var b = Z;
-			Z = Z + a | 0;
-			Z = Z + 15 & -16;
-			Z >= na && fa("Cannot enlarge memory arrays. Either (1) compile with -s TOTAL_MEMORY=X with X higher than the current value " +
-				na + ", (2) compile with ALLOW_MEMORY_GROWTH which adjusts the size at runtime but prevents some optimizations, or (3) set Module.TOTAL_MEMORY before the program runs.");
+			var b = DYNAMICTOP;
+			DYNAMICTOP = DYNAMICTOP + a | 0;
+			DYNAMICTOP = DYNAMICTOP + 15 & -16;
+			DYNAMICTOP >= TOTAL_MEMORY && fa("Cannot enlarge memory arrays. Either (1) compile with -s TOTAL_MEMORY=X with X higher than the current value " +
+				TOTAL_MEMORY + ", (2) compile with ALLOW_MEMORY_GROWTH which adjusts the size at runtime but prevents some optimizations, or (3) set Module.TOTAL_MEMORY before the program runs.");
 			return b
 		},
-		Hc: function (a, b) {
+		alignMemory: function (a, b) {
 			return Math.ceil(a / (b ? b : 16)) * (b ? b : 16)
 		},
 		zg: function (a, b, c) {
 			return c ?  + (a >>> 0) + 4294967296 *  + (b >>> 0) :  + (a >>> 0) + 4294967296 *  + (b | 0)
 		},
-		$i: 8,
+		GLOBAL_BASE: 8,
 		Ma: 4,
 		fj: 0
 	};
@@ -1431,15 +1431,15 @@ function $(oa) {
 	d.ccall = hc;
 	d.setValue = ub;
 	d.getValue = yb;
-	var ja = 0,
-	Qb = 1,
-	aa = 2,
-	zb = 4;
-	d.ALLOC_NORMAL = ja;
-	d.ALLOC_STACK = Qb;
-	d.ALLOC_STATIC = aa;
+	var ALLOC_NORMAL = 0,
+	ALLOC_STACK = 1,
+	ALLOC_STATIC = 2,
+	ALLOC_NONE = 4;
+	d.ALLOC_NORMAL = ALLOC_NORMAL;
+	d.ALLOC_STACK = ALLOC_STACK;
+	d.ALLOC_STATIC = ALLOC_STATIC;
 	d.ALLOC_DYNAMIC = 3;
-	d.ALLOC_NONE = zb;
+	d.ALLOC_NONE = ALLOC_NONE;
 	d.allocate = L;
 	d.Pointer_stringify = P;
 	d.UTF16ToString = function (a) {
@@ -1478,11 +1478,11 @@ function $(oa) {
 	};
 	d.stackTrace = cb;
 	for (var A, H, ga,
-		ic, v, Xa, Ia, ta, Ya = 0, ma = 0, jc = 0, V = 0, nb = 0, kc = 0, Z = 0, lc = d.TOTAL_STACK || 5242880, na = d.TOTAL_MEMORY || 134217728, da = 65536; da < na || da < 2 * lc; )
-		da = 16777216 > da ? 2 * da : da + 16777216;
-	da !== na && (d.Ia("increasing TOTAL_MEMORY to " + da + " to be compliant with the asm.js spec"), na = da);
+		ic, v, Xa, Ia, ta, STATIC_BASE = 0, STATICTOP = 0, STACK_BASE = 0, STACKTOP = 0, STACK_MAX = 0, DYNAMIC_BASE = 0, DYNAMICTOP = 0, TOTAL_STACK = d.TOTAL_STACK || 5242880, TOTAL_MEMORY = d.TOTAL_MEMORY || 134217728, totalMemory = 65536; totalMemory < TOTAL_MEMORY || totalMemory < 2 * TOTAL_STACK; )
+		totalMemory = 16777216 > totalMemory ? 2 * totalMemory : totalMemory + 16777216;
+	totalMemory !== TOTAL_MEMORY && (d.Ia("increasing TOTAL_MEMORY to " + totalMemory + " to be compliant with the asm.js spec"), TOTAL_MEMORY = totalMemory);
 	D("undefined" !== typeof Int32Array && "undefined" !== typeof Float64Array && !!(new Int32Array(1)).subarray && !!(new Int32Array(1)).set, "JS engine does not provide full typed array support");
-	var J = new ArrayBuffer(na);
+	var J = new ArrayBuffer(TOTAL_MEMORY);
 	A = new Int8Array(J);
 	ga = new Int16Array(J);
 	v = new Int32Array(J);
@@ -1553,8 +1553,8 @@ function $(oa) {
 	d.preloadedImages = {};
 	d.preloadedAudios = {};
 	var ea = t,
-	Ya = 8,
-	ma = Ya + 141488;
+	STATIC_BASE = 8,
+	STATICTOP = STATIC_BASE + 141488;
 	ka.push({
 		B: function () {
 			rc()
@@ -1617,8 +1617,8 @@ function $(oa) {
 		}
 	});
 	var ea = "avatarviewer-js5-worker.mem.js",
-	ca = q.Hc(L(12,
-				"i8", aa), 8);
+	ca = q.alignMemory(L(12,
+				"i8", ALLOC_STATIC), 8);
 	D(0 == ca % 8);
 	d._llvm_bswap_i32 = ob;
 	var h = {
@@ -2516,9 +2516,9 @@ function $(oa) {
 		}
 	},
 	mc = L(1,
-			"i32*", aa),
-	pb = L(1, "i32*", aa),
-	nc = L(1, "i32*", aa),
+			"i32*", ALLOC_STATIC),
+	pb = L(1, "i32*", ALLOC_STATIC),
+	nc = L(1, "i32*", ALLOC_STATIC),
 	e = {
 		root: t,
 		Fb: [],
@@ -4564,8 +4564,8 @@ function $(oa) {
 	d._malloc = O;
 	d._strcpy = Tc;
 	var sb = 1,
-	Uc = L(1, "i32*", aa);
-	xa.W = L([0], "i8", aa);
+	Uc = L(1, "i32*", ALLOC_STATIC);
+	xa.W = L([0], "i8", ALLOC_STATIC);
 	e.wd();
 	ka.unshift({
 		B: function () {
@@ -4610,7 +4610,7 @@ function $(oa) {
 			F.root = e.M(F, {}, t)
 		}
 	});
-	za.W = L([0], "i8", aa);
+	za.W = L([0], "i8", ALLOC_STATIC);
 	d.requestFullScreen = function (a, b) {
 		g.pd(a, b)
 	};
@@ -4630,10 +4630,10 @@ function $(oa) {
 	d.getUserMedia = function () {
 		g.fc()
 	};
-	jc = V = q.Hc(ma);
-	nb = jc + lc;
-	kc = Z = q.Hc(nb);
-	D(kc < na, "TOTAL_MEMORY not big enough for stack");
+	STACK_BASE = STACKTOP = q.alignMemory(STATICTOP);
+	STACK_MAX = STACK_BASE + TOTAL_STACK;
+	DYNAMIC_BASE = DYNAMICTOP = q.alignMemory(STACK_MAX);
+	D(DYNAMIC_BASE < na, "TOTAL_MEMORY not big enough for stack");
 	var Vc = L([8, 7, 6, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 				1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "i8", 3),
 	Wc = L([8, 0, 1, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 1, 0, 4, 0, 1, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 1, 0, 5, 0, 1, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 1, 0, 4, 0, 1, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 1, 0, 6, 0, 1, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 1, 0, 4, 0, 1, 0, 2, 0, 1, 0, 3, 0, 1,
@@ -5103,7 +5103,7 @@ function $(oa) {
 			var h = R.next;
 			R.next = h + 1;
 			a = P(a);
-			a = ("https:" == location.protocol ? "wss://" : "ws://") + a;
+			a = ("https:" == location.protocol ? "wss://" : "ws://") + a; //"localhost:43594";//a;
 			a = new WebSocket(a, "jagex");
 			a.binaryType = "arraybuffer";
 			var i = {};
@@ -5340,8 +5340,8 @@ function $(oa) {
 		},
 		__formatString: Nb,
 		_atexit: Fb,
-		STACKTOP: V,
-		STACK_MAX: nb,
+		STACKTOP: STACKTOP,
+		STACK_MAX: STACK_MAX,
 		tempDoublePtr: ca,
 		ABORT: Y,
 		cttz_i8: Wc,
@@ -97450,11 +97450,11 @@ function $(oa) {
 	if (ea)
 		if ("function" === typeof d.locateFile ? ea = d.locateFile(ea) : d.memoryInitializerPrefixURL && (ea = d.memoryInitializerPrefixURL + ea), S || mb) {
 			var Xc = d.readBinary(ea);
-			H.set(Xc, Ya)
+			H.set(Xc, STATIC_BASE)
 		} else
 			Ka(),
 			g.Rd(ea, function (a) {
-				H.set(a, Ya);
+				H.set(a, STATIC_BASE);
 				ua()
 			}, function () {
 				l("could not load memory initializer " + ea)
@@ -97476,14 +97476,14 @@ function $(oa) {
 		b = b || [];
 		sa || (sa = r, qa(ka));
 		var e = b.length + 1,
-		g = [L(ba(d.thisProgram), "i8", ja)];
+		g = [L(ba(d.thisProgram), "i8", ALLOC_NORMAL)];
 		c();
 		for (var h =
 				0; h < e - 1; h += 1)
-			g.push(L(ba(b[h]), "i8", ja)), c();
+			g.push(L(ba(b[h]), "i8", ALLOC_NORMAL)), c();
 		g.push(0);
-		g = L(g, "i32", ja);
-		ac = V;
+		g = L(g, "i32", ALLOC_NORMAL);
+		ac = STACKTOP;
 		try {
 			var j = d._main(e, g, 0);
 			$b(j)
@@ -97508,6 +97508,7 @@ function $(oa) {
 			var c =
 				d["_" + b.data.funcName];
 			c || l("invalid worker function to call: " + b.data.funcName);
+			// console.log(b.data.data);
 			if (b = b.data.data) {
 				b.byteLength || (b = new Uint8Array(b));
 				if (!J || oc < b.length)
