@@ -95495,8 +95495,9 @@ function $(oa) {
 										break i;
 										break
 									}
-								default:
-									break i
+								default: {
+										break i
+									}
 								}
 							while (0);
 					while (0);
