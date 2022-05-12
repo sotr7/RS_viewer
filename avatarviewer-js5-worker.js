@@ -5565,7 +5565,7 @@ function $(oa) {
 				j = a + 168 | 0;
 				a = c[j >> 2] | 0;
 				k = g - a | 0;
-				qy(0, a | 0, k | 0) | 0;
+				_memcpy(0, a | 0, k | 0) | 0;
 				l = k >> 2;
 				if (l)
 					c[0 + (l << 2) >> 2] = b;
@@ -5582,7 +5582,7 @@ function $(oa) {
 					m = c[f >> 2] | 0
 				}
 				k = m + -4 - g | 0;
-				ry(m + (0 - (k >> 2) << 2) | 0, g | 0, k | 0) | 0;
+				_memmove(m + (0 - (k >> 2) << 2) | 0, g | 0, k | 0) | 0;
 				c[g >> 2] = c[e >> 2];
 				c[f >> 2] = (c[f >> 2] | 0) + 4;
 				i = d;
@@ -6746,7 +6746,7 @@ function $(oa) {
 			i = e;
 			return
 		}
-		function wl() {
+		function __GLOBAL__I_a778() {
 			var a = 0,
 			b = 0;
 			a = i;
@@ -7046,7 +7046,7 @@ function $(oa) {
 			i = f;
 			return h | 0
 		}
-		function Dl() {
+		function __GLOBAL__I_a794() {
 			var a = 0;
 			a = i;
 			c[31288] = 0;
@@ -7322,7 +7322,7 @@ function $(oa) {
 			var d = 0;
 			b = i;
 			d = Tb(c | 0) | 0;
-			_l(a, d, py(d | 0) | 0);
+			_l(a, d, _strlen(d | 0) | 0);
 			i = b;
 			return
 		}
@@ -7387,7 +7387,7 @@ function $(oa) {
 			i = i + 32 | 0;
 			f = e + 12 | 0;
 			g = e;
-			_l(g, d, py(d | 0) | 0);
+			_l(g, d, _strlen(d | 0) | 0);
 			Rl(f, b, g);
 			Ll(a, f);
 			bm(f);
@@ -7504,7 +7504,7 @@ function $(oa) {
 				c[b + 4 >> 2] = e;
 				g = j
 			}
-			qy(g | 0, d | 0, e | 0) | 0;
+			_memcpy(g | 0, d | 0, e | 0) | 0;
 			a[g + e >> 0] = 0;
 			i = f;
 			return
@@ -7531,7 +7531,7 @@ function $(oa) {
 				c[b + 4 >> 2] = d;
 				g = j
 			}
-			sy(g | 0, e | 0, d | 0) | 0;
+			_memset(g | 0, e | 0, d | 0) | 0;
 			a[g + d >> 0] = 0;
 			i = f;
 			return
@@ -7562,7 +7562,7 @@ function $(oa) {
 			var c = 0,
 			d = 0;
 			c = i;
-			d = dm(a, b, py(b | 0) | 0) | 0;
+			d = dm(a, b, _strlen(b | 0) | 0) | 0;
 			i = c;
 			return d | 0
 		}
@@ -7600,7 +7600,7 @@ function $(oa) {
 				l = b + 1 | 0;
 			else
 				l = c[b + 8 >> 2] | 0;
-			ry(l | 0, d | 0, e | 0) | 0;
+			_memmove(l | 0, d | 0, e | 0) | 0;
 			a[l + e >> 0] = 0;
 			if (!(a[b >> 0] & 1)) {
 				a[b >> 0] = e << 1;
@@ -7683,7 +7683,7 @@ function $(oa) {
 				m = b + 1 | 0;
 			else
 				m = c[b + 8 >> 2] | 0;
-			sy(m + k | 0, e | 0, d | 0) | 0;
+			_memset(m + k | 0, e | 0, d | 0) | 0;
 			e = k + d | 0;
 			if (!(a[b >> 0] & 1))
 				a[b >> 0] = e << 1;
@@ -7769,7 +7769,7 @@ function $(oa) {
 				r = (m & 255) >>> 1;
 			else
 				r = c[b + 4 >> 2] | 0;
-			qy(n | 0, p | 0, r + 1 | 0) | 0;
+			_memcpy(n | 0, p | 0, r + 1 | 0) | 0;
 			if (q)
 				kl(p);
 			if (o) {
@@ -7790,7 +7790,7 @@ function $(oa) {
 			var c = 0,
 			d = 0;
 			c = i;
-			d = jm(a, b, py(b | 0) | 0) | 0;
+			d = jm(a, b, _strlen(b | 0) | 0) | 0;
 			i = c;
 			return d | 0
 		}
@@ -7888,7 +7888,7 @@ function $(oa) {
 				l = b + 1 | 0;
 			else
 				l = c[b + 8 >> 2] | 0;
-			qy(l + k | 0, d | 0, e | 0) | 0;
+			_memcpy(l + k | 0, d | 0, e | 0) | 0;
 			d = k + e | 0;
 			if (!(a[b >> 0] & 1))
 				a[b >> 0] = d << 1;
@@ -7936,12 +7936,12 @@ function $(oa) {
 				p = -17;
 			o = il(p) | 0;
 			if (g)
-				qy(o | 0, m | 0, g | 0) | 0;
+				_memcpy(o | 0, m | 0, g | 0) | 0;
 			if (j)
-				qy(o + g | 0, k | 0, j | 0) | 0;
+				_memcpy(o + g | 0, k | 0, j | 0) | 0;
 			k = f - h | 0;
 			if ((k | 0) != (g | 0))
-				qy(o + (j + g) | 0, m + (h + g) | 0, k - g | 0) | 0;
+				_memcpy(o + (j + g) | 0, m + (h + g) | 0, k - g | 0) | 0;
 			if ((d | 0) == 10) {
 				q = b + 8 | 0;
 				c[q >> 2] = o;
@@ -8002,10 +8002,10 @@ function $(oa) {
 				o = -17;
 			n = il(o) | 0;
 			if (g)
-				qy(n | 0, l | 0, g | 0) | 0;
+				_memcpy(n | 0, l | 0, g | 0) | 0;
 			m = f - h | 0;
 			if ((m | 0) != (g | 0))
-				qy(n + (j + g) | 0, l + (h + g) | 0, m - g | 0) | 0;
+				_memcpy(n + (j + g) | 0, l + (h + g) | 0, m - g | 0) | 0;
 			if ((d | 0) == 10) {
 				p = b + 8 | 0;
 				c[p >> 2] = n;
@@ -8459,10 +8459,10 @@ function $(oa) {
 			c[a >> 2] = 128400;
 			zm(a, 0);
 			Wr(a + 28 | 0);
-			wx(c[a + 32 >> 2] | 0);
-			wx(c[a + 36 >> 2] | 0);
-			wx(c[a + 48 >> 2] | 0);
-			wx(c[a + 60 >> 2] | 0);
+			_free(c[a + 32 >> 2] | 0);
+			_free(c[a + 36 >> 2] | 0);
+			_free(c[a + 48 >> 2] | 0);
+			_free(c[a + 60 >> 2] | 0);
 			i = b;
 			return
 		}
@@ -11959,7 +11959,7 @@ function $(oa) {
 			w = x + z | 0;
 			n = Ko(x, w, e) | 0;
 			if ((x | 0) != (m | 0)) {
-				u = vx(z << 1) | 0;
+				u = _malloc(z << 1) | 0;
 				if (!u)
 					qx();
 				else {
@@ -11984,12 +11984,12 @@ function $(oa) {
 			c[d >> 2] = f;
 			c[a >> 2] = f;
 			if (B)
-				wx(B);
+				_free(B);
 			if (!y) {
 				i = b;
 				return
 			}
-			wx(y);
+			_free(y);
 			i = b;
 			return
 		}
@@ -12398,7 +12398,7 @@ function $(oa) {
 			x = z + B | 0;
 			n = Ko(z, x, e) | 0;
 			if ((z | 0) != (m | 0)) {
-				y = vx(B << 1) | 0;
+				y = _malloc(B << 1) | 0;
 				if (!y)
 					qx();
 				else {
@@ -12420,8 +12420,8 @@ function $(oa) {
 			c[j + 0 >> 2] = c[t + 0 >> 2];
 			Ju(s, j, E, d, p, e, f);
 			c[a >> 2] = c[s >> 2];
-			wx(D);
-			wx(A);
+			_free(D);
+			_free(A);
 			i = b;
 			return
 		}
@@ -12996,7 +12996,7 @@ function $(oa) {
 			w = x + z | 0;
 			n = Ko(x, w, e) | 0;
 			if ((x | 0) != (m | 0)) {
-				u = vx(z << 3) | 0;
+				u = _malloc(z << 3) | 0;
 				if (!u)
 					qx();
 				else {
@@ -13021,12 +13021,12 @@ function $(oa) {
 			c[d >> 2] = f;
 			c[a >> 2] = f;
 			if (!B) {
-				wx(y);
+				_free(y);
 				i = b;
 				return
 			}
-			wx(B);
-			wx(y);
+			_free(B);
+			_free(y);
 			i = b;
 			return
 		}
@@ -13357,7 +13357,7 @@ function $(oa) {
 			x = z + B | 0;
 			n = Ko(z, x, e) | 0;
 			if ((z | 0) != (m | 0)) {
-				y = vx(B << 3) | 0;
+				y = _malloc(B << 3) | 0;
 				if (!y)
 					qx();
 				else {
@@ -13382,12 +13382,12 @@ function $(oa) {
 			c[d >> 2] = f;
 			c[a >> 2] = f;
 			if (!D) {
-				wx(A);
+				_free(A);
 				i = b;
 				return
 			}
-			wx(D);
-			wx(A);
+			_free(D);
+			_free(A);
 			i = b;
 			return
 		}
@@ -16996,7 +16996,7 @@ function $(oa) {
 					h = c[n >> 2] | 0;
 					x = r - h | 0;
 					if ((x | 0) > 98) {
-						y = vx(x + 2 | 0) | 0;
+						y = _malloc(x + 2 | 0) | 0;
 						if (!y)
 							qx();
 						else {
@@ -17046,7 +17046,7 @@ function $(oa) {
 					a[F >> 0] = 0;
 					c[l >> 2] = k;
 					if ((nw(t, 130408, l) | 0) == 1) {
-						wx(z);
+						_free(z);
 						break
 					} else
 						er(130416)
@@ -18896,7 +18896,7 @@ function $(oa) {
 					h = c[n >> 2] | 0;
 					x = r - h | 0;
 					if ((x | 0) > 392) {
-						y = vx((x >> 2) + 2 | 0) | 0;
+						y = _malloc((x >> 2) + 2 | 0) | 0;
 						if (!y)
 							qx();
 						else {
@@ -18946,7 +18946,7 @@ function $(oa) {
 					a[F >> 0] = 0;
 					c[l >> 2] = k;
 					if ((nw(t, 130408, l) | 0) == 1) {
-						wx(z);
+						_free(z);
 						break
 					} else
 						er(130416)
@@ -19010,7 +19010,7 @@ function $(oa) {
 			i = d;
 			return
 		}
-		function Fc(a) {
+		function stackAlloc(a) {
 			a = a | 0;
 			var b = 0;
 			b = i;
@@ -19018,14 +19018,14 @@ function $(oa) {
 			i = i + 15 & -16;
 			return b | 0
 		}
-		function Gc() {
+		function stackSave() {
 			return i | 0
 		}
-		function Hc(a) {
+		function stackRestore(a) {
 			a = a | 0;
 			i = a
 		}
-		function Ic(a, b) {
+		function setThrew(a, b) {
 			a = a | 0;
 			b = b | 0;
 			if (!s) {
@@ -19051,14 +19051,14 @@ function $(oa) {
 			a[k + 6 >> 0] = a[b + 6 >> 0];
 			a[k + 7 >> 0] = a[b + 7 >> 0]
 		}
-		function Lc(a) {
+		function setTempRet0(a) {
 			a = a | 0;
 			H = a
 		}
-		function Mc() {
+		function getTempRet0() {
 			return H | 0
 		}
-		function Nc() {
+		function __ZL25HelperNxtGlobalInitializev() {
 			var a = 0;
 			a = i;
 			Fk();
@@ -19072,7 +19072,7 @@ function $(oa) {
 			i = a;
 			return
 		}
-		function Pc() {
+		function _main() {
 			var a = 0,
 			b = 0,
 			d = 0,
@@ -19364,7 +19364,7 @@ function $(oa) {
 			a = a | 0;
 			return
 		}
-		function ad() {
+		function _taskrunner_interval_callback() {
 			var b = 0,
 			d = 0,
 			e = 0,
@@ -19386,7 +19386,7 @@ function $(oa) {
 			g = c[(c[d >> 2] | 0) + 20 >> 2] | 0;
 			h = d + 48 | 0;
 			j = h;
-			k = ly(f | 0, e | 0, c[j >> 2] | 0, c[j + 4 >> 2] | 0) | 0;
+			k = _i64Subtract(f | 0, e | 0, c[j >> 2] | 0, c[j + 4 >> 2] | 0) | 0;
 			FUNCTION_TABLE_vid[g & 3](d, ( + (k >>> 0) + 4294967296.0 *  + (H >>> 0)) / 1.0e3);
 			k = h;
 			c[k >> 2] = f;
@@ -19405,7 +19405,7 @@ function $(oa) {
 			i = b;
 			return 104
 		}
-		function cd(b, e) {
+		function _taskrunner_receive_serialized(b, e) {
 			b = b | 0;
 			e = e | 0;
 			var f = 0,
@@ -19433,7 +19433,7 @@ function $(oa) {
 			l = (c[b >> 2] | 0) + k | 0;
 			m = k + 4 | 0;
 			c[e >> 2] = m;
-			k = jy(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
+			k = _llvm_bswap_i32(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
 			l = h + 4 | 0;
 			n = h + 13 | 0;
 			c[l >> 2] = n;
@@ -19442,14 +19442,14 @@ function $(oa) {
 			a[n >> 0] = 0;
 			p = c[b >> 2] | 0;
 			q = p + m | 0;
-			r = py(q | 0) | 0;
+			r = _strlen(q | 0) | 0;
 			c[l >> 2] = h + r + 13;
 			if (!r) {
 				s = 1;
 				t = p
 			} else {
 				p = r + 1 | 0;
-				qy(n | 0, q | 0, p | 0) | 0;
+				_memcpy(n | 0, q | 0, p | 0) | 0;
 				s = p;
 				t = c[b >> 2] | 0
 			}
@@ -19569,7 +19569,7 @@ function $(oa) {
 				j = 43112;
 				k = 43113
 			}
-			ry(j | 0, d | 0, g | 0) | 0;
+			_memmove(j | 0, d | 0, g | 0) | 0;
 			a[j + g >> 0] = 0;
 			d = b + 32 | 0;
 			f = c[b + 40 >> 2] | 0;
@@ -19688,7 +19688,7 @@ function $(oa) {
 			i = d;
 			return
 		}
-		function fd(b, d) {
+		function _taskrunner_receive_message(b, d) {
 			b = b | 0;
 			d = d | 0;
 			var e = 0,
@@ -19768,7 +19768,7 @@ function $(oa) {
 				return
 			}
 		}
-		function gd(b) {
+		function _taskrunner_receive_ready(b) {
 			b = b | 0;
 			var d = 0,
 			e = 0,
@@ -19880,7 +19880,7 @@ function $(oa) {
 			h = b + 4 | 0;
 			j = b + 8 | 0;
 			Mj(f, (c[g >> 2] | 0) + 7 + (c[j >> 2] | 0) - (c[h >> 2] | 0) | 0);
-			k = jy(c[b + 20 >> 2] | 0) | 0;
+			k = _llvm_bswap_i32(c[b + 20 >> 2] | 0) | 0;
 			l = f + 4 | 0;
 			m = f + 8 | 0;
 			n = (c[(c[l >> 2] | 0) + 4 >> 2] | 0) + (c[m >> 2] | 0) | 0;
@@ -19933,7 +19933,7 @@ function $(oa) {
 			i = e;
 			return
 		}
-		function id(b, d, e) {
+		function _taskrunner_receive_response(b, d, e) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -20056,7 +20056,7 @@ function $(oa) {
 				return
 			}
 		}
-		function jd(b, d, e) {
+		function _taskrunner_receive_worker_serial(b, d, e) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -20137,7 +20137,7 @@ function $(oa) {
 			i = f;
 			return
 		}
-		function kd(b) {
+		function _taskrunner_receive_worker_finished(b) {
 			b = b | 0;
 			var d = 0,
 			e = 0,
@@ -20352,7 +20352,7 @@ function $(oa) {
 				s = 43112
 			}
 			c[m >> 2] = r;
-			ry(s | 0, d | 0, p | 0) | 0;
+			_memmove(s | 0, d | 0, p | 0) | 0;
 			m = s + p | 0;
 			c[l >> 2] = m;
 			a[m >> 0] = 0;
@@ -20368,7 +20368,7 @@ function $(oa) {
 			p = c[m >> 2] | 0;
 			q = (c[j >> 2] | 0) - p | 0;
 			if (l >>> 0 <= q >>> 0) {
-				ry(p | 0, e | 0, l | 0) | 0;
+				_memmove(p | 0, e | 0, l | 0) | 0;
 				n = (c[m >> 2] | 0) + l | 0;
 				t = c[j >> 2] | 0;
 				if ((n | 0) != (t | 0)) {
@@ -20376,7 +20376,7 @@ function $(oa) {
 					c[j >> 2] = (c[j >> 2] | 0) + (n - t)
 				}
 			} else {
-				ry(p | 0, e | 0, q | 0) | 0;
+				_memmove(p | 0, e | 0, q | 0) | 0;
 				Ud(m, e + ((c[j >> 2] | 0) - (c[m >> 2] | 0)) | 0, e + l | 0) | 0
 			}
 			if (!((r - s | 0) < 2 | (s | 0) == 0))
@@ -20407,7 +20407,7 @@ function $(oa) {
 				v = 43112
 			}
 			c[r >> 2] = u;
-			ry(v | 0, d | 0, e | 0) | 0;
+			_memmove(v | 0, d | 0, e | 0) | 0;
 			d = v + e | 0;
 			c[s >> 2] = d;
 			a[d >> 0] = 0;
@@ -20906,7 +20906,7 @@ function $(oa) {
 				i = d;
 				return
 			} else {
-				ry(g + 1 | 0, 521 | 0, 5) | 0;
+				_memmove(g + 1 | 0, 521 | 0, 5) | 0;
 				a[(c[f >> 2] | 0) + 6 >> 0] = 0;
 				a[c[f >> 2] >> 0] = 91;
 				c[f >> 2] = (c[f >> 2] | 0) + 6;
@@ -21201,7 +21201,7 @@ function $(oa) {
 			n = h - j + e | 0;
 			if (n >>> 0 <= m >>> 0) {
 				j = d + 1 | 0;
-				ry(h + 1 | 0, j | 0, k - j | 0) | 0;
+				_memmove(h + 1 | 0, j | 0, k - j | 0) | 0;
 				a[(c[g >> 2] | 0) + e >> 0] = 0;
 				a[c[g >> 2] >> 0] = a[d >> 0] | 0;
 				c[g >> 2] = (c[g >> 2] | 0) + e;
@@ -21213,8 +21213,8 @@ function $(oa) {
 			j = ml(m, 0, 0, 0, 0, 0) | 0;
 			n = c[b >> 2] | 0;
 			k = (c[g >> 2] | 0) - n | 0;
-			ry(j | 0, n | 0, k | 0) | 0;
-			ry(j + k | 0, d | 0, e | 0) | 0;
+			_memmove(j | 0, n | 0, k | 0) | 0;
+			_memmove(j + k | 0, d | 0, e | 0) | 0;
 			d = j + (k + e) | 0;
 			a[d >> 0] = 0;
 			e = c[b >> 2] | 0;
@@ -21604,7 +21604,7 @@ function $(oa) {
 				n = 43113 | 0
 			}
 			c[h >> 2] = n;
-			ry(m | 0, j | 0, k | 0) | 0;
+			_memmove(m | 0, j | 0, k | 0) | 0;
 			j = m + k | 0;
 			c[g >> 2] = j;
 			a[j >> 0] = 0;
@@ -21624,7 +21624,7 @@ function $(oa) {
 				o = n;
 				p = n + e | 0;
 				c[k >> 2] = p;
-				ry(o | 0, b | 0, m | 0) | 0;
+				_memmove(o | 0, b | 0, m | 0) | 0;
 				q = o + m | 0;
 				c[g >> 2] = q;
 				a[q >> 0] = 0;
@@ -21636,7 +21636,7 @@ function $(oa) {
 				o = 43112;
 				p = 43113 | 0;
 				c[k >> 2] = p;
-				ry(o | 0, b | 0, m | 0) | 0;
+				_memmove(o | 0, b | 0, m | 0) | 0;
 				q = o + m | 0;
 				c[g >> 2] = q;
 				a[q >> 0] = 0;
@@ -21776,7 +21776,7 @@ function $(oa) {
 				n = 43113 | 0
 			}
 			c[h >> 2] = n;
-			ry(m | 0, j | 0, k | 0) | 0;
+			_memmove(m | 0, j | 0, k | 0) | 0;
 			j = m + k | 0;
 			c[g >> 2] = j;
 			a[j >> 0] = 0;
@@ -22091,7 +22091,7 @@ function $(oa) {
 				n = 43113 | 0
 			}
 			c[g >> 2] = n;
-			ry(m | 0, h | 0, j | 0) | 0;
+			_memmove(m | 0, h | 0, j | 0) | 0;
 			h = m + j | 0;
 			c[f >> 2] = h;
 			a[h >> 0] = 0;
@@ -22111,7 +22111,7 @@ function $(oa) {
 				o = n;
 				p = n + d | 0;
 				c[j >> 2] = p;
-				ry(o | 0, b | 0, m | 0) | 0;
+				_memmove(o | 0, b | 0, m | 0) | 0;
 				q = o + m | 0;
 				c[f >> 2] = q;
 				a[q >> 0] = 0;
@@ -22123,7 +22123,7 @@ function $(oa) {
 				o = 43112;
 				p = 43113 | 0;
 				c[j >> 2] = p;
-				ry(o | 0, b | 0, m | 0) | 0;
+				_memmove(o | 0, b | 0, m | 0) | 0;
 				q = o + m | 0;
 				c[f >> 2] = q;
 				a[q >> 0] = 0;
@@ -22310,7 +22310,7 @@ function $(oa) {
 				n = 43113 | 0
 			}
 			c[g >> 2] = n;
-			ry(m | 0, h | 0, j | 0) | 0;
+			_memmove(m | 0, h | 0, j | 0) | 0;
 			h = m + j | 0;
 			c[f >> 2] = h;
 			a[h >> 0] = 0;
@@ -22533,7 +22533,7 @@ function $(oa) {
 						s = 43112;
 						break
 					} else {
-						qy(0, h | 0, l | 0) | 0;
+						_memcpy(0, h | 0, l | 0) | 0;
 						q = 0 + l | 0;
 						a[q >> 0] = 0;
 						c[b >> 2] = 0;
@@ -22553,7 +22553,7 @@ function $(oa) {
 			if (!d)
 				t = s;
 			else {
-				sy(s + 1 | 0, 0, d | 0) | 0;
+				_memset(s + 1 | 0, 0, d | 0) | 0;
 				t = c[f >> 2] | 0
 			}
 			a[t >> 0] = 0;
@@ -22586,12 +22586,12 @@ function $(oa) {
 			k = j + 1 | 0;
 			c[f >> 2] = 5;
 			l = d[k >> 0] | d[k + 1 >> 0] << 8 | d[k + 2 >> 0] << 16 | d[k + 3 >> 0] << 24;
-			k = jy(l | 0) | 0;
+			k = _llvm_bswap_i32(l | 0) | 0;
 			if (h << 24 >> 24) {
 				m = h & 255;
 				h = j + 5 | 0;
 				c[f >> 2] = 9;
-				j = jy(d[h >> 0] | d[h + 1 >> 0] << 8 | d[h + 2 >> 0] << 16 | d[h + 3 >> 0] << 24 | 0) | 0;
+				j = _llvm_bswap_i32(d[h >> 0] | d[h + 1 >> 0] << 8 | d[h + 2 >> 0] << 16 | d[h + 3 >> 0] << 24 | 0) | 0;
 				if ((m | 0) == 2) {
 					n = pe(b, 9, k, j) | 0;
 					i = e;
@@ -22627,7 +22627,7 @@ function $(oa) {
 					p = 0;
 				else
 					p = c[l + 4 >> 2] | 0;
-				qy(o | 0, p + (c[f >> 2] | 0) | 0, k | 0) | 0;
+				_memcpy(o | 0, p + (c[f >> 2] | 0) | 0, k | 0) | 0;
 				n = j;
 				i = e;
 				return n | 0
@@ -22686,7 +22686,7 @@ function $(oa) {
 				s = 0
 			} else {
 				t = jl(h >>> 0 > 1073741823 ? -1 : h << 2) | 0;
-				sy(t | 0, 0, h << 2 | 0) | 0;
+				_memset(t | 0, 0, h << 2 | 0) | 0;
 				r = t;
 				s = t
 			}
@@ -22706,7 +22706,7 @@ function $(oa) {
 							A = w + x | 0;
 							B = x + 4 | 0;
 							c[m >> 2] = B;
-							y = (jy(d[A >> 0] | d[A + 1 >> 0] << 8 | d[A + 2 >> 0] << 16 | d[A + 3 >> 0] << 24 | 0) | 0) + y | 0;
+							y = (_llvm_bswap_i32(d[A >> 0] | d[A + 1 >> 0] << 8 | d[A + 2 >> 0] << 16 | d[A + 3 >> 0] << 24 | 0) | 0) + y | 0;
 							A = s + (z << 2) | 0;
 							c[A >> 2] = (c[A >> 2] | 0) + y;
 							z = z + 1 | 0;
@@ -22785,7 +22785,7 @@ function $(oa) {
 				x = v;
 				while (1) {
 					c[D + (g << 2) >> 2] = x;
-					v = jy(x | 0) | 0;
+					v = _llvm_bswap_i32(x | 0) | 0;
 					u = (c[(c[p >> 2] | 0) + 4 >> 2] | 0) + k | 0;
 					a[u >> 0] = v;
 					a[u + 1 >> 0] = v >> 8;
@@ -22805,7 +22805,7 @@ function $(oa) {
 					}
 				}
 			}
-			x = jy(F | 0) | 0;
+			x = _llvm_bswap_i32(F | 0) | 0;
 			F = (c[(c[p >> 2] | 0) + 4 >> 2] | 0) + E | 0;
 			a[F >> 0] = x;
 			a[F + 1 >> 0] = x >> 8;
@@ -22836,7 +22836,7 @@ function $(oa) {
 							k = c[m >> 2] | 0;
 							g = p + k | 0;
 							c[m >> 2] = k + 4;
-							q = (jy(d[g >> 0] | d[g + 1 >> 0] << 8 | d[g + 2 >> 0] << 16 | d[g + 3 >> 0] << 24 | 0) | 0) + q | 0;
+							q = (_llvm_bswap_i32(d[g >> 0] | d[g + 1 >> 0] << 8 | d[g + 2 >> 0] << 16 | d[g + 3 >> 0] << 24 | 0) | 0) + q | 0;
 							if (!q)
 								I = x;
 							else {
@@ -23535,7 +23535,7 @@ function $(oa) {
 					d = c[k >> 2] | 0;
 					o = (c[h >> 2] | 0) - d | 0;
 					if (j >>> 0 <= o >>> 0) {
-						ry(d | 0, f | 0, j | 0) | 0;
+						_memmove(d | 0, f | 0, j | 0) | 0;
 						p = (c[k >> 2] | 0) + j | 0;
 						q = c[h >> 2] | 0;
 						if ((p | 0) != (q | 0)) {
@@ -23543,7 +23543,7 @@ function $(oa) {
 							c[h >> 2] = (c[h >> 2] | 0) + (p - q)
 						}
 					} else {
-						ry(d | 0, f | 0, o | 0) | 0;
+						_memmove(d | 0, f | 0, o | 0) | 0;
 						Ud(k, f + ((c[h >> 2] | 0) - (c[k >> 2] | 0)) | 0, f + j | 0) | 0
 					}
 					j = c[m >> 2] | 0;
@@ -23560,11 +23560,11 @@ function $(oa) {
 					d = c[n >> 2] | 0;
 					q = (c[o >> 2] | 0) - d | 0;
 					if (l >>> 0 > q >>> 0) {
-						ry(d | 0, k | 0, q | 0) | 0;
+						_memmove(d | 0, k | 0, q | 0) | 0;
 						Ud(n, k + ((c[o >> 2] | 0) - (c[n >> 2] | 0)) | 0, k + l | 0) | 0;
 						break
 					}
-					ry(d | 0, k | 0, l | 0) | 0;
+					_memmove(d | 0, k | 0, l | 0) | 0;
 					d = (c[n >> 2] | 0) + l | 0;
 					l = c[o >> 2] | 0;
 					if ((d | 0) != (l | 0)) {
@@ -24185,7 +24185,7 @@ function $(oa) {
 					a[(c[(c[j >> 2] | 0) + 4 >> 2] | 0) + l >> 0] = c[b + 8 >> 2];
 					l = (c[e >> 2] | 0) + 1 | 0;
 					c[e >> 2] = l;
-					m = jy(c[b + 12 >> 2] | 0) | 0;
+					m = _llvm_bswap_i32(c[b + 12 >> 2] | 0) | 0;
 					n = (c[(c[j >> 2] | 0) + 4 >> 2] | 0) + l | 0;
 					a[n >> 0] = m;
 					a[n + 1 >> 0] = m >> 8;
@@ -24275,7 +24275,7 @@ function $(oa) {
 			k = H;
 			l = Cy(j | 0, k | 0, 1e6, 0) | 0;
 			m = H;
-			if (((((k >>> 0 > 6 | (k | 0) == 6 & j >>> 0 > 4231196223 ? (j = b + 48 | 0, k = c[j >> 2] | 0, n = c[j + 4 >> 2] | 0, j = ky(l | 0, m | 0, -3e4, -1) | 0, o = H, n >>> 0 < o >>> 0 | (n | 0) == (o | 0) & k >>> 0 < j >>> 0) : 0) ? (j = b + 44 | 0, k = c[j >> 2] | 0, (k | 0) != 0) : 0) ? (Ui(k + 4 | 0, 0) | 0, Kj(k + 76 | 0), c[k >> 2] = 0, k = b + 40 | 0, o = c[k >> 2] | 0, c[k >> 2] = 0, c[j >> 2] = 0, (o | 0) != 0) : 0) ? (j = o + 4 | 0, k = (c[j >> 2] | 0) + -1 | 0, c[j >> 2] = k, (k | 0) == 0) : 0) ? (FUNCTION_TABLE_vi[c[(c[o >> 2] | 0) + 8 >> 2] & 255](o), k = o + 8 | 0, j = (c[k >> 2] | 0) + -1 | 0, c[k >> 2] = j, (j | 0) == 0) : 0)
+			if (((((k >>> 0 > 6 | (k | 0) == 6 & j >>> 0 > 4231196223 ? (j = b + 48 | 0, k = c[j >> 2] | 0, n = c[j + 4 >> 2] | 0, j = _i64Add(l | 0, m | 0, -3e4, -1) | 0, o = H, n >>> 0 < o >>> 0 | (n | 0) == (o | 0) & k >>> 0 < j >>> 0) : 0) ? (j = b + 44 | 0, k = c[j >> 2] | 0, (k | 0) != 0) : 0) ? (Ui(k + 4 | 0, 0) | 0, Kj(k + 76 | 0), c[k >> 2] = 0, k = b + 40 | 0, o = c[k >> 2] | 0, c[k >> 2] = 0, c[j >> 2] = 0, (o | 0) != 0) : 0) ? (j = o + 4 | 0, k = (c[j >> 2] | 0) + -1 | 0, c[j >> 2] = k, (k | 0) == 0) : 0) ? (FUNCTION_TABLE_vi[c[(c[o >> 2] | 0) + 8 >> 2] & 255](o), k = o + 8 | 0, j = (c[k >> 2] | 0) + -1 | 0, c[k >> 2] = j, (j | 0) == 0) : 0)
 				FUNCTION_TABLE_vi[c[(c[o >> 2] | 0) + 12 >> 2] & 255](o);
 			o = b + 44 | 0;
 			if (!(c[o >> 2] | 0)) {
@@ -24340,7 +24340,7 @@ function $(oa) {
 							F = d[G >> 0] | 0;
 							E = G + 1 | 0;
 							c[q >> 2] = 5;
-							G = jy(d[E >> 0] | d[E + 1 >> 0] << 8 | d[E + 2 >> 0] << 16 | d[E + 3 >> 0] << 24 | 0) | 0;
+							G = _llvm_bswap_i32(d[E >> 0] | d[E + 1 >> 0] << 8 | d[E + 2 >> 0] << 16 | d[E + 3 >> 0] << 24 | 0) | 0;
 							E = G << 8 | F;
 							c[n >> 2] = E;
 							if ((G | 0) < 0) {
@@ -24583,7 +24583,7 @@ function $(oa) {
 						P = J + 1 | 0;
 						c[v >> 2] = 5;
 						J = d[P >> 0] | d[P + 1 >> 0] << 8 | d[P + 2 >> 0] << 16 | d[P + 3 >> 0] << 24;
-						P = jy(J | 0) | 0;
+						P = _llvm_bswap_i32(J | 0) | 0;
 						if ((P | 0) < 0 | (W & 255) > 3) {
 							D = 51;
 							break a
@@ -24759,28 +24759,28 @@ function $(oa) {
 					a[x >> 0] = 0;
 					y = c[t >> 2] | 0;
 					z = y + s | 0;
-					A = py(z | 0) | 0;
+					A = _strlen(z | 0) | 0;
 					c[u >> 2] = h + A + 13;
 					if (!A) {
 						B = 1;
 						C = y
 					} else {
 						y = A + 1 | 0;
-						qy(v | 0, z | 0, y | 0) | 0;
+						_memcpy(v | 0, z | 0, y | 0) | 0;
 						B = y;
 						C = c[t >> 2] | 0
 					}
 					y = s + B | 0;
 					c[q >> 2] = y;
 					B = C + y | 0;
-					z = py(B | 0) | 0;
+					z = _strlen(B | 0) | 0;
 					c[w >> 2] = j + z + 13;
 					if (!z) {
 						D = 1;
 						E = C
 					} else {
 						C = z + 1 | 0;
-						qy(x | 0, B | 0, C | 0) | 0;
+						_memcpy(x | 0, B | 0, C | 0) | 0;
 						D = C;
 						E = c[t >> 2] | 0
 					}
@@ -24906,27 +24906,27 @@ function $(oa) {
 					a[j >> 0] = 0;
 					B = c[t >> 2] | 0;
 					o = B + s | 0;
-					D = py(o | 0) | 0;
+					D = _strlen(o | 0) | 0;
 					c[n >> 2] = g + D + 13;
 					if (!D) {
 						F = 1;
 						G = B
 					} else {
 						B = D + 1 | 0;
-						qy(x | 0, o | 0, B | 0) | 0;
+						_memcpy(x | 0, o | 0, B | 0) | 0;
 						F = B;
 						G = c[t >> 2] | 0
 					}
 					t = s + F | 0;
 					c[q >> 2] = t;
 					F = G + t | 0;
-					G = py(F | 0) | 0;
+					G = _strlen(F | 0) | 0;
 					c[y >> 2] = l + G + 13;
 					if (!G)
 						H = 1;
 					else {
 						l = G + 1 | 0;
-						qy(j | 0, F | 0, l | 0) | 0;
+						_memcpy(j | 0, F | 0, l | 0) | 0;
 						H = l
 					}
 					c[q >> 2] = t + H;
@@ -24946,7 +24946,7 @@ function $(oa) {
 					q = jl(64) | 0;
 					c[s >> 2] = q;
 					Qj(e, q, 0, 64);
-					Ge(b, x & 255, jy(r | 0) | 0, m);
+					Ge(b, x & 255, _llvm_bswap_i32(r | 0) | 0, m);
 					ll(q);
 					c[s >> 2] = 0;
 					i = f;
@@ -24992,7 +24992,7 @@ function $(oa) {
 			m = c[k >> 2] | 0;
 			n = (c[j >> 2] | 0) - m | 0;
 			if (l >>> 0 <= n >>> 0) {
-				ry(m | 0, d | 0, l | 0) | 0;
+				_memmove(m | 0, d | 0, l | 0) | 0;
 				o = (c[k >> 2] | 0) + l | 0;
 				p = c[j >> 2] | 0;
 				if ((o | 0) == (p | 0))
@@ -25003,7 +25003,7 @@ function $(oa) {
 					q = e
 				}
 			} else {
-				ry(m | 0, d | 0, n | 0) | 0;
+				_memmove(m | 0, d | 0, n | 0) | 0;
 				Ud(k, d + ((c[j >> 2] | 0) - (c[k >> 2] | 0)) | 0, d + l | 0) | 0;
 				q = e
 			}
@@ -25018,7 +25018,7 @@ function $(oa) {
 			k = c[l >> 2] | 0;
 			j = (c[q >> 2] | 0) - k | 0;
 			if (d >>> 0 <= j >>> 0) {
-				ry(k | 0, e | 0, d | 0) | 0;
+				_memmove(k | 0, e | 0, d | 0) | 0;
 				n = (c[l >> 2] | 0) + d | 0;
 				m = c[q >> 2] | 0;
 				if ((n | 0) != (m | 0)) {
@@ -25026,7 +25026,7 @@ function $(oa) {
 					c[q >> 2] = (c[q >> 2] | 0) + (n - m)
 				}
 			} else {
-				ry(k | 0, e | 0, j | 0) | 0;
+				_memmove(k | 0, e | 0, j | 0) | 0;
 				Ud(l, e + ((c[q >> 2] | 0) - (c[l >> 2] | 0)) | 0, e + d | 0) | 0
 			}
 			d = il(136) | 0;
@@ -25149,7 +25149,7 @@ function $(oa) {
 			h = g + 24 | 0;
 			j = g;
 			Mj(h, (c[f >> 2] | 0) + 5 | 0);
-			k = jy(e | 0) | 0;
+			k = _llvm_bswap_i32(e | 0) | 0;
 			e = h + 4 | 0;
 			l = h + 8 | 0;
 			m = (c[(c[e >> 2] | 0) + 4 >> 2] | 0) + (c[l >> 2] | 0) | 0;
@@ -25234,7 +25234,7 @@ function $(oa) {
 			q = o + 24 | 0;
 			r = o;
 			Mj(p, (c[n >> 2] | 0) + 11 | 0);
-			s = jy(f | 0) | 0;
+			s = _llvm_bswap_i32(f | 0) | 0;
 			f = p + 4 | 0;
 			t = p + 8 | 0;
 			u = (c[(c[f >> 2] | 0) + 4 >> 2] | 0) + (c[t >> 2] | 0) | 0;
@@ -25250,7 +25250,7 @@ function $(oa) {
 			a[(c[(c[f >> 2] | 0) + 4 >> 2] | 0) + g >> 0] = h & 1;
 			g = (c[t >> 2] | 0) + 1 | 0;
 			c[t >> 2] = g;
-			s = jy(l | 0) | 0;
+			s = _llvm_bswap_i32(l | 0) | 0;
 			u = (c[(c[f >> 2] | 0) + 4 >> 2] | 0) + g | 0;
 			a[u >> 0] = s;
 			a[u + 1 >> 0] = s >> 8;
@@ -25643,7 +25643,7 @@ function $(oa) {
 			m = g + 4 | 0;
 			n = c[(c[m >> 2] | 0) + 4 >> 2] | 0;
 			c[l >> 2] = 4;
-			o = jy(d[n >> 0] | d[n + 1 >> 0] << 8 | d[n + 2 >> 0] << 16 | d[n + 3 >> 0] << 24 | 0) | 0;
+			o = _llvm_bswap_i32(d[n >> 0] | d[n + 1 >> 0] << 8 | d[n + 2 >> 0] << 16 | d[n + 3 >> 0] << 24 | 0) | 0;
 			n = f + 4 | 0;
 			p = c[n >> 2] | 0;
 			if (!p) {
@@ -25720,7 +25720,7 @@ function $(oa) {
 				v = 0;
 			else
 				v = c[j >> 2] | 0;
-			j = jy(v | 0) | 0;
+			j = _llvm_bswap_i32(v | 0) | 0;
 			v = (c[(c[u >> 2] | 0) + 4 >> 2] | 0) + e | 0;
 			a[v >> 0] = j;
 			a[v + 1 >> 0] = j >> 8;
@@ -25923,13 +25923,13 @@ function $(oa) {
 			v = h + 4 | 0;
 			w = c[(c[v >> 2] | 0) + 4 >> 2] | 0;
 			c[u >> 2] = 4;
-			x = jy(d[w >> 0] | d[w + 1 >> 0] << 8 | d[w + 2 >> 0] << 16 | d[w + 3 >> 0] << 24 | 0) | 0;
+			x = _llvm_bswap_i32(d[w >> 0] | d[w + 1 >> 0] << 8 | d[w + 2 >> 0] << 16 | d[w + 3 >> 0] << 24 | 0) | 0;
 			c[u >> 2] = 5;
 			y = _i(d[w + 4 >> 0] | 0) | 0;
 			w = c[u >> 2] | 0;
 			z = (c[(c[v >> 2] | 0) + 4 >> 2] | 0) + (w + 1) | 0;
 			c[u >> 2] = w + 5;
-			w = jy(d[z >> 0] | d[z + 1 >> 0] << 8 | d[z + 2 >> 0] << 16 | d[z + 3 >> 0] << 24 | 0) | 0;
+			w = _llvm_bswap_i32(d[z >> 0] | d[z + 1 >> 0] << 8 | d[z + 2 >> 0] << 16 | d[z + 3 >> 0] << 24 | 0) | 0;
 			z = c[t >> 2] | 0;
 			if (!z) {
 				A = 0;
@@ -26019,7 +26019,7 @@ function $(oa) {
 							while (1) {
 								K = G + w | 0;
 								c[C >> 2] = w + 4;
-								L = jy(d[K >> 0] | d[K + 1 >> 0] << 8 | d[K + 2 >> 0] << 16 | d[K + 3 >> 0] << 24 | 0) | 0;
+								L = _llvm_bswap_i32(d[K >> 0] | d[K + 1 >> 0] << 8 | d[K + 2 >> 0] << 16 | d[K + 3 >> 0] << 24 | 0) | 0;
 								Mj(n, L);
 								Pj(h, n, L);
 								c[B >> 2] = 0;
@@ -26109,7 +26109,7 @@ function $(oa) {
 								_ = 0;
 								$ = X
 							} else {
-								J = jy(M | 0) | 0;
+								J = _llvm_bswap_i32(M | 0) | 0;
 								I = W + 4 | 0;
 								H = W + 8 | 0;
 								v = (c[(c[I >> 2] | 0) + 4 >> 2] | 0) + (c[H >> 2] | 0) | 0;
@@ -26119,7 +26119,7 @@ function $(oa) {
 								a[v + 3 >> 0] = J >> 24;
 								J = (c[H >> 2] | 0) + 4 | 0;
 								c[H >> 2] = J;
-								v = jy(N | 0) | 0;
+								v = _llvm_bswap_i32(N | 0) | 0;
 								C = (c[(c[I >> 2] | 0) + 4 >> 2] | 0) + J | 0;
 								a[C >> 0] = v;
 								a[C + 1 >> 0] = v >> 8;
@@ -26198,7 +26198,7 @@ function $(oa) {
 						a[(c[(c[v >> 2] | 0) + 4 >> 2] | 0) + J >> 0] = e;
 						J = (c[C >> 2] | 0) + 1 | 0;
 						c[C >> 2] = J;
-						I = jy(f | 0) | 0;
+						I = _llvm_bswap_i32(f | 0) | 0;
 						w = (c[(c[v >> 2] | 0) + 4 >> 2] | 0) + J | 0;
 						a[w >> 0] = I;
 						a[w + 1 >> 0] = I >> 8;
@@ -26217,7 +26217,7 @@ function $(oa) {
 							ba = 0;
 						else
 							ba = c[w >> 2] | 0;
-						w = jy(ba | 0) | 0;
+						w = _llvm_bswap_i32(ba | 0) | 0;
 						J = (c[(c[v >> 2] | 0) + 4 >> 2] | 0) + I | 0;
 						a[J >> 0] = w;
 						a[J + 1 >> 0] = w >> 8;
@@ -26322,7 +26322,7 @@ function $(oa) {
 						a[(c[(c[J >> 2] | 0) + 4 >> 2] | 0) + v >> 0] = e;
 						v = (c[I >> 2] | 0) + 1 | 0;
 						c[I >> 2] = v;
-						g = jy(f | 0) | 0;
+						g = _llvm_bswap_i32(f | 0) | 0;
 						G = (c[(c[J >> 2] | 0) + 4 >> 2] | 0) + v | 0;
 						a[G >> 0] = g;
 						a[G + 1 >> 0] = g >> 8;
@@ -26336,7 +26336,7 @@ function $(oa) {
 						a[(c[(c[J >> 2] | 0) + 4 >> 2] | 0) + g >> 0] = 0;
 						g = (c[I >> 2] | 0) + 1 | 0;
 						c[I >> 2] = g;
-						G = jy(w | 0) | 0;
+						G = _llvm_bswap_i32(w | 0) | 0;
 						v = (c[(c[J >> 2] | 0) + 4 >> 2] | 0) + g | 0;
 						a[v >> 0] = G;
 						a[v + 1 >> 0] = G >> 8;
@@ -26401,7 +26401,7 @@ function $(oa) {
 							while (1) {
 								A = E + z | 0;
 								c[C >> 2] = z + 4;
-								K = jy(d[A >> 0] | d[A + 1 >> 0] << 8 | d[A + 2 >> 0] << 16 | d[A + 3 >> 0] << 24 | 0) | 0;
+								K = _llvm_bswap_i32(d[A >> 0] | d[A + 1 >> 0] << 8 | d[A + 2 >> 0] << 16 | d[A + 3 >> 0] << 24 | 0) | 0;
 								Mj(p, K);
 								Pj(h, p, K);
 								c[g >> 2] = 0;
@@ -26424,7 +26424,7 @@ function $(oa) {
 											a[(c[(c[ha >> 2] | 0) + 4 >> 2] | 0) + (c[ia >> 2] | 0) >> 0] = H;
 											ja = (c[ia >> 2] | 0) + 1 | 0;
 											c[ia >> 2] = ja;
-											ka = jy(K | 0) | 0;
+											ka = _llvm_bswap_i32(K | 0) | 0;
 											la = (c[(c[ha >> 2] | 0) + 4 >> 2] | 0) + ja | 0;
 											a[la >> 0] = ka;
 											a[la + 1 >> 0] = ka >> 8;
@@ -26432,7 +26432,7 @@ function $(oa) {
 											a[la + 3 >> 0] = ka >> 24;
 											ka = (c[ia >> 2] | 0) + 4 | 0;
 											c[ia >> 2] = ka;
-											la = jy(A | 0) | 0;
+											la = _llvm_bswap_i32(A | 0) | 0;
 											ja = (c[(c[ha >> 2] | 0) + 4 >> 2] | 0) + ka | 0;
 											a[ja >> 0] = la;
 											a[ja + 1 >> 0] = la >> 8;
@@ -26531,7 +26531,7 @@ function $(oa) {
 					a[(c[(c[w >> 2] | 0) + 4 >> 2] | 0) + H >> 0] = e;
 					H = (c[I >> 2] | 0) + 1 | 0;
 					c[I >> 2] = H;
-					G = jy(f | 0) | 0;
+					G = _llvm_bswap_i32(f | 0) | 0;
 					v = (c[(c[w >> 2] | 0) + 4 >> 2] | 0) + H | 0;
 					a[v >> 0] = G;
 					a[v + 1 >> 0] = G >> 8;
@@ -26550,7 +26550,7 @@ function $(oa) {
 						ra = 0;
 					else
 						ra = c[v >> 2] | 0;
-					v = jy(ra | 0) | 0;
+					v = _llvm_bswap_i32(ra | 0) | 0;
 					H = (c[(c[w >> 2] | 0) + 4 >> 2] | 0) + G | 0;
 					a[H >> 0] = v;
 					a[H + 1 >> 0] = v >> 8;
@@ -26625,7 +26625,7 @@ function $(oa) {
 				a[(c[(c[va >> 2] | 0) + 4 >> 2] | 0) + ua >> 0] = e;
 				e = (c[x >> 2] | 0) + 1 | 0;
 				c[x >> 2] = e;
-				ua = jy(f | 0) | 0;
+				ua = _llvm_bswap_i32(f | 0) | 0;
 				f = (c[(c[va >> 2] | 0) + 4 >> 2] | 0) + e | 0;
 				a[f >> 0] = ua;
 				a[f + 1 >> 0] = ua >> 8;
@@ -26644,7 +26644,7 @@ function $(oa) {
 					wa = 0;
 				else
 					wa = c[ua >> 2] | 0;
-				ua = jy(wa | 0) | 0;
+				ua = _llvm_bswap_i32(wa | 0) | 0;
 				wa = (c[(c[va >> 2] | 0) + 4 >> 2] | 0) + j | 0;
 				a[wa >> 0] = ua;
 				a[wa + 1 >> 0] = ua >> 8;
@@ -26725,7 +26725,7 @@ function $(oa) {
 			a[(c[(c[k >> 2] | 0) + 4 >> 2] | 0) + m >> 0] = d;
 			d = (c[l >> 2] | 0) + 1 | 0;
 			c[l >> 2] = d;
-			m = jy(e | 0) | 0;
+			m = _llvm_bswap_i32(e | 0) | 0;
 			e = (c[(c[k >> 2] | 0) + 4 >> 2] | 0) + d | 0;
 			a[e >> 0] = m;
 			a[e + 1 >> 0] = m >> 8;
@@ -26789,7 +26789,7 @@ function $(oa) {
 			g = H;
 			f = b + 200 | 0;
 			l = f;
-			if (!((c[l >> 2] | 0) == (k | 0) ? (c[l + 4 >> 2] | 0) == (g | 0) : 0) ? (l = b + 212 | 0, c[b + 208 >> 2] = c[l >> 2], c[l >> 2] = 0, l = f, c[l >> 2] = k, c[l + 4 >> 2] = g, l = b + 216 | 0, f = l, m = c[f >> 2] | 0, n = c[f + 4 >> 2] | 0, f = ky(k | 0, g | 0, -10, -1) | 0, o = H, n >>> 0 < o >>> 0 | (n | 0) == (o | 0) & m >>> 0 < f >>> 0) : 0) {
+			if (!((c[l >> 2] | 0) == (k | 0) ? (c[l + 4 >> 2] | 0) == (g | 0) : 0) ? (l = b + 212 | 0, c[b + 208 >> 2] = c[l >> 2], c[l >> 2] = 0, l = f, c[l >> 2] = k, c[l + 4 >> 2] = g, l = b + 216 | 0, f = l, m = c[f >> 2] | 0, n = c[f + 4 >> 2] | 0, f = _i64Add(k | 0, g | 0, -10, -1) | 0, o = H, n >>> 0 < o >>> 0 | (n | 0) == (o | 0) & m >>> 0 < f >>> 0) : 0) {
 				f = b + 224 | 0;
 				c[f >> 2] = k;
 				c[f + 4 >> 2] = g;
@@ -26860,10 +26860,10 @@ function $(oa) {
 			c[p >> 2] = (c[p >> 2] | 0) + 1;
 			p = Ek() | 0;
 			f = Cy(p | 0, H | 0, 1e6, 0) | 0;
-			p = ly(f | 0, H | 0, h | 0, j | 0) | 0;
+			p = _i64Subtract(f | 0, H | 0, h | 0, j | 0) | 0;
 			j = b + 240 | 0;
 			b = j;
-			h = ky(p | 0, H | 0, c[b >> 2] | 0, c[b + 4 >> 2] | 0) | 0;
+			h = _i64Add(p | 0, H | 0, c[b >> 2] | 0, c[b + 4 >> 2] | 0) | 0;
 			b = j;
 			c[b >> 2] = h;
 			c[b + 4 >> 2] = H;
@@ -26890,7 +26890,7 @@ function $(oa) {
 			a[(c[(c[h >> 2] | 0) + 4 >> 2] | 0) + (c[j >> 2] | 0) >> 0] = 6;
 			k = (c[j >> 2] | 0) + 1 | 0;
 			c[j >> 2] = k;
-			l = jy(d | 0) | 0;
+			l = _llvm_bswap_i32(d | 0) | 0;
 			d = (c[(c[h >> 2] | 0) + 4 >> 2] | 0) + k | 0;
 			a[d >> 0] = l;
 			a[d + 1 >> 0] = l >> 8;
@@ -26898,7 +26898,7 @@ function $(oa) {
 			a[d + 3 >> 0] = l >> 24;
 			l = (c[j >> 2] | 0) + 4 | 0;
 			c[j >> 2] = l;
-			d = jy(e | 0) | 0;
+			d = _llvm_bswap_i32(e | 0) | 0;
 			e = (c[(c[h >> 2] | 0) + 4 >> 2] | 0) + l | 0;
 			a[e >> 0] = d;
 			a[e + 1 >> 0] = d >> 8;
@@ -27119,7 +27119,7 @@ function $(oa) {
 			f = Cy(e | 0, H | 0, 1e6, 0) | 0;
 			e = H;
 			g = b + 188 | 0;
-			if ((a[g >> 0] | 0) != 0 ? (h = b + 192 | 0, j = h, k = c[j >> 2] | 0, l = c[j + 4 >> 2] | 0, j = ky(f | 0, e | 0, -1e3, -1) | 0, m = H, l >>> 0 < m >>> 0 | (l | 0) == (m | 0) & k >>> 0 < j >>> 0) : 0) {
+			if ((a[g >> 0] | 0) != 0 ? (h = b + 192 | 0, j = h, k = c[j >> 2] | 0, l = c[j + 4 >> 2] | 0, j = _i64Add(f | 0, e | 0, -1e3, -1) | 0, m = H, l >>> 0 < m >>> 0 | (l | 0) == (m | 0) & k >>> 0 < j >>> 0) : 0) {
 				j = c[b + 128 >> 2] | 0;
 				k = zx(4, 148) | 0;
 				if (!k) {
@@ -27185,7 +27185,7 @@ function $(oa) {
 			i = d;
 			return
 		}
-		function Ue() {
+		function ___cxx_global_var_init13() {
 			var b = 0,
 			d = 0;
 			b = i;
@@ -27201,7 +27201,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function Ve() {
+		function ___cxx_global_var_init14() {
 			var b = 0,
 			d = 0;
 			b = i;
@@ -27223,7 +27223,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function We() {
+		function ___cxx_global_var_init15() {
 			var b = 0,
 			d = 0;
 			b = i;
@@ -27239,7 +27239,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function Xe() {
+		function ___cxx_global_var_init16() {
 			var b = 0,
 			d = 0;
 			b = i;
@@ -27261,7 +27261,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function Ye() {
+		function ___cxx_global_var_init17() {
 			var b = 0,
 			d = 0;
 			b = i;
@@ -27278,7 +27278,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function Ze() {
+		function __GLOBAL__I_a() {
 			var a = 0,
 			b = 0;
 			a = i;
@@ -27308,7 +27308,7 @@ function $(oa) {
 			b = b | 0;
 			var c = 0;
 			a = i;
-			c = vx(b) | 0;
+			c = _malloc(b) | 0;
 			i = a;
 			return c | 0
 		}
@@ -27316,7 +27316,7 @@ function $(oa) {
 			a = a | 0;
 			b = b | 0;
 			a = i;
-			wx(b);
+			_free(b);
 			i = a;
 			return
 		}
@@ -27532,7 +27532,7 @@ function $(oa) {
 			a = a | 0;
 			var b = 0;
 			b = i;
-			wx(a);
+			_free(a);
 			i = b;
 			return
 		}
@@ -27765,7 +27765,7 @@ function $(oa) {
 			a = a | 0;
 			var b = 0;
 			b = i;
-			wx(a);
+			_free(a);
 			i = b;
 			return
 		}
@@ -27830,7 +27830,7 @@ function $(oa) {
 			a = a | 0;
 			var b = 0;
 			b = i;
-			wx(a);
+			_free(a);
 			i = b;
 			return
 		}
@@ -27887,7 +27887,7 @@ function $(oa) {
 			a = a | 0;
 			var b = 0;
 			b = i;
-			wx(a);
+			_free(a);
 			i = b;
 			return
 		}
@@ -27918,7 +27918,7 @@ function $(oa) {
 			n = h - j + e | 0;
 			if (n >>> 0 <= m >>> 0) {
 				j = d + 1 | 0;
-				ry(h + 1 | 0, j | 0, k - j | 0) | 0;
+				_memmove(h + 1 | 0, j | 0, k - j | 0) | 0;
 				a[(c[g >> 2] | 0) + e >> 0] = 0;
 				a[c[g >> 2] >> 0] = a[d >> 0] | 0;
 				c[g >> 2] = (c[g >> 2] | 0) + e;
@@ -27930,8 +27930,8 @@ function $(oa) {
 			j = ml(m, 0, 0, 0, 0, 0) | 0;
 			n = c[b >> 2] | 0;
 			k = (c[g >> 2] | 0) - n | 0;
-			ry(j | 0, n | 0, k | 0) | 0;
-			ry(j + k | 0, d | 0, e | 0) | 0;
+			_memmove(j | 0, n | 0, k | 0) | 0;
+			_memmove(j + k | 0, d | 0, e | 0) | 0;
 			d = j + (k + e) | 0;
 			a[d >> 0] = 0;
 			e = c[b >> 2] | 0;
@@ -28690,11 +28690,11 @@ function $(oa) {
 			l = n + m | 0;
 			m = j + 5 | 0;
 			c[h >> 2] = m;
-			c[b + 8 >> 2] = jy(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
+			c[b + 8 >> 2] = _llvm_bswap_i32(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
 			l = n + m | 0;
 			m = j + 9 | 0;
 			c[h >> 2] = m;
-			c[b + 12 >> 2] = jy(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
+			c[b + 12 >> 2] = _llvm_bswap_i32(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
 			c[h >> 2] = j + 10;
 			c[b + 16 >> 2] = _i(d[n + m >> 0] | 0) | 0;
 			m = c[k >> 2] | 0;
@@ -28709,15 +28709,15 @@ function $(oa) {
 			l = j + n | 0;
 			n = k + 5 | 0;
 			c[h >> 2] = n;
-			c[b + 24 >> 2] = jy(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
+			c[b + 24 >> 2] = _llvm_bswap_i32(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
 			l = j + n | 0;
 			n = k + 9 | 0;
 			c[h >> 2] = n;
-			c[b + 32 >> 2] = jy(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
+			c[b + 32 >> 2] = _llvm_bswap_i32(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
 			l = j + n | 0;
 			n = k + 13 | 0;
 			c[h >> 2] = n;
-			c[b + 36 >> 2] = jy(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
+			c[b + 36 >> 2] = _llvm_bswap_i32(d[l >> 0] | d[l + 1 >> 0] << 8 | d[l + 2 >> 0] << 16 | d[l + 3 >> 0] << 24 | 0) | 0;
 			c[h >> 2] = k + 14;
 			c[b + 40 >> 2] = Zi(d[j + n >> 0] | 0) | 0;
 			if (!(m & 8)) {
@@ -28781,7 +28781,7 @@ function $(oa) {
 				m = 43112;
 				n = 43113
 			}
-			ry(m | 0, h | 0, j | 0) | 0;
+			_memmove(m | 0, h | 0, j | 0) | 0;
 			a[m + j >> 0] = 0;
 			c[f >> 2] = 0;
 			h = f + 4 | 0;
@@ -28801,7 +28801,7 @@ function $(oa) {
 				p = 43113
 			}
 			c[l >> 2] = p;
-			ry(o | 0, m | 0, j | 0) | 0;
+			_memmove(o | 0, m | 0, j | 0) | 0;
 			p = o + j | 0;
 			c[h >> 2] = p;
 			a[p >> 0] = 0;
@@ -29422,7 +29422,7 @@ function $(oa) {
 				k = ml(g, 0, 0, 0, 0, 0) | 0;
 				d = c[b >> 2] | 0;
 				h = (c[f >> 2] | 0) - d | 0;
-				ry(k | 0, d | 0, h | 0) | 0;
+				_memmove(k | 0, d | 0, h | 0) | 0;
 				d = k + h | 0;
 				a[d >> 0] = 0;
 				h = c[b >> 2] | 0;
@@ -29457,7 +29457,7 @@ function $(oa) {
 			d = i;
 			e = b << 2;
 			f = ml(e + 4 | 0, 0, 4194304, 0, 0, 0) | 0;
-			sy(f | 0, 0, e | 0) | 0;
+			_memset(f | 0, 0, e | 0) | 0;
 			c[f + (b << 2) >> 2] = -1;
 			e = a + 8 | 0;
 			g = c[e >> 2] | 0;
@@ -29781,7 +29781,7 @@ function $(oa) {
 						s = 43112;
 						break
 					} else {
-						qy(0, h | 0, l | 0) | 0;
+						_memcpy(0, h | 0, l | 0) | 0;
 						q = 0 + l | 0;
 						a[q >> 0] = 0;
 						c[b >> 2] = 0;
@@ -29801,7 +29801,7 @@ function $(oa) {
 			if (!d)
 				t = s;
 			else {
-				sy(s + 1 | 0, 0, d | 0) | 0;
+				_memset(s + 1 | 0, 0, d | 0) | 0;
 				t = c[f >> 2] | 0
 			}
 			a[t >> 0] = 0;
@@ -29865,7 +29865,7 @@ function $(oa) {
 						s = 43112;
 						break
 					} else {
-						qy(0, h | 0, l | 0) | 0;
+						_memcpy(0, h | 0, l | 0) | 0;
 						q = 0 + l | 0;
 						a[q >> 0] = 0;
 						c[b >> 2] = 0;
@@ -29885,7 +29885,7 @@ function $(oa) {
 			if (!d)
 				t = s;
 			else {
-				sy(s + 1 | 0, 0, d | 0) | 0;
+				_memset(s + 1 | 0, 0, d | 0) | 0;
 				t = c[f >> 2] | 0
 			}
 			a[t >> 0] = 0;
@@ -29956,7 +29956,7 @@ function $(oa) {
 				return q | 0
 			}
 			if (f)
-				qy(c[b + 44 >> 2] | 0, f | 0, n | 0) | 0;
+				_memcpy(c[b + 44 >> 2] | 0, f | 0, n | 0) | 0;
 			c[b >> 2] = d;
 			c[b + 4 >> 2] = e;
 			e = b + 8 | 0;
@@ -29984,7 +29984,7 @@ function $(oa) {
 			n = k >> 2;
 			j = b + 16 | 0;
 			if (n >>> 0 > (c[j >> 2] | 0) - l >> 2 >>> 0) {
-				qy(0, d | 0, k | 0) | 0;
+				_memcpy(0, d | 0, k | 0) | 0;
 				c[e >> 2] = 0;
 				e = 0 + (n << 2) | 0;
 				c[h >> 2] = e;
@@ -29993,7 +29993,7 @@ function $(oa) {
 				i = g;
 				return q | 0
 			} else {
-				ry(l | 0, d | 0, k | 0) | 0;
+				_memmove(l | 0, d | 0, k | 0) | 0;
 				c[h >> 2] = l + (n << 2);
 				q = 1;
 				i = g;
@@ -30048,7 +30048,7 @@ function $(oa) {
 			k = f >> 2;
 			l = b + 16 | 0;
 			if (k >>> 0 > (c[l >> 2] | 0) - g >> 2 >>> 0) {
-				qy(0, h | 0, f | 0) | 0;
+				_memcpy(0, h | 0, f | 0) | 0;
 				c[j >> 2] = 0;
 				j = 0 + (k << 2) | 0;
 				c[e >> 2] = j;
@@ -30056,7 +30056,7 @@ function $(oa) {
 				i = d;
 				return
 			} else {
-				ry(g | 0, h | 0, f | 0) | 0;
+				_memmove(g | 0, h | 0, f | 0) | 0;
 				c[e >> 2] = g + (k << 2);
 				i = d;
 				return
@@ -31731,7 +31731,7 @@ function $(oa) {
 				n = c[o >> 2] | 0;
 				if (!n)
 					qx();
-				E = vx(D) | 0;
+				E = _malloc(D) | 0;
 				if (!E)
 					qx();
 				else {
@@ -31793,7 +31793,7 @@ function $(oa) {
 			}
 			O = M + f | 0;
 			if (O >>> 0 > 100) {
-				M = vx(O) | 0;
+				M = _malloc(O) | 0;
 				if (!M)
 					qx();
 				else {
@@ -31810,13 +31810,13 @@ function $(oa) {
 			z = c[A >> 2] | 0;
 			c[m + 0 >> 2] = c[B + 0 >> 2];
 			Ju(b, m, Q, e, z, g, j);
-			wx(P);
+			_free(P);
 			bm(w);
 			bm(v);
 			bm(u);
 			Jl(c[q >> 2] | 0) | 0;
-			wx(F);
-			wx(G);
+			_free(F);
+			_free(G);
 			i = d;
 			return
 		}
@@ -32574,7 +32574,7 @@ function $(oa) {
 			}
 			J = H + C | 0;
 			if (J >>> 0 > 100) {
-				H = vx(J) | 0;
+				H = _malloc(J) | 0;
 				if (!H)
 					qx();
 				else {
@@ -32598,7 +32598,7 @@ function $(oa) {
 			u = c[v >> 2] | 0;
 			c[k + 0 >> 2] = c[w + 0 >> 2];
 			Ju(b, k, L, e, u, g, h);
-			wx(K);
+			_free(K);
 			bm(r);
 			bm(q);
 			bm(p);
@@ -32689,7 +32689,7 @@ function $(oa) {
 				n = c[o >> 2] | 0;
 				if (!n)
 					qx();
-				E = vx(D << 2) | 0;
+				E = _malloc(D << 2) | 0;
 				if (!E)
 					qx();
 				else {
@@ -32751,7 +32751,7 @@ function $(oa) {
 			}
 			O = M + f | 0;
 			if (O >>> 0 > 100) {
-				M = vx(O << 2) | 0;
+				M = _malloc(O << 2) | 0;
 				if (!M)
 					qx();
 				else {
@@ -32769,18 +32769,18 @@ function $(oa) {
 			c[m + 0 >> 2] = c[B + 0 >> 2];
 			Lu(b, m, Q, e, z, g, j);
 			if (P)
-				wx(P);
+				_free(P);
 			pm(w);
 			pm(v);
 			bm(u);
 			Jl(c[q >> 2] | 0) | 0;
 			if (!F) {
-				wx(G);
+				_free(G);
 				i = d;
 				return
 			}
-			wx(F);
-			wx(G);
+			_free(F);
+			_free(G);
 			i = d;
 			return
 		}
@@ -33532,7 +33532,7 @@ function $(oa) {
 			}
 			J = H + C | 0;
 			if (J >>> 0 > 100) {
-				H = vx(J << 2) | 0;
+				H = _malloc(J << 2) | 0;
 				if (!H)
 					qx();
 				else {
@@ -33565,7 +33565,7 @@ function $(oa) {
 				i = d;
 				return
 			}
-			wx(K);
+			_free(K);
 			pm(r);
 			pm(q);
 			bm(p);
@@ -33661,7 +33661,7 @@ function $(oa) {
 			c[b + 0 >> 2] = 0;
 			c[b + 4 >> 2] = 0;
 			c[b + 8 >> 2] = 0;
-			r = py(o | 0) | 0;
+			r = _strlen(o | 0) | 0;
 			g = o + r | 0;
 			if ((r | 0) > 0)
 				s = o;
@@ -33803,7 +33803,7 @@ function $(oa) {
 			c[b + 8 >> 2] = 0;
 			c[p + 4 >> 2] = 0;
 			c[p >> 2] = 132536;
-			x = py(o | 0) | 0;
+			x = _strlen(o | 0) | 0;
 			g = o + x | 0;
 			f = j;
 			c[f >> 2] = 0;
@@ -35694,7 +35694,7 @@ function $(oa) {
 				return d | 0
 			}
 			if ((a[138288] | 0) == 0 ? (Da(138288) | 0) != 0 : 0) {
-				sy(138120, 0, 168) | 0;
+				_memset(138120, 0, 168) | 0;
 				Sa(188, 0, o | 0) | 0;
 				$a(138288)
 			}
@@ -35733,7 +35733,7 @@ function $(oa) {
 				return d | 0
 			}
 			if ((a[137752] | 0) == 0 ? (Da(137752) | 0) != 0 : 0) {
-				sy(137584, 0, 168) | 0;
+				_memset(137584, 0, 168) | 0;
 				Sa(189, 0, o | 0) | 0;
 				$a(137752)
 			}
@@ -35772,7 +35772,7 @@ function $(oa) {
 				return d | 0
 			}
 			if ((a[137360] | 0) == 0 ? (Da(137360) | 0) != 0 : 0) {
-				sy(137072, 0, 288) | 0;
+				_memset(137072, 0, 288) | 0;
 				Sa(190, 0, o | 0) | 0;
 				$a(137360)
 			}
@@ -35821,7 +35821,7 @@ function $(oa) {
 				return d | 0
 			}
 			if ((a[136520] | 0) == 0 ? (Da(136520) | 0) != 0 : 0) {
-				sy(136232, 0, 288) | 0;
+				_memset(136232, 0, 288) | 0;
 				Sa(191, 0, o | 0) | 0;
 				$a(136520)
 			}
@@ -35870,7 +35870,7 @@ function $(oa) {
 				return d | 0
 			}
 			if ((a[136208] | 0) == 0 ? (Da(136208) | 0) != 0 : 0) {
-				sy(135920, 0, 288) | 0;
+				_memset(135920, 0, 288) | 0;
 				Sa(192, 0, o | 0) | 0;
 				$a(136208)
 			}
@@ -35897,7 +35897,7 @@ function $(oa) {
 				return d | 0
 			}
 			if ((a[135880] | 0) == 0 ? (Da(135880) | 0) != 0 : 0) {
-				sy(135592, 0, 288) | 0;
+				_memset(135592, 0, 288) | 0;
 				Sa(193, 0, o | 0) | 0;
 				$a(135880)
 			}
@@ -36049,7 +36049,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function Mt() {
+		function __GLOBAL__I_a948() {
 			var a = 0;
 			a = i;
 			Fl(0);
@@ -36813,13 +36813,13 @@ function $(oa) {
 			f = 0,
 			g = 0;
 			d = i;
-			e = py(b | 0) | 0;
+			e = _strlen(b | 0) | 0;
 			f = il(e + 13 | 0) | 0;
 			c[f >> 2] = e;
 			c[f + 4 >> 2] = e;
 			c[f + 8 >> 2] = 0;
 			g = f + 12 | 0;
-			qy(g | 0, b | 0, e + 1 | 0) | 0;
+			_memcpy(g | 0, b | 0, e + 1 | 0) | 0;
 			c[a >> 2] = g;
 			i = d;
 			return
@@ -36975,7 +36975,7 @@ function $(oa) {
 			m = l;
 			n = (g - f | 0) / 12 | 0;
 			if (n >>> 0 > 100) {
-				o = vx(n) | 0;
+				o = _malloc(n) | 0;
 				if (!o)
 					qx();
 				else {
@@ -37251,7 +37251,7 @@ function $(oa) {
 				i = l;
 				return X | 0
 			}
-			wx(p);
+			_free(p);
 			i = l;
 			return X | 0
 		}
@@ -39483,7 +39483,7 @@ function $(oa) {
 			l = k;
 			m = (f - e | 0) / 12 | 0;
 			if (m >>> 0 > 100) {
-				n = vx(m) | 0;
+				n = _malloc(m) | 0;
 				if (!n)
 					qx();
 				else {
@@ -39767,7 +39767,7 @@ function $(oa) {
 				i = k;
 				return _ | 0
 			}
-			wx(o);
+			_free(o);
 			i = k;
 			return _ | 0
 		}
@@ -42736,7 +42736,7 @@ function $(oa) {
 			k = (c[d >> 2] | 0) - j | 0;
 			l = k >>> 0 < 2147483647 ? k << 1 : -1;
 			k = (c[b >> 2] | 0) - j | 0;
-			j = yx(g ? h : 0, l) | 0;
+			j = _realloc(g ? h : 0, l) | 0;
 			if (!j)
 				qx();
 			if (!g) {
@@ -42783,7 +42783,7 @@ function $(oa) {
 				m = h;
 			else
 				m = 0;
-			h = yx(m, l) | 0;
+			h = _realloc(m, l) | 0;
 			if (!h)
 				qx();
 			if (!g) {
@@ -42893,7 +42893,7 @@ function $(oa) {
 				m = h;
 			else
 				m = 0;
-			h = yx(m, l) | 0;
+			h = _realloc(m, l) | 0;
 			if (!h)
 				qx();
 			if (!g) {
@@ -50216,7 +50216,7 @@ function $(oa) {
 									Na = 195;
 									continue b
 								}
-								sy(f + 3180 | 0, 0, 256) | 0;
+								_memset(f + 3180 | 0, 0, 256) | 0;
 								If = 0;
 								Jf = O;
 								Na = 203;
@@ -52158,7 +52158,7 @@ function $(oa) {
 								Xi = 0;
 							la = c[f + 3176 >> 2] | 0;
 							ma = c[f + 36 >> 2] | 0;
-							sy(f + 64 | 0, 0, 1024) | 0;
+							_memset(f + 64 | 0, 0, 1024) | 0;
 							n = la + 1 | 0;
 							la = ma * 1e5 | 0;
 							ma = 15;
@@ -53312,7 +53312,7 @@ function $(oa) {
 			c = c | 0;
 			var d = 0;
 			a = i;
-			d = vx(da(c, b) | 0) | 0;
+			d = _malloc(da(c, b) | 0) | 0;
 			i = a;
 			return d | 0
 		}
@@ -53321,7 +53321,7 @@ function $(oa) {
 			b = b | 0;
 			a = i;
 			if (b)
-				wx(b);
+				_free(b);
 			i = a;
 			return
 		}
@@ -53554,7 +53554,7 @@ function $(oa) {
 			i = e;
 			return j | 0
 		}
-		function sk(a, b, e) {
+		function crc32(a, b, e) {
 			a = a | 0;
 			b = b | 0;
 			e = e | 0;
@@ -54515,7 +54515,7 @@ function $(oa) {
 							if (Ta & 512) {
 								a[j >> 0] = Ta;
 								a[y >> 0] = Ta >>> 8;
-								c[x >> 2] = sk(c[x >> 2] | 0, j, 2) | 0
+								c[x >> 2] = crc32(c[x >> 2] | 0, j, 2) | 0
 							}
 							c[l >> 2] = 2;
 							db = 0;
@@ -54614,7 +54614,7 @@ function $(oa) {
 								Kb = ka;
 								Lb = ma
 							}
-							Ea = jy(Kb | 0) | 0;
+							Ea = _llvm_bswap_i32(Kb | 0) | 0;
 							c[x >> 2] = Ea;
 							c[E >> 2] = Ea;
 							c[l >> 2] = 10;
@@ -54751,10 +54751,10 @@ function $(oa) {
 								bc = ma
 							}
 							if ((Fa & 2 | 0) != 0 & (ac | 0) == 35615) {
-								c[x >> 2] = sk(0, 0, 0) | 0;
+								c[x >> 2] = crc32(0, 0, 0) | 0;
 								a[j >> 0] = 31;
 								a[y >> 0] = -117;
-								c[x >> 2] = sk(c[x >> 2] | 0, j, 2) | 0;
+								c[x >> 2] = crc32(c[x >> 2] | 0, j, 2) | 0;
 								c[l >> 2] = 1;
 								Xa = 0;
 								Ya = $b;
@@ -54953,12 +54953,12 @@ function $(oa) {
 									if (!(c[z >> 2] | 0))
 										Hc = rk(Ha, Sa, Ea) | 0;
 									else
-										Hc = sk(Ha, Sa, Ea) | 0;
+										Hc = crc32(Ha, Sa, Ea) | 0;
 									c[x >> 2] = Hc;
 									c[E >> 2] = Hc
 								}
 								if (!(c[z >> 2] | 0))
-									Ic = jy(Fc | 0) | 0;
+									Ic = _llvm_bswap_i32(Fc | 0) | 0;
 								else
 									Ic = Fc;
 								if ((Ic | 0) == (c[x >> 2] | 0)) {
@@ -55388,7 +55388,7 @@ function $(oa) {
 							a[y >> 0] = ic >>> 8;
 							a[ga >> 0] = ic >>> 16;
 							a[ha >> 0] = ic >>> 24;
-							c[x >> 2] = sk(c[x >> 2] | 0, j, 4) | 0
+							c[x >> 2] = crc32(c[x >> 2] | 0, j, 4) | 0
 						}
 						c[l >> 2] = 3;
 						dd = 0;
@@ -55441,7 +55441,7 @@ function $(oa) {
 							ta = 281;
 							break a
 						}
-						qy(r | 0, yb | 0, Fa | 0) | 0;
+						_memcpy(r | 0, yb | 0, Fa | 0) | 0;
 						c[F >> 2] = (c[F >> 2] | 0) - Fa;
 						Xa = vb;
 						Ya = wb - Fa | 0;
@@ -55989,7 +55989,7 @@ function $(oa) {
 					if (c[z >> 2] & 512) {
 						a[j >> 0] = id;
 						a[y >> 0] = id >>> 8;
-						c[x >> 2] = sk(c[x >> 2] | 0, j, 2) | 0
+						c[x >> 2] = crc32(c[x >> 2] | 0, j, 2) | 0
 					}
 					c[l >> 2] = 4;
 					Aa = 0;
@@ -56074,7 +56074,7 @@ function $(oa) {
 							} else {
 								a[j >> 0] = Le;
 								a[y >> 0] = Le >>> 8;
-								c[x >> 2] = sk(c[x >> 2] | 0, j, 2) | 0;
+								c[x >> 2] = crc32(c[x >> 2] | 0, j, 2) | 0;
 								Ge = 0;
 								He = Ke;
 								Ie = 0;
@@ -56326,12 +56326,12 @@ function $(oa) {
 							if ((Wc | 0) != 0 ? (Ra = c[Wc + 16 >> 2] | 0, (Ra | 0) != 0) : 0) {
 								Ha = (c[Wc + 20 >> 2] | 0) - Sd | 0;
 								Sd = c[Wc + 24 >> 2] | 0;
-								qy(Ra + Ha | 0, Ib | 0, ((Ha + Md | 0) >>> 0 > Sd >>> 0 ? Sd - Ha | 0 : Md) | 0) | 0;
+								_memcpy(Ra + Ha | 0, Ib | 0, ((Ha + Md | 0) >>> 0 > Sd >>> 0 ? Sd - Ha | 0 : Md) | 0) | 0;
 								kf = c[z >> 2] | 0
 							} else
 								kf = Kd;
 							if (kf & 512)
-								c[x >> 2] = sk(c[x >> 2] | 0, Ib, Md) | 0;
+								c[x >> 2] = crc32(c[x >> 2] | 0, Ib, Md) | 0;
 							Kd = (c[F >> 2] | 0) - Md | 0;
 							c[F >> 2] = Kd;
 							gf = Kd;
@@ -56465,7 +56465,7 @@ function $(oa) {
 								zf = Ha << 24 >> 24 != 0
 							} while (zf & ib >>> 0 > yf >>> 0);
 							if (c[z >> 2] & 512)
-								c[x >> 2] = sk(c[x >> 2] | 0, kb, yf) | 0;
+								c[x >> 2] = crc32(c[x >> 2] | 0, kb, yf) | 0;
 							Qd = ib - yf | 0;
 							Ld = kb + yf | 0;
 							if (zf) {
@@ -56688,7 +56688,7 @@ function $(oa) {
 							Yf = Wc << 24 >> 24 != 0
 						} while (Yf & Pc >>> 0 > Xf >>> 0);
 						if (c[z >> 2] & 512)
-							c[x >> 2] = sk(c[x >> 2] | 0, Rc, Xf) | 0;
+							c[x >> 2] = crc32(c[x >> 2] | 0, Rc, Xf) | 0;
 						Wc = Pc - Xf | 0;
 						Zb = Rc + Xf | 0;
 						if (Yf) {
@@ -56846,7 +56846,7 @@ function $(oa) {
 							c[Ld + 44 >> 2] = Fa >>> 9 & 1;
 							c[Ld + 48 >> 2] = 1
 						}
-						Ld = sk(0, 0, 0) | 0;
+						Ld = crc32(0, 0, 0) | 0;
 						c[x >> 2] = Ld;
 						c[E >> 2] = Ld;
 						c[l >> 2] = 11;
@@ -57040,7 +57040,7 @@ function $(oa) {
 				if (!(c[z >> 2] | 0))
 					ug = rk(w, Y, p) | 0;
 				else
-					ug = sk(w, Y, p) | 0;
+					ug = crc32(w, Y, p) | 0;
 				c[x >> 2] = ug;
 				c[E >> 2] = ug
 			}
@@ -57142,7 +57142,7 @@ function $(oa) {
 				m = h;
 			h = b - (c[a + 16 >> 2] | 0) | 0;
 			if (h >>> 0 >= m >>> 0) {
-				qy(k | 0, (c[a + 12 >> 2] | 0) + (0 - m) | 0, m | 0) | 0;
+				_memcpy(k | 0, (c[a + 12 >> 2] | 0) + (0 - m) | 0, m | 0) | 0;
 				c[e + 48 >> 2] = 0;
 				c[e + 44 >> 2] = c[g >> 2];
 				j = 0;
@@ -57154,10 +57154,10 @@ function $(oa) {
 			n = m - l | 0;
 			m = n >>> 0 > h >>> 0 ? h : n;
 			n = a + 12 | 0;
-			qy(k + l | 0, (c[n >> 2] | 0) + (0 - h) | 0, m | 0) | 0;
+			_memcpy(k + l | 0, (c[n >> 2] | 0) + (0 - h) | 0, m | 0) | 0;
 			l = h - m | 0;
 			if ((h | 0) != (m | 0)) {
-				qy(c[f >> 2] | 0, (c[n >> 2] | 0) + (0 - l) | 0, l | 0) | 0;
+				_memcpy(c[f >> 2] | 0, (c[n >> 2] | 0) + (0 - l) | 0, l | 0) | 0;
 				c[b >> 2] = l;
 				c[e + 44 >> 2] = c[g >> 2];
 				j = 0;
@@ -57510,7 +57510,7 @@ function $(oa) {
 			c = c | 0;
 			var d = 0;
 			a = i;
-			d = vx(da(c, b) | 0) | 0;
+			d = _malloc(da(c, b) | 0) | 0;
 			i = a;
 			return d | 0
 		}
@@ -57518,7 +57518,7 @@ function $(oa) {
 			a = a | 0;
 			b = b | 0;
 			a = i;
-			wx(b);
+			_free(b);
 			i = a;
 			return
 		}
@@ -58091,7 +58091,7 @@ function $(oa) {
 			d = c[b >> 2] | 0;
 			e = By(d | 0, ((d | 0) < 0) << 31 >> 31 | 0, 1e9, 0) | 0;
 			d = c[b + 4 >> 2] | 0;
-			b = ky(e | 0, H | 0, d | 0, ((d | 0) < 0) << 31 >> 31 | 0) | 0;
+			b = _i64Add(e | 0, H | 0, d | 0, ((d | 0) < 0) << 31 >> 31 | 0) | 0;
 			i = a;
 			return b | 0
 		}
@@ -58101,7 +58101,7 @@ function $(oa) {
 			e = 0,
 			f = 0;
 			b = i;
-			d = vx(16) | 0;
+			d = _malloc(16) | 0;
 			if (!d)
 				e = 0;
 			else {
@@ -58111,7 +58111,7 @@ function $(oa) {
 				e = d
 			}
 			c[10350] = e;
-			d = vx(336) | 0;
+			d = _malloc(336) | 0;
 			if (!d)
 				f = 0;
 			else {
@@ -58142,9 +58142,9 @@ function $(oa) {
 				FUNCTION_TABLE_vi[c[(c[d >> 2] | 0) + 4 >> 2] & 255](d);
 			d = c[10350] | 0;
 			FUNCTION_TABLE_vi[c[c[d >> 2] >> 2] & 255](d);
-			wx(c[10350] | 0);
+			_free(c[10350] | 0);
 			c[10350] = 0;
-			wx(b);
+			_free(b);
 			cl();
 			i = a;
 			return
@@ -58158,7 +58158,7 @@ function $(oa) {
 				i = e;
 				return
 			} else {
-				sy(d | 0, 0, c[b + 8 >> 2] << 2 | 0) | 0;
+				_memset(d | 0, 0, c[b + 8 >> 2] << 2 | 0) | 0;
 				i = e;
 				return
 			}
@@ -58181,9 +58181,9 @@ function $(oa) {
 			d = d | 0;
 			e = e | 0;
 			e = i;
-			d = vx(b) | 0;
+			d = _malloc(b) | 0;
 			b = 41512;
-			a = ky(c[b >> 2] | 0, c[b + 4 >> 2] | 0, 1, 0) | 0;
+			a = _i64Add(c[b >> 2] | 0, c[b + 4 >> 2] | 0, 1, 0) | 0;
 			b = 41512;
 			c[b >> 2] = a;
 			c[b + 4 >> 2] = H;
@@ -58199,7 +58199,7 @@ function $(oa) {
 			f = i;
 			d = zx(e, b) | 0;
 			b = 41512;
-			e = ky(c[b >> 2] | 0, c[b + 4 >> 2] | 0, 1, 0) | 0;
+			e = _i64Add(c[b >> 2] | 0, c[b + 4 >> 2] | 0, 1, 0) | 0;
 			b = 41512;
 			c[b >> 2] = e;
 			c[b + 4 >> 2] = H;
@@ -58213,11 +58213,11 @@ function $(oa) {
 			var e = 0;
 			d = i;
 			a = 41520;
-			e = ky(c[a >> 2] | 0, c[a + 4 >> 2] | 0, 1, 0) | 0;
+			e = _i64Add(c[a >> 2] | 0, c[a + 4 >> 2] | 0, 1, 0) | 0;
 			a = 41520;
 			c[a >> 2] = e;
 			c[a + 4 >> 2] = H;
-			wx(b);
+			_free(b);
 			i = d;
 			return
 		}
@@ -58228,11 +58228,11 @@ function $(oa) {
 			var e = 0;
 			d = i;
 			a = 41520;
-			e = ky(c[a >> 2] | 0, c[a + 4 >> 2] | 0, 1, 0) | 0;
+			e = _i64Add(c[a >> 2] | 0, c[a + 4 >> 2] | 0, 1, 0) | 0;
 			a = 41520;
 			c[a >> 2] = e;
 			c[a + 4 >> 2] = H;
-			wx(b);
+			_free(b);
 			i = d;
 			return
 		}
@@ -58419,7 +58419,7 @@ function $(oa) {
 			o = s;
 			s = 0;
 			if ((o | 0) != 0 & (t | 0) != 0) {
-				p = oy(c[o >> 2] | 0, e) | 0;
+				p = _testSetjmp(c[o >> 2] | 0, e) | 0;
 				if (!p)
 					Fa(o | 0, t | 0);
 				H = t
@@ -58433,7 +58433,7 @@ function $(oa) {
 					b = s;
 					s = 0;
 					if ((b | 0) != 0 & (t | 0) != 0) {
-						q = oy(c[b >> 2] | 0, e) | 0;
+						q = _testSetjmp(c[b >> 2] | 0, e) | 0;
 						if (!q)
 							Fa(b | 0, t | 0);
 						H = t
@@ -58445,7 +58445,7 @@ function $(oa) {
 						b = s;
 						s = 0;
 						if ((b | 0) != 0 & (t | 0) != 0) {
-							r = oy(c[b >> 2] | 0, e) | 0;
+							r = _testSetjmp(c[b >> 2] | 0, e) | 0;
 							if (!r)
 								Fa(b | 0, t | 0);
 							H = t
@@ -58454,12 +58454,12 @@ function $(oa) {
 						if ((r | 0) != 1) {
 							c[f >> 2] = q;
 							if (q) {
-								my(g, 1, e | 0) | 0;
+								_saveSetjmp(g, 1, e | 0) | 0;
 								s = 0;
 								q = s;
 								s = 0;
 								if ((q | 0) != 0 & (t | 0) != 0) {
-									u = oy(c[q >> 2] | 0, e) | 0;
+									u = _testSetjmp(c[q >> 2] | 0, e) | 0;
 									if (!u)
 										Fa(q | 0, t | 0);
 									H = t
@@ -58501,7 +58501,7 @@ function $(oa) {
 						u = s;
 						s = 0;
 						if ((u | 0) != 0 & (t | 0) != 0) {
-							x = oy(c[u >> 2] | 0, e) | 0;
+							x = _testSetjmp(c[u >> 2] | 0, e) | 0;
 							if (!x)
 								Fa(u | 0, t | 0);
 							H = t
@@ -58517,7 +58517,7 @@ function $(oa) {
 						u = s;
 						s = 0;
 						if ((u | 0) != 0 & (t | 0) != 0) {
-							y = oy(c[u >> 2] | 0, e) | 0;
+							y = _testSetjmp(c[u >> 2] | 0, e) | 0;
 							if (!y)
 								Fa(u | 0, t | 0);
 							H = t
@@ -58533,7 +58533,7 @@ function $(oa) {
 						q = s;
 						s = 0;
 						if ((q | 0) != 0 & (t | 0) != 0) {
-							z = oy(c[q >> 2] | 0, e) | 0;
+							z = _testSetjmp(c[q >> 2] | 0, e) | 0;
 							if (!z)
 								Fa(q | 0, t | 0);
 							H = t
@@ -58555,7 +58555,7 @@ function $(oa) {
 							q = s;
 							s = 0;
 							if ((q | 0) != 0 & (t | 0) != 0) {
-								A = oy(c[q >> 2] | 0, e) | 0;
+								A = _testSetjmp(c[q >> 2] | 0, e) | 0;
 								if (!A)
 									Fa(q | 0, t | 0);
 								H = t
@@ -58575,7 +58575,7 @@ function $(oa) {
 							u = s;
 							s = 0;
 							if ((u | 0) != 0 & (t | 0) != 0) {
-								C = oy(c[u >> 2] | 0, e) | 0;
+								C = _testSetjmp(c[u >> 2] | 0, e) | 0;
 								if (!C)
 									Fa(u | 0, t | 0);
 								H = t
@@ -58591,7 +58591,7 @@ function $(oa) {
 							u = s;
 							s = 0;
 							if ((u | 0) != 0 & (t | 0) != 0) {
-								D = oy(c[u >> 2] | 0, e) | 0;
+								D = _testSetjmp(c[u >> 2] | 0, e) | 0;
 								if (!D)
 									Fa(u | 0, t | 0);
 								H = t
@@ -58609,7 +58609,7 @@ function $(oa) {
 							u = s;
 							s = 0;
 							if ((u | 0) != 0 & (t | 0) != 0) {
-								E = oy(c[u >> 2] | 0, e) | 0;
+								E = _testSetjmp(c[u >> 2] | 0, e) | 0;
 								if (!E)
 									Fa(u | 0, t | 0);
 								H = t
@@ -58626,7 +58626,7 @@ function $(oa) {
 						u = s;
 						s = 0;
 						if ((u | 0) != 0 & (t | 0) != 0) {
-							F = oy(c[u >> 2] | 0, e) | 0;
+							F = _testSetjmp(c[u >> 2] | 0, e) | 0;
 							if (!F)
 								Fa(u | 0, t | 0);
 							H = t
@@ -58642,7 +58642,7 @@ function $(oa) {
 						u = s;
 						s = 0;
 						if ((u | 0) != 0 & (t | 0) != 0) {
-							G = oy(c[u >> 2] | 0, e) | 0;
+							G = _testSetjmp(c[u >> 2] | 0, e) | 0;
 							if (!G)
 								Fa(u | 0, t | 0);
 							H = t
@@ -58658,7 +58658,7 @@ function $(oa) {
 						q = s;
 						s = 0;
 						if ((q | 0) != 0 & (t | 0) != 0) {
-							I = oy(c[q >> 2] | 0, e) | 0;
+							I = _testSetjmp(c[q >> 2] | 0, e) | 0;
 							if (!I)
 								Fa(q | 0, t | 0);
 							H = t
@@ -58675,7 +58675,7 @@ function $(oa) {
 							u = s;
 							s = 0;
 							if ((u | 0) != 0 & (t | 0) != 0) {
-								J = oy(c[u >> 2] | 0, e) | 0;
+								J = _testSetjmp(c[u >> 2] | 0, e) | 0;
 								if (!J)
 									Fa(u | 0, t | 0);
 								H = t
@@ -58692,7 +58692,7 @@ function $(oa) {
 						u = s;
 						s = 0;
 						if ((u | 0) != 0 & (t | 0) != 0) {
-							K = oy(c[u >> 2] | 0, e) | 0;
+							K = _testSetjmp(c[u >> 2] | 0, e) | 0;
 							if (!K)
 								Fa(u | 0, t | 0);
 							H = t
@@ -58709,7 +58709,7 @@ function $(oa) {
 						r = s;
 						s = 0;
 						if ((r | 0) != 0 & (t | 0) != 0) {
-							L = oy(c[r >> 2] | 0, e) | 0;
+							L = _testSetjmp(c[r >> 2] | 0, e) | 0;
 							if (!L)
 								Fa(r | 0, t | 0);
 							H = t
@@ -58727,7 +58727,7 @@ function $(oa) {
 							b = s;
 							s = 0;
 							if ((b | 0) != 0 & (t | 0) != 0) {
-								M = oy(c[b >> 2] | 0, e) | 0;
+								M = _testSetjmp(c[b >> 2] | 0, e) | 0;
 								if (!M)
 									Fa(b | 0, t | 0);
 								H = t
@@ -58751,7 +58751,7 @@ function $(oa) {
 									N = s;
 									s = 0;
 									if ((N | 0) != 0 & (t | 0) != 0) {
-										O = oy(c[N >> 2] | 0, e) | 0;
+										O = _testSetjmp(c[N >> 2] | 0, e) | 0;
 										if (!O)
 											Fa(N | 0, t | 0);
 										H = t
@@ -58774,7 +58774,7 @@ function $(oa) {
 								p = s;
 								s = 0;
 								if ((p | 0) != 0 & (t | 0) != 0) {
-									P = oy(c[p >> 2] | 0, e) | 0;
+									P = _testSetjmp(c[p >> 2] | 0, e) | 0;
 									if (!P)
 										Fa(p | 0, t | 0);
 									H = t
@@ -58797,7 +58797,7 @@ function $(oa) {
 										o = s;
 										s = 0;
 										if ((o | 0) != 0 & (t | 0) != 0) {
-											Q = oy(c[o >> 2] | 0, e) | 0;
+											Q = _testSetjmp(c[o >> 2] | 0, e) | 0;
 											if (!Q)
 												Fa(o | 0, t | 0);
 											H = t
@@ -58818,7 +58818,7 @@ function $(oa) {
 								p = s;
 								s = 0;
 								if ((p | 0) != 0 & (t | 0) != 0) {
-									R = oy(c[p >> 2] | 0, e) | 0;
+									R = _testSetjmp(c[p >> 2] | 0, e) | 0;
 									if (!R)
 										Fa(p | 0, t | 0);
 									H = t
@@ -58838,7 +58838,7 @@ function $(oa) {
 						r = s;
 						s = 0;
 						if ((r | 0) != 0 & (t | 0) != 0) {
-							S = oy(c[r >> 2] | 0, e) | 0;
+							S = _testSetjmp(c[r >> 2] | 0, e) | 0;
 							if (!S)
 								Fa(r | 0, t | 0);
 							H = t
@@ -58854,7 +58854,7 @@ function $(oa) {
 						r = s;
 						s = 0;
 						if ((r | 0) != 0 & (t | 0) != 0) {
-							T = oy(c[r >> 2] | 0, e) | 0;
+							T = _testSetjmp(c[r >> 2] | 0, e) | 0;
 							if (!T)
 								Fa(r | 0, t | 0);
 							H = t
@@ -58870,7 +58870,7 @@ function $(oa) {
 						r = s;
 						s = 0;
 						if ((r | 0) != 0 & (t | 0) != 0) {
-							U = oy(c[r >> 2] | 0, e) | 0;
+							U = _testSetjmp(c[r >> 2] | 0, e) | 0;
 							if (!U)
 								Fa(r | 0, t | 0);
 							H = t
@@ -58886,13 +58886,13 @@ function $(oa) {
 							u = c[a + 44 >> 2] | 0;
 							while (1) {
 								p = q + (r << 2) | 0;
-								qy(u | 0, c[p >> 2] | 0, b | 0) | 0;
+								_memcpy(u | 0, c[p >> 2] | 0, b | 0) | 0;
 								s = 0;
 								ha(173, c[p >> 2] | 0);
 								p = s;
 								s = 0;
 								if ((p | 0) != 0 & (t | 0) != 0) {
-									V = oy(c[p >> 2] | 0, e) | 0;
+									V = _testSetjmp(c[p >> 2] | 0, e) | 0;
 									if (!V)
 										Fa(p | 0, t | 0);
 									H = t
@@ -58915,7 +58915,7 @@ function $(oa) {
 						b = s;
 						s = 0;
 						if ((b | 0) != 0 & (t | 0) != 0) {
-							W = oy(c[b >> 2] | 0, e) | 0;
+							W = _testSetjmp(c[b >> 2] | 0, e) | 0;
 							if (!W)
 								Fa(b | 0, t | 0);
 							H = t
@@ -58934,7 +58934,7 @@ function $(oa) {
 						b = s;
 						s = 0;
 						if ((b | 0) != 0 & (t | 0) != 0) {
-							Y = oy(c[b >> 2] | 0, e) | 0;
+							Y = _testSetjmp(c[b >> 2] | 0, e) | 0;
 							if (!Y)
 								Fa(b | 0, t | 0);
 							H = t
@@ -58960,7 +58960,7 @@ function $(oa) {
 								b = s;
 								s = 0;
 								if ((b | 0) != 0 & (t | 0) != 0) {
-									Z = oy(c[b >> 2] | 0, e) | 0;
+									Z = _testSetjmp(c[b >> 2] | 0, e) | 0;
 									if (!Z)
 										Fa(b | 0, t | 0);
 									H = t
@@ -58979,7 +58979,7 @@ function $(oa) {
 							b = s;
 							s = 0;
 							if ((b | 0) != 0 & (t | 0) != 0) {
-								_ = oy(c[b >> 2] | 0, e) | 0;
+								_ = _testSetjmp(c[b >> 2] | 0, e) | 0;
 								if (!_)
 									Fa(b | 0, t | 0);
 								H = t
@@ -58995,7 +58995,7 @@ function $(oa) {
 							b = s;
 							s = 0;
 							if ((b | 0) != 0 & (t | 0) != 0) {
-								$ = oy(c[b >> 2] | 0, e) | 0;
+								$ = _testSetjmp(c[b >> 2] | 0, e) | 0;
 								if (!$)
 									Fa(b | 0, t | 0);
 								H = t
@@ -59020,7 +59020,7 @@ function $(oa) {
 				b = s;
 				s = 0;
 				if ((b | 0) != 0 & (t | 0) != 0) {
-					aa = oy(c[b >> 2] | 0, e) | 0;
+					aa = _testSetjmp(c[b >> 2] | 0, e) | 0;
 					if (!aa)
 						Fa(b | 0, t | 0);
 					H = t
@@ -59059,7 +59059,7 @@ function $(oa) {
 			i = e;
 			return
 		}
-		function Cg() {
+		function __GLOBAL__I_a28() {
 			var a = 0,
 			b = 0;
 			a = i;
@@ -59119,12 +59119,12 @@ function $(oa) {
 				p = q + h | 0;
 				q = b;
 				s = q - o | 0;
-				qy(0, n | 0, s | 0) | 0;
+				_memcpy(0, n | 0, s | 0) | 0;
 				n = s >> 2;
-				qy(0 + (n << 2) | 0, d | 0, e | 0) | 0;
+				_memcpy(0 + (n << 2) | 0, d | 0, e | 0) | 0;
 				s = n + h | 0;
 				n = m - q | 0;
-				qy(0 + (s << 2) | 0, b | 0, n | 0) | 0;
+				_memcpy(0 + (s << 2) | 0, b | 0, n | 0) | 0;
 				c[a >> 2] = 0;
 				c[k >> 2] = 0 + ((n >> 2) + s << 2);
 				c[j >> 2] = 0 + ((r >>> 0 > p >>> 0 ? r : p) << 2);
@@ -59136,21 +59136,21 @@ function $(oa) {
 			m = r >> 2;
 			if (h >>> 0 < m >>> 0) {
 				j = l + (0 - h << 2) | 0;
-				ry(l | 0, j | 0, e | 0) | 0;
+				_memmove(l | 0, j | 0, e | 0) | 0;
 				c[k >> 2] = (c[k >> 2] | 0) + (h << 2);
 				s = j - p | 0;
-				ry(l + (0 - (s >> 2) << 2) | 0, b | 0, s | 0) | 0;
-				ry(b | 0, d | 0, e | 0) | 0;
+				_memmove(l + (0 - (s >> 2) << 2) | 0, b | 0, s | 0) | 0;
+				_memmove(b | 0, d | 0, e | 0) | 0;
 				i = f;
 				return
 			} else {
 				e = d + (m << 2) | 0;
-				ry(l | 0, e | 0, g - e | 0) | 0;
+				_memmove(l | 0, e | 0, g - e | 0) | 0;
 				e = (c[k >> 2] | 0) + (h - m << 2) | 0;
 				c[k >> 2] = e;
-				ry(e | 0, b | 0, r | 0) | 0;
+				_memmove(e | 0, b | 0, r | 0) | 0;
 				c[k >> 2] = (c[k >> 2] | 0) + (m << 2);
-				ry(b | 0, d | 0, r | 0) | 0;
+				_memmove(b | 0, d | 0, r | 0) | 0;
 				i = f;
 				return
 			}
@@ -59210,7 +59210,7 @@ function $(oa) {
 			if (h) {
 				b = c[a + 720 >> 2] | 0;
 				if (!b)
-					k = vx(h) | 0;
+					k = _malloc(h) | 0;
 				else
 					k = FUNCTION_TABLE_iii[b & 31](a, h) | 0;
 				if (k) {
@@ -59248,7 +59248,7 @@ function $(oa) {
 			}
 			e = c[a + 724 >> 2] | 0;
 			if (!e) {
-				wx(b);
+				_free(b);
 				i = d;
 				return
 			} else {
@@ -59477,7 +59477,7 @@ function $(oa) {
 			c[l >> 2] = 0;
 			m = j + 160 | 0;
 			n = j + 4 | 0;
-			sy(m | 0, 0, 900) | 0;
+			_memset(m | 0, 0, 900) | 0;
 			c[m + 748 >> 2] = 2147483647;
 			c[m + 752 >> 2] = 2147483647;
 			c[m + 756 >> 2] = 0;
@@ -59490,12 +59490,12 @@ function $(oa) {
 			c[m + 168 >> 2] = d;
 			d = m + 172 | 0;
 			c[d >> 2] = e;
-			my(n, 1, l | 0) | 0;
+			_saveSetjmp(n, 1, l | 0) | 0;
 			s = 0;
 			e = s;
 			s = 0;
 			if ((e | 0) != 0 & (t | 0) != 0) {
-				o = oy(c[e >> 2] | 0, l) | 0;
+				o = _testSetjmp(c[e >> 2] | 0, l) | 0;
 				if (!o)
 					Fa(e | 0, t | 0);
 				H = t
@@ -59522,7 +59522,7 @@ function $(oa) {
 				e = s;
 				s = 0;
 				if ((e | 0) != 0 & (t | 0) != 0) {
-					y = oy(c[e >> 2] | 0, l) | 0;
+					y = _testSetjmp(c[e >> 2] | 0, l) | 0;
 					if (!y)
 						Fa(e | 0, t | 0);
 					H = t
@@ -59544,7 +59544,7 @@ function $(oa) {
 					b = s;
 					s = 0;
 					if ((b | 0) != 0 & (t | 0) != 0) {
-						z = oy(c[b >> 2] | 0, l) | 0;
+						z = _testSetjmp(c[b >> 2] | 0, l) | 0;
 						if (!z)
 							Fa(b | 0, t | 0);
 						H = t
@@ -59561,7 +59561,7 @@ function $(oa) {
 					o = s;
 					s = 0;
 					if ((o | 0) != 0 & (t | 0) != 0) {
-						B = oy(c[o >> 2] | 0, l) | 0;
+						B = _testSetjmp(c[o >> 2] | 0, l) | 0;
 						if (!B)
 							Fa(o | 0, t | 0);
 						H = t
@@ -59584,7 +59584,7 @@ function $(oa) {
 					e = s;
 					s = 0;
 					if ((e | 0) != 0 & (t | 0) != 0) {
-						C = oy(c[e >> 2] | 0, l) | 0;
+						C = _testSetjmp(c[e >> 2] | 0, l) | 0;
 						if (!C)
 							Fa(e | 0, t | 0);
 						H = t
@@ -59605,7 +59605,7 @@ function $(oa) {
 				o = s;
 				s = 0;
 				if ((o | 0) != 0 & (t | 0) != 0) {
-					D = oy(c[o >> 2] | 0, l) | 0;
+					D = _testSetjmp(c[o >> 2] | 0, l) | 0;
 					if (!D)
 						Fa(o | 0, t | 0);
 					H = t
@@ -59620,7 +59620,7 @@ function $(oa) {
 				e = s;
 				s = 0;
 				if ((e | 0) != 0 & (t | 0) != 0) {
-					E = oy(c[e >> 2] | 0, l) | 0;
+					E = _testSetjmp(c[e >> 2] | 0, l) | 0;
 					if (!E)
 						Fa(e | 0, t | 0);
 					H = t
@@ -59648,7 +59648,7 @@ function $(oa) {
 				c[v >> 2] = 0;
 				c[w >> 2] = 0;
 				c[x >> 2] = 0;
-				qy(A | 0, m | 0, 900) | 0;
+				_memcpy(A | 0, m | 0, 900) | 0;
 				r = A;
 				i = j;
 				return r | 0
@@ -59668,13 +59668,13 @@ function $(oa) {
 			if (a) {
 				d = c[a + 720 >> 2] | 0;
 				if (!d)
-					e = vx(268) | 0;
+					e = _malloc(268) | 0;
 				else
 					e = FUNCTION_TABLE_iii[d & 31](a, 268) | 0;
 				if (!e)
 					f = e;
 				else {
-					sy(e | 0, 0, 268) | 0;
+					_memset(e | 0, 0, 268) | 0;
 					f = e
 				}
 			} else
@@ -59682,7 +59682,7 @@ function $(oa) {
 			i = b;
 			return f | 0
 		}
-		function Kg(e, f, g, h) {
+		function png_free_data_part_68_564940(e, f, g, h) {
 			e = e | 0;
 			f = f | 0;
 			g = g | 0;
@@ -59726,7 +59726,7 @@ function $(oa) {
 							break;
 						m = c[e + 724 >> 2] | 0;
 						if (!m)
-							wx(n);
+							_free(n);
 						else
 							FUNCTION_TABLE_vii[m & 127](e, n);
 						c[(c[l >> 2] | 0) + (h * 28 | 0) + 4 >> 2] = 0;
@@ -59736,7 +59736,7 @@ function $(oa) {
 					if ((c[l >> 2] | 0) > 0) {
 						n = 0;
 						do {
-							Kg(e, f, 16384, n);
+							png_free_data_part_68_564940(e, f, 16384, n);
 							n = n + 1 | 0
 						} while ((n | 0) < (c[l >> 2] | 0))
 					}
@@ -59746,7 +59746,7 @@ function $(oa) {
 						if (m) {
 							o = c[e + 724 >> 2] | 0;
 							if (!o) {
-								wx(m);
+								_free(m);
 								break
 							} else {
 								FUNCTION_TABLE_vii[o & 127](e, m);
@@ -59768,7 +59768,7 @@ function $(oa) {
 					if (o) {
 						q = c[e + 724 >> 2] | 0;
 						if (!q) {
-							wx(o);
+							_free(o);
 							break
 						} else {
 							FUNCTION_TABLE_vii[q & 127](e, o);
@@ -59790,7 +59790,7 @@ function $(oa) {
 					if (m) {
 						o = c[e + 724 >> 2] | 0;
 						if (!o) {
-							wx(m);
+							_free(m);
 							break
 						} else {
 							FUNCTION_TABLE_vii[o & 127](e, m);
@@ -59804,7 +59804,7 @@ function $(oa) {
 					if (o) {
 						q = c[e + 724 >> 2] | 0;
 						if (!q) {
-							wx(o);
+							_free(o);
 							break
 						} else {
 							FUNCTION_TABLE_vii[q & 127](e, o);
@@ -59827,7 +59827,7 @@ function $(oa) {
 					if (m) {
 						p = c[e + 724 >> 2] | 0;
 						if (!p) {
-							wx(m);
+							_free(m);
 							break
 						} else {
 							FUNCTION_TABLE_vii[p & 127](e, m);
@@ -59841,7 +59841,7 @@ function $(oa) {
 					if (p) {
 						o = c[e + 724 >> 2] | 0;
 						if (!o) {
-							wx(p);
+							_free(p);
 							break
 						} else {
 							FUNCTION_TABLE_vii[o & 127](e, p);
@@ -59865,7 +59865,7 @@ function $(oa) {
 								if (u) {
 									v = c[o >> 2] | 0;
 									if (!v) {
-										wx(u);
+										_free(u);
 										break
 									} else {
 										FUNCTION_TABLE_vii[v & 127](e, u);
@@ -59889,7 +59889,7 @@ function $(oa) {
 						if ((x | 0) == 51) {
 							r = c[e + 724 >> 2] | 0;
 							if (!r) {
-								wx(w);
+								_free(w);
 								break
 							} else {
 								FUNCTION_TABLE_vii[r & 127](e, w);
@@ -59912,7 +59912,7 @@ function $(oa) {
 					if (m) {
 						w = c[e + 724 >> 2] | 0;
 						if (!w) {
-							wx(m);
+							_free(m);
 							break
 						} else {
 							FUNCTION_TABLE_vii[w & 127](e, m);
@@ -59926,7 +59926,7 @@ function $(oa) {
 					if (w) {
 						r = c[e + 724 >> 2] | 0;
 						if (!r) {
-							wx(w);
+							_free(w);
 							break
 						} else {
 							FUNCTION_TABLE_vii[r & 127](e, w);
@@ -59949,7 +59949,7 @@ function $(oa) {
 							if ((s | 0) > 0) {
 								s = 0;
 								do {
-									Kg(e, f, 32, s);
+									png_free_data_part_68_564940(e, f, 32, s);
 									s = s + 1 | 0
 								} while ((s | 0) < (c[m >> 2] | 0))
 							}
@@ -59959,7 +59959,7 @@ function $(oa) {
 								if (w) {
 									r = c[e + 724 >> 2] | 0;
 									if (!r) {
-										wx(w);
+										_free(w);
 										break
 									} else {
 										FUNCTION_TABLE_vii[r & 127](e, w);
@@ -59982,7 +59982,7 @@ function $(oa) {
 							if (q) {
 								r = c[e + 724 >> 2] | 0;
 								if (!r) {
-									wx(q);
+									_free(q);
 									break
 								} else {
 									FUNCTION_TABLE_vii[r & 127](e, q);
@@ -59995,7 +59995,7 @@ function $(oa) {
 							if (q) {
 								m = c[e + 724 >> 2] | 0;
 								if (!m) {
-									wx(q);
+									_free(q);
 									break
 								} else {
 									FUNCTION_TABLE_vii[m & 127](e, q);
@@ -60021,7 +60021,7 @@ function $(oa) {
 							if (m) {
 								q = c[e + 724 >> 2] | 0;
 								if (!q) {
-									wx(m);
+									_free(m);
 									break
 								} else {
 									FUNCTION_TABLE_vii[q & 127](e, m);
@@ -60038,7 +60038,7 @@ function $(oa) {
 						if ((w | 0) > 0) {
 							w = 0;
 							do {
-								Kg(e, f, 512, w);
+								png_free_data_part_68_564940(e, f, 512, w);
 								w = w + 1 | 0
 							} while ((w | 0) < (c[m >> 2] | 0))
 						}
@@ -60048,7 +60048,7 @@ function $(oa) {
 							if (y) {
 								q = c[e + 724 >> 2] | 0;
 								if (!q) {
-									wx(y);
+									_free(y);
 									break
 								} else {
 									FUNCTION_TABLE_vii[q & 127](e, y);
@@ -60071,7 +60071,7 @@ function $(oa) {
 					if (q) {
 						s = c[e + 724 >> 2] | 0;
 						if (!s) {
-							wx(q);
+							_free(q);
 							break
 						} else {
 							FUNCTION_TABLE_vii[s & 127](e, q);
@@ -60093,7 +60093,7 @@ function $(oa) {
 					if (y) {
 						q = c[e + 724 >> 2] | 0;
 						if (!q) {
-							wx(y);
+							_free(y);
 							break
 						} else {
 							FUNCTION_TABLE_vii[q & 127](e, y);
@@ -60126,7 +60126,7 @@ function $(oa) {
 								if (p) {
 									t = c[q >> 2] | 0;
 									if (!t) {
-										wx(p);
+										_free(p);
 										break
 									} else {
 										FUNCTION_TABLE_vii[t & 127](e, p);
@@ -60150,7 +60150,7 @@ function $(oa) {
 						if ((x | 0) == 125) {
 							y = c[e + 724 >> 2] | 0;
 							if (!y) {
-								wx(D);
+								_free(D);
 								break
 							} else {
 								FUNCTION_TABLE_vii[y & 127](e, D);
@@ -60249,7 +60249,7 @@ function $(oa) {
 					return
 				}
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, d);
+					png_err(b, d);
 				Zg(b, d);
 				i = f;
 				return
@@ -60424,7 +60424,7 @@ function $(oa) {
 				if (!(c[b + 376 >> 2] | 0))
 					Eg(b, d);
 				else
-					_g(b, d)
+					png_err(b, d)
 			}
 			if (g ? (c[b + 376 >> 2] | 0) != 0 : 0) {
 				Zg(b, d);
@@ -60780,7 +60780,7 @@ function $(oa) {
 							M = G;
 						if ((M | 0) == (c[7656 + (H << 5) >> 2] | 0)) {
 							if (!g)
-								N = sk(sk(0, 0, 0) | 0, f, L) | 0;
+								N = crc32(crc32(0, 0, 0) | 0, f, L) | 0;
 							else
 								N = g;
 							if ((N | 0) == (c[7660 + (H << 5) >> 2] | 0))
@@ -61419,7 +61419,7 @@ function $(oa) {
 				if (!(f | (e | 0) == 0)) {
 					g = c[a + 724 >> 2] | 0;
 					if (!g) {
-						wx(e);
+						_free(e);
 						break
 					} else {
 						FUNCTION_TABLE_vii[g & 127](a, e);
@@ -61445,7 +61445,7 @@ function $(oa) {
 							if (!(f | (l | 0) == 0)) {
 								m = c[g >> 2] | 0;
 								if (!m) {
-									wx(l);
+									_free(l);
 									break
 								} else {
 									FUNCTION_TABLE_vii[m & 127](a, l);
@@ -61466,7 +61466,7 @@ function $(oa) {
 					if (!(f | (j | 0) == 0)) {
 						k = c[a + 724 >> 2] | 0;
 						if (!k) {
-							wx(j);
+							_free(j);
 							break
 						} else {
 							FUNCTION_TABLE_vii[k & 127](a, j);
@@ -61482,7 +61482,7 @@ function $(oa) {
 				if (!(f | (j | 0) == 0)) {
 					k = c[a + 724 >> 2] | 0;
 					if (!k) {
-						wx(j);
+						_free(j);
 						break
 					} else {
 						FUNCTION_TABLE_vii[k & 127](a, j);
@@ -61497,7 +61497,7 @@ function $(oa) {
 				if (!(f | (j | 0) == 0)) {
 					k = c[a + 724 >> 2] | 0;
 					if (!k) {
-						wx(j);
+						_free(j);
 						break
 					} else {
 						FUNCTION_TABLE_vii[k & 127](a, j);
@@ -61523,7 +61523,7 @@ function $(oa) {
 							if (!(f | (g | 0) == 0)) {
 								l = c[k >> 2] | 0;
 								if (!l) {
-									wx(g);
+									_free(g);
 									break
 								} else {
 									FUNCTION_TABLE_vii[l & 127](a, g);
@@ -61544,7 +61544,7 @@ function $(oa) {
 					if (!(f | (n | 0) == 0)) {
 						e = c[a + 724 >> 2] | 0;
 						if (!e) {
-							wx(n);
+							_free(n);
 							break
 						} else {
 							FUNCTION_TABLE_vii[e & 127](a, n);
@@ -61574,7 +61574,7 @@ function $(oa) {
 						if (!(f | (k | 0) == 0)) {
 							g = c[e >> 2] | 0;
 							if (!g) {
-								wx(k);
+								_free(k);
 								break
 							} else {
 								FUNCTION_TABLE_vii[g & 127](a, k);
@@ -61595,7 +61595,7 @@ function $(oa) {
 				if (!(f | (o | 0) == 0)) {
 					j = c[a + 724 >> 2] | 0;
 					if (!j) {
-						wx(o);
+						_free(o);
 						break
 					} else {
 						FUNCTION_TABLE_vii[j & 127](a, o);
@@ -61722,13 +61722,13 @@ function $(oa) {
 							w = d + 720 | 0;
 							x = c[w >> 2] | 0;
 							if (!x)
-								y = vx(u) | 0;
+								y = _malloc(u) | 0;
 							else
 								y = FUNCTION_TABLE_iii[x & 31](d, u) | 0;
 							if (!y)
 								Eg(d, 3264);
 							else {
-								sy(y | 0, 0, u | 0) | 0;
+								_memset(y | 0, 0, u | 0) | 0;
 								z = y;
 								A = w;
 								break
@@ -61744,7 +61744,7 @@ function $(oa) {
 						if (!v) {
 							u = c[A >> 2] | 0;
 							if (!u)
-								B = vx(512) | 0;
+								B = _malloc(512) | 0;
 							else
 								B = FUNCTION_TABLE_iii[u & 31](d, 512) | 0;
 							if (!B) {
@@ -61839,7 +61839,7 @@ function $(oa) {
 			if (!m) {
 				F = c[d + 720 >> 2] | 0;
 				if (!F)
-					I = vx(256) | 0;
+					I = _malloc(256) | 0;
 				else
 					I = FUNCTION_TABLE_iii[F & 31](d, 256) | 0;
 				if (!I)
@@ -61881,7 +61881,7 @@ function $(oa) {
 			if (!m) {
 				K = c[d + 720 >> 2] | 0;
 				if (!K)
-					M = vx(256) | 0;
+					M = _malloc(256) | 0;
 				else
 					M = FUNCTION_TABLE_iii[K & 31](d, 256) | 0;
 				if (!M)
@@ -61922,7 +61922,7 @@ function $(oa) {
 			if (!m) {
 				m = c[d + 720 >> 2] | 0;
 				if (!m)
-					Q = vx(256) | 0;
+					Q = _malloc(256) | 0;
 				else
 					Q = FUNCTION_TABLE_iii[m & 31](d, 256) | 0;
 				if (!Q)
@@ -62009,7 +62009,7 @@ function $(oa) {
 				return
 			}
 		}
-		function _g(a, b) {
+		function png_err(a, b) {
 			a = a | 0;
 			b = b | 0;
 			var d = 0,
@@ -62054,12 +62054,12 @@ function $(oa) {
 			h = a + 164 | 0;
 			a: do
 				if ((g | 0) != 0 ? !((c[h >> 2] | 0) == 0 | (g | 0) == (a | 0)) : 0) {
-					my(e, 1, d | 0) | 0;
+					_saveSetjmp(e, 1, d | 0) | 0;
 					s = 0;
 					j = s;
 					s = 0;
 					if ((j | 0) != 0 & (t | 0) != 0) {
-						k = oy(c[j >> 2] | 0, d) | 0;
+						k = _testSetjmp(c[j >> 2] | 0, d) | 0;
 						if (!k)
 							Fa(j | 0, t | 0);
 						H = t
@@ -62082,7 +62082,7 @@ function $(oa) {
 							m = s;
 							s = 0;
 							if ((m | 0) != 0 & (t | 0) != 0) {
-								n = oy(c[m >> 2] | 0, d) | 0;
+								n = _testSetjmp(c[m >> 2] | 0, d) | 0;
 								if (!n)
 									Fa(m | 0, t | 0);
 								H = t
@@ -62101,7 +62101,7 @@ function $(oa) {
 							j = s;
 							s = 0;
 							if ((j | 0) != 0 & (t | 0) != 0) {
-								p = oy(c[j >> 2] | 0, d) | 0;
+								p = _testSetjmp(c[j >> 2] | 0, d) | 0;
 								if (!p)
 									Fa(j | 0, t | 0);
 								H = t
@@ -62217,9 +62217,9 @@ function $(oa) {
 			j = b + 208 | 0;
 			k = c[j >> 2] | 0;
 			if (k & 1)
-				_g(b, 4112);
+				png_err(b, 4112);
 			if ((f | 0) != 13)
-				_g(b, 4128);
+				png_err(b, 4128);
 			c[j >> 2] = k | 1;
 			do
 				if (b) {
@@ -62234,10 +62234,10 @@ function $(oa) {
 					} else if ((k & 768 | 0) == 768)
 						break;
 					k = b + 412 | 0;
-					c[k >> 2] = sk(c[k >> 2] | 0, h, 13) | 0
+					c[k >> 2] = crc32(c[k >> 2] | 0, h, 13) | 0
 				}
 			while (0);
-			xh(b, 0) | 0;
+			png_crc_finish(b, 0) | 0;
 			k = (d[h + 1 >> 0] | 0) << 16 | (d[h >> 0] | 0) << 24 | (d[h + 2 >> 0] | 0) << 8 | (d[h + 3 >> 0] | 0);
 			if ((k | 0) < 0)
 				Eg(b, 4056);
@@ -62293,7 +62293,7 @@ function $(oa) {
 				return
 			}
 		}
-		function eh(a, b, d, e) {
+		function png_handle_unknown(a, b, d, e) {
 			a = a | 0;
 			b = b | 0;
 			d = d | 0;
@@ -62329,7 +62329,7 @@ function $(oa) {
 						k = 19;
 						break
 					} else if ((k | 0) == 18) {
-						xh(a, d) | 0;
+						png_crc_finish(a, d) | 0;
 						m = j;
 						k = 19;
 						break
@@ -62337,7 +62337,7 @@ function $(oa) {
 				} else if (xi(a, d) | 0) {
 					l = FUNCTION_TABLE_iii[c[h >> 2] & 31](a, a + 764 | 0) | 0;
 					if ((l | 0) < 0)
-						_g(a, 4896);
+						png_err(a, 4896);
 					if (!l)
 						if ((e | 0) < 2)
 							if ((c[a + 688 >> 2] | 0) < 2) {
@@ -62387,7 +62387,7 @@ function $(oa) {
 					if ((e | 0) == 2) {
 						c[m >> 2] = 1;
 						if (!(c[a + 212 >> 2] & 1048576))
-							_g(a, 4768);
+							png_err(a, 4768);
 						else {
 							Zg(a, 4768);
 							o = 0;
@@ -62408,7 +62408,7 @@ function $(oa) {
 				if (!((a | 0) == 0 | (k | 0) == 0)) {
 					e = c[a + 724 >> 2] | 0;
 					if (!e) {
-						wx(k);
+						_free(k);
 						break
 					} else {
 						FUNCTION_TABLE_vii[e & 127](a, k);
@@ -62422,13 +62422,13 @@ function $(oa) {
 				return
 			}
 			if (!(c[a + 376 >> 2] & 536870912))
-				_g(a, 5024);
+				png_err(a, 5024);
 			else {
 				i = f;
 				return
 			}
 		}
-		function fh(d, e, f) {
+		function png_handle_PLTE(d, e, f) {
 			d = d | 0;
 			e = e | 0;
 			f = f | 0;
@@ -62456,13 +62456,13 @@ function $(oa) {
 			k = d + 208 | 0;
 			l = c[k >> 2] | 0;
 			if (!(l & 1))
-				_g(d, 4136);
+				png_err(d, 4136);
 			if (l & 2)
-				_g(d, 1544);
+				png_err(d, 1544);
 			if (l & 4) {
-				xh(d, f) | 0;
+				png_crc_finish(d, f) | 0;
 				if (!(c[d + 212 >> 2] & 1048576))
-					_g(d, 4112);
+					png_err(d, 4112);
 				Zg(d, 4112);
 				i = g;
 				return
@@ -62470,19 +62470,19 @@ function $(oa) {
 			c[k >> 2] = l | 2;
 			l = d + 435 | 0;
 			if (!(a[l >> 0] & 2)) {
-				xh(d, f) | 0;
+				png_crc_finish(d, f) | 0;
 				if (!(c[d + 212 >> 2] & 1048576))
-					_g(d, 4152);
+					png_err(d, 4152);
 				Zg(d, 4152);
 				i = g;
 				return
 			}
 			if (!(f >>> 0 < 769 & ((f >>> 0) % 3 | 0 | 0) == 0)) {
-				xh(d, f) | 0;
+				png_crc_finish(d, f) | 0;
 				if ((a[l >> 0] | 0) == 3)
-					_g(d, 4128);
+					png_err(d, 4128);
 				if (!(c[d + 212 >> 2] & 1048576))
-					_g(d, 4128);
+					png_err(d, 4128);
 				Zg(d, 4128);
 				i = g;
 				return
@@ -62512,7 +62512,7 @@ function $(oa) {
 										break
 								} else if ((u & 768 | 0) == 768)
 									break;
-								c[r >> 2] = sk(c[r >> 2] | 0, j, 3) | 0
+								c[r >> 2] = crc32(c[r >> 2] | 0, j, 3) | 0
 							}
 						while (0);
 						a[t >> 0] = a[j >> 0] | 0;
@@ -62527,7 +62527,7 @@ function $(oa) {
 					Eg(d, 3688)
 				}
 			while (0);
-			xh(d, 0) | 0;
+			png_crc_finish(d, 0) | 0;
 			hi(d, e, h, l);
 			l = d + 428 | 0;
 			if (!(b[l >> 1] | 0)) {
@@ -62556,7 +62556,7 @@ function $(oa) {
 			do
 				if ((w | 0) == 35) {
 					if (!(c[d + 212 >> 2] & 1048576))
-						_g(d, 4184);
+						png_err(d, 4184);
 					Zg(d, 4184);
 					if (!e) {
 						i = g;
@@ -62571,7 +62571,7 @@ function $(oa) {
 			do
 				if (v & 64)
 					if (!(c[d + 212 >> 2] & 1048576))
-						_g(d, 4208);
+						png_err(d, 4208);
 					else {
 						Zg(d, 4208);
 						x = c[w >> 2] | 0;
@@ -62585,12 +62585,12 @@ function $(oa) {
 				return
 			}
 			if (!(c[d + 212 >> 2] & 1048576))
-				_g(d, 4232);
+				png_err(d, 4232);
 			Zg(d, 4232);
 			i = g;
 			return
 		}
-		function gh(a, e, f) {
+		function png_handle_gAMA(a, e, f) {
 			a = a | 0;
 			e = e | 0;
 			f = f | 0;
@@ -62602,19 +62602,19 @@ function $(oa) {
 			h = g;
 			j = c[a + 208 >> 2] | 0;
 			if (!(j & 1))
-				_g(a, 4136);
+				png_err(a, 4136);
 			if (j & 6) {
-				xh(a, f) | 0;
+				png_crc_finish(a, f) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4112);
+					png_err(a, 4112);
 				Zg(a, 4112);
 				i = g;
 				return
 			}
 			if ((f | 0) != 4) {
-				xh(a, f) | 0;
+				png_crc_finish(a, f) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4128);
+					png_err(a, 4128);
 				Zg(a, 4128);
 				i = g;
 				return
@@ -62632,10 +62632,10 @@ function $(oa) {
 					} else if ((f & 768 | 0) == 768)
 						break;
 					f = a + 412 | 0;
-					c[f >> 2] = sk(c[f >> 2] | 0, h, 4) | 0
+					c[f >> 2] = crc32(c[f >> 2] | 0, h, 4) | 0
 				}
 			while (0);
-			if (xh(a, 0) | 0) {
+			if (png_crc_finish(a, 0) | 0) {
 				i = g;
 				return
 			}
@@ -62659,7 +62659,7 @@ function $(oa) {
 			if (f & 32768) {
 				h = e + 8 | 0;
 				c[h >> 2] = c[h >> 2] & -6150;
-				Kg(a, e, 16, -1);
+				png_free_data_part_68_564940(a, e, 16, -1);
 				i = g;
 				return
 			}
@@ -62678,7 +62678,7 @@ function $(oa) {
 				return
 			}
 		}
-		function hh(b, e, f) {
+		function png_handle_sBIT(b, e, f) {
 			b = b | 0;
 			e = e | 0;
 			f = f | 0;
@@ -62703,20 +62703,20 @@ function $(oa) {
 			c[h >> 2] = 0;
 			m = c[b + 208 >> 2] | 0;
 			if (!(m & 1))
-				_g(b, 4136);
+				png_err(b, 4136);
 			if (m & 6) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4112);
+					png_err(b, 4112);
 				Zg(b, 4112);
 				i = g;
 				return
 			}
 			m = (e | 0) == 0;
 			if (!m ? (c[e + 8 >> 2] & 2 | 0) != 0 : 0) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 1544);
+					png_err(b, 1544);
 				Zg(b, 1544);
 				i = g;
 				return
@@ -62728,9 +62728,9 @@ function $(oa) {
 				o = d[b + 439 >> 0] | 0;
 			if ((o | 0) != (f | 0) | f >>> 0 > 4) {
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4128);
+					png_err(b, 4128);
 				Zg(b, 4128);
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				i = g;
 				return
 			}
@@ -62752,7 +62752,7 @@ function $(oa) {
 					f = c[q >> 2] | 0;
 					while (1) {
 						s = (r | 0) == 0 ? -1 : r;
-						f = sk(f, p, s) | 0;
+						f = crc32(f, p, s) | 0;
 						if ((r | 0) == (s | 0))
 							break;
 						else {
@@ -62763,14 +62763,14 @@ function $(oa) {
 					c[q >> 2] = f
 				}
 			}
-			if (xh(b, 0) | 0) {
+			if (png_crc_finish(b, 0) | 0) {
 				i = g;
 				return
 			}
 			f = a[h >> 0] | 0;
 			h = b + 516 | 0;
 			if (!(a[n >> 0] & 2)) {
-				sy(h | 0, f | 0, 4) | 0;
+				_memset(h | 0, f | 0, 4) | 0;
 				a[b + 520 >> 0] = a[l >> 0] | 0
 			} else {
 				a[h >> 0] = f;
@@ -62793,7 +62793,7 @@ function $(oa) {
 			i = g;
 			return
 		}
-		function ih(a, f, g) {
+		function png_handle_cHRM(a, f, g) {
 			a = a | 0;
 			f = f | 0;
 			g = g | 0;
@@ -62815,19 +62815,19 @@ function $(oa) {
 			k = h;
 			l = c[a + 208 >> 2] | 0;
 			if (!(l & 1))
-				_g(a, 4136);
+				png_err(a, 4136);
 			if (l & 6) {
-				xh(a, g) | 0;
+				png_crc_finish(a, g) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4112);
+					png_err(a, 4112);
 				Zg(a, 4112);
 				i = h;
 				return
 			}
 			if ((g | 0) != 32) {
-				xh(a, g) | 0;
+				png_crc_finish(a, g) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4128);
+					png_err(a, 4128);
 				Zg(a, 4128);
 				i = h;
 				return
@@ -62845,10 +62845,10 @@ function $(oa) {
 					} else if ((g & 768 | 0) == 768)
 						break;
 					g = a + 412 | 0;
-					c[g >> 2] = sk(c[g >> 2] | 0, j, 32) | 0
+					c[g >> 2] = crc32(c[g >> 2] | 0, j, 32) | 0
 				}
 			while (0);
-			if (xh(a, 0) | 0) {
+			if (png_crc_finish(a, 0) | 0) {
 				i = h;
 				return
 			}
@@ -62877,7 +62877,7 @@ function $(oa) {
 			c[k + 20 >> 2] = j;
 			if ((c[l >> 2] | 0) == -1 | (c[m >> 2] | 0) == -1 | (c[k >> 2] | 0) == -1 | (n | 0) == -1 | (o | 0) == -1 | (p | 0) == -1 | (q | 0) == -1 | (j | 0) == -1) {
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4256);
+					png_err(a, 4256);
 				Zg(a, 4256);
 				i = h;
 				return
@@ -62909,7 +62909,7 @@ function $(oa) {
 				if (o & 32768) {
 					n = f + 8 | 0;
 					c[n >> 2] = c[n >> 2] & -6150;
-					Kg(a, f, 16, -1);
+					png_free_data_part_68_564940(a, f, 16, -1);
 					i = h;
 					return
 				}
@@ -62944,7 +62944,7 @@ function $(oa) {
 						if (q & 32768) {
 							m = f + 8 | 0;
 							c[m >> 2] = c[m >> 2] & -6150;
-							Kg(a, f, 16, -1);
+							png_free_data_part_68_564940(a, f, 16, -1);
 							break
 						}
 						m = f + 8 | 0;
@@ -62962,13 +62962,13 @@ function $(oa) {
 					}
 				while (0);
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 1544);
+					png_err(a, 1544);
 				Zg(a, 1544);
 				i = h;
 				return
 			}
 		}
-		function jh(a, f, g) {
+		function png_handle_sRGB(a, f, g) {
 			a = a | 0;
 			f = f | 0;
 			g = g | 0;
@@ -62988,19 +62988,19 @@ function $(oa) {
 			j = h;
 			k = c[a + 208 >> 2] | 0;
 			if (!(k & 1))
-				_g(a, 4136);
+				png_err(a, 4136);
 			if (k & 6) {
-				xh(a, g) | 0;
+				png_crc_finish(a, g) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4112);
+					png_err(a, 4112);
 				Zg(a, 4112);
 				i = h;
 				return
 			}
 			if ((g | 0) != 1) {
-				xh(a, g) | 0;
+				png_crc_finish(a, g) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4128);
+					png_err(a, 4128);
 				Zg(a, 4128);
 				i = h;
 				return
@@ -63018,10 +63018,10 @@ function $(oa) {
 					} else if ((g & 768 | 0) == 768)
 						break;
 					g = a + 412 | 0;
-					c[g >> 2] = sk(c[g >> 2] | 0, j, 1) | 0
+					c[g >> 2] = crc32(c[g >> 2] | 0, j, 1) | 0
 				}
 			while (0);
-			if (xh(a, 0) | 0) {
+			if (png_crc_finish(a, 0) | 0) {
 				i = h;
 				return
 			}
@@ -63051,7 +63051,7 @@ function $(oa) {
 				if (p & 32768) {
 					q = f + 8 | 0;
 					c[q >> 2] = c[q >> 2] & -6150;
-					Kg(a, f, 16, -1);
+					png_free_data_part_68_564940(a, f, 16, -1);
 					i = h;
 					return
 				}
@@ -63086,7 +63086,7 @@ function $(oa) {
 						if (k & 32768) {
 							r = f + 8 | 0;
 							c[r >> 2] = c[r >> 2] & -6150;
-							Kg(a, f, 16, -1);
+							png_free_data_part_68_564940(a, f, 16, -1);
 							break
 						}
 						r = f + 8 | 0;
@@ -63104,13 +63104,13 @@ function $(oa) {
 					}
 				while (0);
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4272);
+					png_err(a, 4272);
 				Zg(a, 4272);
 				i = h;
 				return
 			}
 		}
-		function kh(f, g, h) {
+		function png_handle_iCCP(f, g, h) {
 			f = f | 0;
 			g = g | 0;
 			h = h | 0;
@@ -63161,19 +63161,19 @@ function $(oa) {
 			c[k >> 2] = h;
 			p = c[f + 208 >> 2] | 0;
 			if (!(p & 1))
-				_g(f, 4136);
+				png_err(f, 4136);
 			if (p & 6) {
-				xh(f, h) | 0;
+				png_crc_finish(f, h) | 0;
 				if (!(c[f + 212 >> 2] & 1048576))
-					_g(f, 4112);
+					png_err(f, 4112);
 				Zg(f, 4112);
 				i = j;
 				return
 			}
 			if (h >>> 0 < 9) {
-				xh(f, h) | 0;
+				png_crc_finish(f, h) | 0;
 				if (!(c[f + 212 >> 2] & 1048576))
-					_g(f, 1840);
+					png_err(f, 1840);
 				Zg(f, 1840);
 				i = j;
 				return
@@ -63182,7 +63182,7 @@ function $(oa) {
 			q = f + 898 | 0;
 			r = e[q >> 1] | 0;
 			if (r & 32768) {
-				xh(f, h) | 0;
+				png_crc_finish(f, h) | 0;
 				i = j;
 				return
 			}
@@ -63207,7 +63207,7 @@ function $(oa) {
 							y = c[u >> 2] | 0;
 							while (1) {
 								z = (x | 0) == 0 ? -1 : x;
-								y = sk(y, w, z) | 0;
+								y = crc32(y, w, z) | 0;
 								if ((x | 0) == (z | 0))
 									break;
 								else {
@@ -63287,7 +63287,7 @@ function $(oa) {
 														}
 														L = c[f + 724 >> 2] | 0;
 														if (!L) {
-															wx(K);
+															_free(K);
 															F = 43;
 															break
 														} else {
@@ -63319,7 +63319,7 @@ function $(oa) {
 													}
 												while (0);
 												if ((F | 0) == 47)
-													N = vx(u) | 0;
+													N = _malloc(u) | 0;
 												if (!N) {
 													G = 4320;
 													H = 1;
@@ -63329,7 +63329,7 @@ function $(oa) {
 												c[f + 792 >> 2] = u;
 												M = N
 											}
-											qy(M | 0, m | 0, 132) | 0;
+											_memcpy(M | 0, m | 0, 132) | 0;
 											K = ((z & 255) << 16 | (y & 255) << 24 | (C & 255) << 8 | I & 255) * 12 | 0;
 											c[o >> 2] = K;
 											zi(f, n, k, M + 132 | 0, o, 0);
@@ -63355,10 +63355,10 @@ function $(oa) {
 												}
 												if (!L)
 													Zg(f, 4296);
-												xh(f, K) | 0;
+												png_crc_finish(f, K) | 0;
 												Tg(f, p, M, c[f + 272 >> 2] | 0);
 												if (g) {
-													Kg(f, g, 16, 0);
+													png_free_data_part_68_564940(f, g, 16, 0);
 													do
 														if (!w) {
 															c[g + 116 >> 2] = 0;
@@ -63377,13 +63377,13 @@ function $(oa) {
 																}
 															while (0);
 															if ((F | 0) == 63)
-																O = vx(w) | 0;
+																O = _malloc(w) | 0;
 															c[g + 116 >> 2] = O;
 															if (!O) {
 																F = 66;
 																break
 															}
-															qy(O | 0, l | 0, w | 0) | 0;
+															_memcpy(O | 0, l | 0, w | 0) | 0;
 															c[g + 124 >> 2] = u;
 															c[g + 120 >> 2] = M;
 															c[J >> 2] = 0;
@@ -63425,7 +63425,7 @@ function $(oa) {
 														} else {
 															C = g + 8 | 0;
 															c[C >> 2] = c[C >> 2] & -6150;
-															Kg(f, g, 16, -1)
+															png_free_data_part_68_564940(f, g, 16, -1)
 														}
 													while (0);
 													if (P) {
@@ -63479,7 +63479,7 @@ function $(oa) {
 				}
 			while (0);
 			if ((F | 0) == 79) {
-				xh(f, D) | 0;
+				png_crc_finish(f, D) | 0;
 				T = E
 			}
 			b[q >> 1] = e[q >> 1] | 32768;
@@ -63498,7 +63498,7 @@ function $(oa) {
 					if (q & 32768) {
 						E = g + 8 | 0;
 						c[E >> 2] = c[E >> 2] & -6150;
-						Kg(f, g, 16, -1);
+						png_free_data_part_68_564940(f, g, 16, -1);
 						break
 					}
 					E = g + 8 | 0;
@@ -63520,12 +63520,12 @@ function $(oa) {
 				return
 			}
 			if (!(c[f + 212 >> 2] & 1048576))
-				_g(f, T);
+				png_err(f, T);
 			Zg(f, T);
 			i = j;
 			return
 		}
-		function lh(e, f, g) {
+		function png_handle_sPLT(e, f, g) {
 			e = e | 0;
 			f = f | 0;
 			g = g | 0;
@@ -63550,7 +63550,7 @@ function $(oa) {
 			l = e + 756 | 0;
 			m = c[l >> 2] | 0;
 			if ((m | 0) == 1) {
-				xh(e, g) | 0;
+				png_crc_finish(e, g) | 0;
 				i = h;
 				return
 			} else if (m)
@@ -63564,17 +63564,17 @@ function $(oa) {
 					Qb(o | 0, 7576, j | 0) | 0;
 					ec(10, o | 0) | 0
 				}
-				xh(e, g) | 0;
+				png_crc_finish(e, g) | 0;
 				i = h;
 				return
 			}
 			o = c[e + 208 >> 2] | 0;
 			if (!(o & 1))
-				_g(e, 4136);
+				png_err(e, 4136);
 			if (o & 4) {
-				xh(e, g) | 0;
+				png_crc_finish(e, g) | 0;
 				if (!(c[e + 212 >> 2] & 1048576))
-					_g(e, 4112);
+					png_err(e, 4112);
 				Zg(e, 4112);
 				i = h;
 				return
@@ -63591,7 +63591,7 @@ function $(oa) {
 						if (e) {
 							q = c[e + 724 >> 2] | 0;
 							if (!q) {
-								wx(m);
+								_free(m);
 								n = 21;
 								break
 							} else {
@@ -63612,7 +63612,7 @@ function $(oa) {
 						if ((e | 0) != 0 ? (m = c[e + 720 >> 2] | 0, (m | 0) != 0) : 0)
 							s = FUNCTION_TABLE_iii[m & 31](e, o) | 0;
 						else
-							s = vx(o) | 0;
+							s = _malloc(o) | 0;
 						if (s) {
 							c[l >> 2] = s;
 							c[e + 792 >> 2] = o;
@@ -63620,9 +63620,9 @@ function $(oa) {
 							break
 						}
 					}
-					xh(e, g) | 0;
+					png_crc_finish(e, g) | 0;
 					if (!(c[e + 212 >> 2] & 1048576))
-						_g(e, 4320);
+						png_err(e, 4320);
 					Zg(e, 4320);
 					i = h;
 					return
@@ -63646,7 +63646,7 @@ function $(oa) {
 					n = c[t >> 2] | 0;
 					while (1) {
 						m = (l | 0) == 0 ? -1 : l;
-						n = sk(n, o, m) | 0;
+						n = crc32(n, o, m) | 0;
 						if ((l | 0) == (m | 0))
 							break;
 						else {
@@ -63657,7 +63657,7 @@ function $(oa) {
 					c[t >> 2] = n
 				}
 			}
-			if (xh(e, 0) | 0) {
+			if (png_crc_finish(e, 0) | 0) {
 				i = h;
 				return
 			}
@@ -63723,7 +63723,7 @@ function $(oa) {
 				if (n) {
 					s = c[e + 720 >> 2] | 0;
 					if (!s)
-						v = vx(n) | 0;
+						v = _malloc(n) | 0;
 					else
 						v = FUNCTION_TABLE_iii[s & 31](e, n) | 0;
 					if (v) {
@@ -63766,7 +63766,7 @@ function $(oa) {
 						}
 						n = c[e + 724 >> 2] | 0;
 						if (!n) {
-							wx(f);
+							_free(f);
 							i = h;
 							return
 						} else {
@@ -63801,7 +63801,7 @@ function $(oa) {
 			i = h;
 			return
 		}
-		function mh(f, g, h) {
+		function png_handle_tRNS(f, g, h) {
 			f = f | 0;
 			g = g | 0;
 			h = h | 0;
@@ -63819,19 +63819,19 @@ function $(oa) {
 			m = j;
 			n = c[f + 208 >> 2] | 0;
 			if (!(n & 1))
-				_g(f, 4136);
+				png_err(f, 4136);
 			if (n & 4) {
-				xh(f, h) | 0;
+				png_crc_finish(f, h) | 0;
 				if (!(c[f + 212 >> 2] & 1048576))
-					_g(f, 4112);
+					png_err(f, 4112);
 				Zg(f, 4112);
 				i = j;
 				return
 			}
 			if ((g | 0) != 0 ? (c[g + 8 >> 2] & 16 | 0) != 0 : 0) {
-				xh(f, h) | 0;
+				png_crc_finish(f, h) | 0;
 				if (!(c[f + 212 >> 2] & 1048576))
-					_g(f, 1544);
+					png_err(f, 1544);
 				Zg(f, 1544);
 				i = j;
 				return
@@ -63839,9 +63839,9 @@ function $(oa) {
 			o = a[f + 435 >> 0] | 0;
 			if (!(o << 24 >> 24)) {
 				if ((h | 0) != 2) {
-					xh(f, h) | 0;
+					png_crc_finish(f, h) | 0;
 					if (!(c[f + 212 >> 2] & 1048576))
-						_g(f, 4128);
+						png_err(f, 4128);
 					Zg(f, 4128);
 					i = j;
 					return
@@ -63859,16 +63859,16 @@ function $(oa) {
 						} else if ((p & 768 | 0) == 768)
 							break;
 						p = f + 412 | 0;
-						c[p >> 2] = sk(c[p >> 2] | 0, l, 2) | 0
+						c[p >> 2] = crc32(c[p >> 2] | 0, l, 2) | 0
 					}
 				while (0);
 				b[f + 428 >> 1] = 1;
 				b[f + 540 >> 1] = (d[l >> 0] | 0) << 8 | (d[l + 1 >> 0] | 0)
 			} else if (o << 24 >> 24 == 2) {
 				if ((h | 0) != 6) {
-					xh(f, h) | 0;
+					png_crc_finish(f, h) | 0;
 					if (!(c[f + 212 >> 2] & 1048576))
-						_g(f, 4128);
+						png_err(f, 4128);
 					Zg(f, 4128);
 					i = j;
 					return
@@ -63886,7 +63886,7 @@ function $(oa) {
 						} else if ((l & 768 | 0) == 768)
 							break;
 						l = f + 412 | 0;
-						c[l >> 2] = sk(c[l >> 2] | 0, m, 6) | 0
+						c[l >> 2] = crc32(c[l >> 2] | 0, m, 6) | 0
 					}
 				while (0);
 				b[f + 428 >> 1] = 1;
@@ -63895,17 +63895,17 @@ function $(oa) {
 				b[f + 538 >> 1] = (d[m + 4 >> 0] | 0) << 8 | (d[m + 5 >> 0] | 0)
 			} else if (o << 24 >> 24 == 3) {
 				if (!(n & 2)) {
-					xh(f, h) | 0;
+					png_crc_finish(f, h) | 0;
 					if (!(c[f + 212 >> 2] & 1048576))
-						_g(f, 4112);
+						png_err(f, 4112);
 					Zg(f, 4112);
 					i = j;
 					return
 				}
 				if ((h >>> 0 > 256 ? 1 : (e[f + 420 >> 1] | 0) >>> 0 < h >>> 0) | (h | 0) == 0) {
-					xh(f, h) | 0;
+					png_crc_finish(f, h) | 0;
 					if (!(c[f + 212 >> 2] & 1048576))
-						_g(f, 4128);
+						png_err(f, 4128);
 					Zg(f, 4128);
 					i = j;
 					return
@@ -63928,7 +63928,7 @@ function $(oa) {
 						l = c[n >> 2] | 0;
 						while (1) {
 							p = (m | 0) == 0 ? -1 : m;
-							l = sk(l, o, p) | 0;
+							l = crc32(l, o, p) | 0;
 							if ((m | 0) == (p | 0))
 								break;
 							else {
@@ -63941,15 +63941,15 @@ function $(oa) {
 				while (0);
 				b[f + 428 >> 1] = h
 			} else {
-				xh(f, h) | 0;
+				png_crc_finish(f, h) | 0;
 				if (!(c[f + 212 >> 2] & 1048576))
-					_g(f, 4536);
+					png_err(f, 4536);
 				Zg(f, 4536);
 				i = j;
 				return
 			}
 			h = f + 428 | 0;
-			if (!(xh(f, 0) | 0)) {
+			if (!(png_crc_finish(f, 0) | 0)) {
 				ji(f, g, k, e[h >> 1] | 0, f + 532 | 0);
 				i = j;
 				return
@@ -63959,7 +63959,7 @@ function $(oa) {
 				return
 			}
 		}
-		function nh(e, f, g) {
+		function png_handle_bKGD(e, f, g) {
 			e = e | 0;
 			f = f | 0;
 			g = g | 0;
@@ -63983,13 +63983,13 @@ function $(oa) {
 			j = h;
 			k = c[e + 208 >> 2] | 0;
 			if (!(k & 1))
-				_g(e, 4136);
+				png_err(e, 4136);
 			if ((k & 4 | 0) == 0 ? (l = e + 435 | 0, m = a[l >> 0] | 0, n = m << 24 >> 24 == 3, !(n & (k & 2 | 0) == 0)) : 0) {
 				k = (f | 0) != 0;
 				if (k ? (c[f + 8 >> 2] & 32 | 0) != 0 : 0) {
-					xh(e, g) | 0;
+					png_crc_finish(e, g) | 0;
 					if (!(c[e + 212 >> 2] & 1048576))
-						_g(e, 1544);
+						png_err(e, 1544);
 					Zg(e, 1544);
 					i = h;
 					return
@@ -63999,9 +63999,9 @@ function $(oa) {
 				else
 					o = (m & 2) << 1 | 2;
 				if ((o | 0) != (g | 0)) {
-					xh(e, g) | 0;
+					png_crc_finish(e, g) | 0;
 					if (!(c[e + 212 >> 2] & 1048576))
-						_g(e, 4128);
+						png_err(e, 4128);
 					Zg(e, 4128);
 					i = h;
 					return
@@ -64025,7 +64025,7 @@ function $(oa) {
 						q = c[m >> 2] | 0;
 						while (1) {
 							r = (p | 0) == 0 ? -1 : p;
-							q = sk(q, n, r) | 0;
+							q = crc32(q, n, r) | 0;
 							if ((p | 0) == (r | 0))
 								break;
 							else {
@@ -64036,7 +64036,7 @@ function $(oa) {
 						c[m >> 2] = q
 					}
 				while (0);
-				if (xh(e, 0) | 0) {
+				if (png_crc_finish(e, 0) | 0) {
 					i = h;
 					return
 				}
@@ -64067,7 +64067,7 @@ function $(oa) {
 								break
 							}
 							if (!(c[e + 212 >> 2] & 1048576))
-								_g(e, 4568);
+								png_err(e, 4568);
 							Zg(e, 4568);
 							i = h;
 							return
@@ -64103,14 +64103,14 @@ function $(oa) {
 				i = h;
 				return
 			}
-			xh(e, g) | 0;
+			png_crc_finish(e, g) | 0;
 			if (!(c[e + 212 >> 2] & 1048576))
-				_g(e, 4112);
+				png_err(e, 4112);
 			Zg(e, 4112);
 			i = h;
 			return
 		}
-		function oh(a, f, g) {
+		function png_handle_hIST(a, f, g) {
 			a = a | 0;
 			f = f | 0;
 			g = g | 0;
@@ -64131,28 +64131,28 @@ function $(oa) {
 			k = h + 512 | 0;
 			l = c[a + 208 >> 2] | 0;
 			if (!(l & 1))
-				_g(a, 4136);
+				png_err(a, 4136);
 			if ((l & 6 | 0) != 2) {
-				xh(a, g) | 0;
+				png_crc_finish(a, g) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4112);
+					png_err(a, 4112);
 				Zg(a, 4112);
 				i = h;
 				return
 			}
 			if ((f | 0) != 0 ? (c[f + 8 >> 2] & 64 | 0) != 0 : 0) {
-				xh(a, g) | 0;
+				png_crc_finish(a, g) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 1544);
+					png_err(a, 1544);
 				Zg(a, 1544);
 				i = h;
 				return
 			}
 			l = g >>> 1;
 			if (g >>> 0 > 513 ? 1 : (l | 0) != (e[a + 420 >> 1] | 0 | 0)) {
-				xh(a, g) | 0;
+				png_crc_finish(a, g) | 0;
 				if (!(c[a + 212 >> 2] & 1048576))
-					_g(a, 4128);
+					png_err(a, 4128);
 				Zg(a, 4128);
 				i = h;
 				return
@@ -64179,7 +64179,7 @@ function $(oa) {
 										break
 								} else if ((s & 768 | 0) == 768)
 									break;
-								c[q >> 2] = sk(c[q >> 2] | 0, k, 2) | 0
+								c[q >> 2] = crc32(c[q >> 2] | 0, k, 2) | 0
 							}
 						while (0);
 						b[j + (r << 1) >> 1] = (d[k >> 0] | 0) << 8 | (d[m >> 0] | 0);
@@ -64190,7 +64190,7 @@ function $(oa) {
 					Eg(a, 3688)
 				}
 			while (0);
-			if (xh(a, 0) | 0) {
+			if (png_crc_finish(a, 0) | 0) {
 				i = h;
 				return
 			}
@@ -64198,7 +64198,7 @@ function $(oa) {
 			i = h;
 			return
 		}
-		function ph(b, e, f) {
+		function png_handle_pHYs(b, e, f) {
 			b = b | 0;
 			e = e | 0;
 			f = f | 0;
@@ -64211,28 +64211,28 @@ function $(oa) {
 			h = g;
 			j = c[b + 208 >> 2] | 0;
 			if (!(j & 1))
-				_g(b, 4136);
+				png_err(b, 4136);
 			if (j & 4) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4112);
+					png_err(b, 4112);
 				Zg(b, 4112);
 				i = g;
 				return
 			}
 			j = (e | 0) == 0;
 			if (!j ? (c[e + 8 >> 2] & 128 | 0) != 0 : 0) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 1544);
+					png_err(b, 1544);
 				Zg(b, 1544);
 				i = g;
 				return
 			}
 			if ((f | 0) != 9) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4128);
+					png_err(b, 4128);
 				Zg(b, 4128);
 				i = g;
 				return
@@ -64251,10 +64251,10 @@ function $(oa) {
 					} else if ((k & 768 | 0) == 768)
 						break;
 					k = b + 412 | 0;
-					c[k >> 2] = sk(c[k >> 2] | 0, h, 9) | 0
+					c[k >> 2] = crc32(c[k >> 2] | 0, h, 9) | 0
 				}
 			while (0);
-			if ((xh(b, 0) | 0) != 0 | (f | j)) {
+			if ((png_crc_finish(b, 0) | 0) != 0 | (f | j)) {
 				i = g;
 				return
 			}
@@ -64268,7 +64268,7 @@ function $(oa) {
 			i = g;
 			return
 		}
-		function qh(b, e, f) {
+		function png_handle_oFFs(b, e, f) {
 			b = b | 0;
 			e = e | 0;
 			f = f | 0;
@@ -64281,28 +64281,28 @@ function $(oa) {
 			h = g;
 			j = c[b + 208 >> 2] | 0;
 			if (!(j & 1))
-				_g(b, 4136);
+				png_err(b, 4136);
 			if (j & 4) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4112);
+					png_err(b, 4112);
 				Zg(b, 4112);
 				i = g;
 				return
 			}
 			j = (e | 0) == 0;
 			if (!j ? (c[e + 8 >> 2] & 256 | 0) != 0 : 0) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 1544);
+					png_err(b, 1544);
 				Zg(b, 1544);
 				i = g;
 				return
 			}
 			if ((f | 0) != 9) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4128);
+					png_err(b, 4128);
 				Zg(b, 4128);
 				i = g;
 				return
@@ -64321,10 +64321,10 @@ function $(oa) {
 					} else if ((k & 768 | 0) == 768)
 						break;
 					k = b + 412 | 0;
-					c[k >> 2] = sk(c[k >> 2] | 0, h, 9) | 0
+					c[k >> 2] = crc32(c[k >> 2] | 0, h, 9) | 0
 				}
 			while (0);
-			if ((xh(b, 0) | 0) != 0 | (f | j)) {
+			if ((png_crc_finish(b, 0) | 0) != 0 | (f | j)) {
 				i = g;
 				return
 			}
@@ -64338,7 +64338,7 @@ function $(oa) {
 			i = g;
 			return
 		}
-		function rh(b, e, f) {
+		function png_handle_pCAL(b, e, f) {
 			b = b | 0;
 			e = e | 0;
 			f = f | 0;
@@ -64365,19 +64365,19 @@ function $(oa) {
 			h = g;
 			j = c[b + 208 >> 2] | 0;
 			if (!(j & 1))
-				_g(b, 4136);
+				png_err(b, 4136);
 			if (j & 4) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4112);
+					png_err(b, 4112);
 				Zg(b, 4112);
 				i = g;
 				return
 			}
 			if ((e | 0) != 0 ? (c[e + 8 >> 2] & 1024 | 0) != 0 : 0) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 1544);
+					png_err(b, 1544);
 				Zg(b, 1544);
 				i = g;
 				return
@@ -64394,7 +64394,7 @@ function $(oa) {
 						if (b) {
 							m = c[b + 724 >> 2] | 0;
 							if (!m) {
-								wx(l);
+								_free(l);
 								n = 18;
 								break
 							} else {
@@ -64415,7 +64415,7 @@ function $(oa) {
 						if ((b | 0) != 0 ? (l = c[b + 720 >> 2] | 0, (l | 0) != 0) : 0)
 							q = FUNCTION_TABLE_iii[l & 31](b, j) | 0;
 						else
-							q = vx(j) | 0;
+							q = _malloc(j) | 0;
 						if (q) {
 							c[k >> 2] = q;
 							c[b + 792 >> 2] = j;
@@ -64423,9 +64423,9 @@ function $(oa) {
 							break
 						}
 					}
-					xh(b, f) | 0;
+					png_crc_finish(b, f) | 0;
 					if (!(c[b + 212 >> 2] & 1048576))
-						_g(b, 4320);
+						png_err(b, 4320);
 					Zg(b, 4320);
 					i = g;
 					return
@@ -64449,7 +64449,7 @@ function $(oa) {
 					l = c[r >> 2] | 0;
 					while (1) {
 						m = (k | 0) == 0 ? -1 : k;
-						l = sk(l, j, m) | 0;
+						l = crc32(l, j, m) | 0;
 						if ((k | 0) == (m | 0))
 							break;
 						else {
@@ -64460,7 +64460,7 @@ function $(oa) {
 					c[r >> 2] = l
 				}
 			}
-			if (xh(b, 0) | 0) {
+			if (png_crc_finish(b, 0) | 0) {
 				i = g;
 				return
 			}
@@ -64476,7 +64476,7 @@ function $(oa) {
 			}
 			if (l >>> 0 <= (f + 12 | 0) >>> 0) {
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4128);
+					png_err(b, 4128);
 				Zg(b, 4128);
 				i = g;
 				return
@@ -64491,7 +64491,7 @@ function $(oa) {
 				do
 					if ((k & 255) > 3)
 						if (!(c[b + 212 >> 2] & 1048576))
-							_g(b, 4608);
+							png_err(b, 4608);
 						else {
 							Zg(b, 4608);
 							t = m;
@@ -64512,7 +64512,7 @@ function $(oa) {
 						if (j << 24 >> 24) {
 							v = c[b + 720 >> 2] | 0;
 							if (!v)
-								w = vx(u) | 0;
+								w = _malloc(u) | 0;
 							else
 								w = FUNCTION_TABLE_iii[v & 31](b, u) | 0;
 							if (w) {
@@ -64545,7 +64545,7 @@ function $(oa) {
 									li(b, e, o, r, s, f, k, m, w);
 									v = c[b + 724 >> 2] | 0;
 									if (!v) {
-										wx(w);
+										_free(w);
 										i = g;
 										return
 									} else {
@@ -64556,11 +64556,11 @@ function $(oa) {
 								}
 								v = c[b + 724 >> 2] | 0;
 								if (!v)
-									wx(w);
+									_free(w);
 								else
 									FUNCTION_TABLE_vii[v & 127](b, w);
 								if (!(c[b + 212 >> 2] & 1048576))
-									_g(b, 4640);
+									png_err(b, 4640);
 								Zg(b, 4640);
 								i = g;
 								return
@@ -64580,18 +64580,18 @@ function $(oa) {
 					}
 				while (0);
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4320);
+					png_err(b, 4320);
 				Zg(b, 4320);
 				i = g;
 				return
 			}
 			if (!(c[b + 212 >> 2] & 1048576))
-				_g(b, 4584);
+				png_err(b, 4584);
 			Zg(b, 4584);
 			i = g;
 			return
 		}
-		function sh(b, e, f) {
+		function png_handle_sCAL(b, e, f) {
 			b = b | 0;
 			e = e | 0;
 			f = f | 0;
@@ -64612,27 +64612,27 @@ function $(oa) {
 			j = g;
 			k = c[b + 208 >> 2] | 0;
 			if (!(k & 1))
-				_g(b, 4136);
+				png_err(b, 4136);
 			if (k & 4) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4112);
+					png_err(b, 4112);
 				Zg(b, 4112);
 				i = g;
 				return
 			}
 			if ((e | 0) != 0 ? (c[e + 8 >> 2] & 16384 | 0) != 0 : 0) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 1544);
+					png_err(b, 1544);
 				Zg(b, 1544);
 				i = g;
 				return
 			}
 			if (f >>> 0 < 4) {
-				xh(b, f) | 0;
+				png_crc_finish(b, f) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4128);
+					png_err(b, 4128);
 				Zg(b, 4128);
 				i = g;
 				return
@@ -64649,7 +64649,7 @@ function $(oa) {
 						if (b) {
 							n = c[b + 724 >> 2] | 0;
 							if (!n) {
-								wx(m);
+								_free(m);
 								o = 22;
 								break
 							} else {
@@ -64670,7 +64670,7 @@ function $(oa) {
 						if ((b | 0) != 0 ? (m = c[b + 720 >> 2] | 0, (m | 0) != 0) : 0)
 							q = FUNCTION_TABLE_iii[m & 31](b, k) | 0;
 						else
-							q = vx(k) | 0;
+							q = _malloc(k) | 0;
 						if (q) {
 							c[l >> 2] = q;
 							c[b + 792 >> 2] = k;
@@ -64679,9 +64679,9 @@ function $(oa) {
 						}
 					}
 					if (!(c[b + 212 >> 2] & 1048576))
-						_g(b, 4320);
+						png_err(b, 4320);
 					Zg(b, 4320);
-					xh(b, f) | 0;
+					png_crc_finish(b, f) | 0;
 					i = g;
 					return
 				}
@@ -64703,7 +64703,7 @@ function $(oa) {
 					l = c[r >> 2] | 0;
 					while (1) {
 						o = (k | 0) == 0 ? -1 : k;
-						l = sk(l, q, o) | 0;
+						l = crc32(l, q, o) | 0;
 						if ((k | 0) == (o | 0))
 							break;
 						else {
@@ -64715,13 +64715,13 @@ function $(oa) {
 				}
 			}
 			a[p + f >> 0] = 0;
-			if (xh(b, 0) | 0) {
+			if (png_crc_finish(b, 0) | 0) {
 				i = g;
 				return
 			}
 			if (((a[p >> 0] | 0) + -1 << 24 >> 24 & 255) >= 2) {
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4656);
+					png_err(b, 4656);
 				Zg(b, 4656);
 				i = g;
 				return
@@ -64731,7 +64731,7 @@ function $(oa) {
 			if (((Wg(p, f, j, h) | 0) != 0 ? (l = c[h >> 2] | 0, l >>> 0 < f >>> 0) : 0) ? (r = l + 1 | 0, c[h >> 2] = r, (a[p + l >> 0] | 0) == 0) : 0) {
 				if ((c[j >> 2] & 392 | 0) != 264) {
 					if (!(c[b + 212 >> 2] & 1048576))
-						_g(b, 4696);
+						png_err(b, 4696);
 					Zg(b, 4696);
 					i = g;
 					return
@@ -64740,7 +64740,7 @@ function $(oa) {
 				l = (Wg(p, f, j, h) | 0) != 0;
 				if (!(l & (c[h >> 2] | 0) == (f | 0))) {
 					if (!(c[b + 212 >> 2] & 1048576))
-						_g(b, 4720);
+						png_err(b, 4720);
 					Zg(b, 4720);
 					i = g;
 					return
@@ -64751,18 +64751,18 @@ function $(oa) {
 					return
 				}
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4744);
+					png_err(b, 4744);
 				Zg(b, 4744);
 				i = g;
 				return
 			}
 			if (!(c[b + 212 >> 2] & 1048576))
-				_g(b, 4672);
+				png_err(b, 4672);
 			Zg(b, 4672);
 			i = g;
 			return
 		}
-		function th(e, f, g) {
+		function png_handle_tIME(e, f, g) {
 			e = e | 0;
 			f = f | 0;
 			g = g | 0;
@@ -64784,12 +64784,12 @@ function $(oa) {
 			l = e + 208 | 0;
 			m = c[l >> 2] | 0;
 			if (!(m & 1))
-				_g(e, 4136);
+				png_err(e, 4136);
 			n = (f | 0) == 0;
 			if (!n ? (c[f + 8 >> 2] & 512 | 0) != 0 : 0) {
-				xh(e, g) | 0;
+				png_crc_finish(e, g) | 0;
 				if (!(c[e + 212 >> 2] & 1048576))
-					_g(e, 1544);
+					png_err(e, 1544);
 				Zg(e, 1544);
 				i = h;
 				return
@@ -64797,9 +64797,9 @@ function $(oa) {
 			if (m & 4)
 				c[l >> 2] = m | 8;
 			if ((g | 0) != 7) {
-				xh(e, g) | 0;
+				png_crc_finish(e, g) | 0;
 				if (!(c[e + 212 >> 2] & 1048576))
-					_g(e, 4128);
+					png_err(e, 4128);
 				Zg(e, 4128);
 				i = h;
 				return
@@ -64818,10 +64818,10 @@ function $(oa) {
 					} else if ((m & 768 | 0) == 768)
 						break;
 					m = e + 412 | 0;
-					c[m >> 2] = sk(c[m >> 2] | 0, k, 7) | 0
+					c[m >> 2] = crc32(c[m >> 2] | 0, k, 7) | 0
 				}
 			while (0);
-			if (xh(e, 0) | 0) {
+			if (png_crc_finish(e, 0) | 0) {
 				i = h;
 				return
 			}
@@ -64840,13 +64840,13 @@ function $(oa) {
 				return
 			}
 			if (!((s + -1 << 24 >> 24 & 255) > 11 | (r + -1 << 24 >> 24 & 255) > 30 | (q & 255) > 23 | (o & 255) > 59 | (m & 255) > 60)) {
-				l = ty(m & 255 | 0, 0, 48) | 0;
+				l = _bitshift64Shl(m & 255 | 0, 0, 48) | 0;
 				m = H;
-				n = ty(o & 255 | 0, 0, 40) | 0;
+				n = _bitshift64Shl(o & 255 | 0, 0, 40) | 0;
 				o = H | m | q & 255;
-				q = ty(r & 255 | 0, 0, 24) | 0;
+				q = _bitshift64Shl(r & 255 | 0, 0, 24) | 0;
 				r = o | H;
-				o = ty(s & 255 | 0, 0, 16) | 0;
+				o = _bitshift64Shl(s & 255 | 0, 0, 16) | 0;
 				s = r | H;
 				r = n | l | q | o | t;
 				t = f + 140 | 0;
@@ -64875,7 +64875,7 @@ function $(oa) {
 				return
 			}
 		}
-		function uh(b, d, e) {
+		function png_handle_tEXt(b, d, e) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -64898,15 +64898,15 @@ function $(oa) {
 			j = b + 756 | 0;
 			k = c[j >> 2] | 0;
 			if ((k | 0) == 1) {
-				xh(b, e) | 0;
+				png_crc_finish(b, e) | 0;
 				i = f;
 				return
 			} else if (k)
 				l = 3;
 			if ((l | 0) == 3 ? (m = k + -1 | 0, c[j >> 2] = m, (m | 0) == 1) : 0) {
-				xh(b, e) | 0;
+				png_crc_finish(b, e) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4768);
+					png_err(b, 4768);
 				Zg(b, 4768);
 				i = f;
 				return
@@ -64914,7 +64914,7 @@ function $(oa) {
 			m = b + 208 | 0;
 			j = c[m >> 2] | 0;
 			if (!(j & 1))
-				_g(b, 4136);
+				png_err(b, 4136);
 			if (j & 4)
 				c[m >> 2] = j | 8;
 			j = e + 1 | 0;
@@ -64929,7 +64929,7 @@ function $(oa) {
 						if (b) {
 							n = c[b + 724 >> 2] | 0;
 							if (!n) {
-								wx(k);
+								_free(k);
 								l = 17;
 								break
 							} else {
@@ -64950,7 +64950,7 @@ function $(oa) {
 						if ((b | 0) != 0 ? (k = c[b + 720 >> 2] | 0, (k | 0) != 0) : 0)
 							q = FUNCTION_TABLE_iii[k & 31](b, j) | 0;
 						else
-							q = vx(j) | 0;
+							q = _malloc(j) | 0;
 						if (q) {
 							c[m >> 2] = q;
 							c[b + 792 >> 2] = j;
@@ -64960,7 +64960,7 @@ function $(oa) {
 					}
 					Zg(b, 7472);
 					if (!(c[b + 212 >> 2] & 1048576))
-						_g(b, 4320);
+						png_err(b, 4320);
 					Zg(b, 4320);
 					i = f;
 					return
@@ -64984,7 +64984,7 @@ function $(oa) {
 					l = c[r >> 2] | 0;
 					while (1) {
 						k = (m | 0) == 0 ? -1 : m;
-						l = sk(l, j, k) | 0;
+						l = crc32(l, j, k) | 0;
 						if ((m | 0) == (k | 0))
 							break;
 						else {
@@ -64995,7 +64995,7 @@ function $(oa) {
 					c[r >> 2] = l
 				}
 			}
-			if (xh(b, 0) | 0) {
+			if (png_crc_finish(b, 0) | 0) {
 				i = f;
 				return
 			}
@@ -65016,7 +65016,7 @@ function $(oa) {
 			c[h + 24 >> 2] = 0;
 			c[h + 16 >> 2] = 0;
 			c[h + 8 >> 2] = r;
-			c[h + 12 >> 2] = py(r | 0) | 0;
+			c[h + 12 >> 2] = _strlen(r | 0) | 0;
 			if (!(ni(b, d, h, 1) | 0)) {
 				i = f;
 				return
@@ -65033,7 +65033,7 @@ function $(oa) {
 			i = f;
 			return
 		}
-		function vh(b, d, e) {
+		function png_handle_zTXt(b, d, e) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -65056,15 +65056,15 @@ function $(oa) {
 			j = b + 756 | 0;
 			k = c[j >> 2] | 0;
 			if ((k | 0) == 1) {
-				xh(b, e) | 0;
+				png_crc_finish(b, e) | 0;
 				i = f;
 				return
 			} else if (k)
 				l = 3;
 			if ((l | 0) == 3 ? (m = k + -1 | 0, c[j >> 2] = m, (m | 0) == 1) : 0) {
-				xh(b, e) | 0;
+				png_crc_finish(b, e) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4768);
+					png_err(b, 4768);
 				Zg(b, 4768);
 				i = f;
 				return
@@ -65072,7 +65072,7 @@ function $(oa) {
 			m = b + 208 | 0;
 			j = c[m >> 2] | 0;
 			if (!(j & 1))
-				_g(b, 4136);
+				png_err(b, 4136);
 			if (j & 4)
 				c[m >> 2] = j | 8;
 			j = b + 788 | 0;
@@ -65086,7 +65086,7 @@ function $(oa) {
 						if (b) {
 							k = c[b + 724 >> 2] | 0;
 							if (!k) {
-								wx(m);
+								_free(m);
 								l = 17;
 								break
 							} else {
@@ -65107,7 +65107,7 @@ function $(oa) {
 						if ((b | 0) != 0 ? (m = c[b + 720 >> 2] | 0, (m | 0) != 0) : 0)
 							o = FUNCTION_TABLE_iii[m & 31](b, e) | 0;
 						else
-							o = vx(e) | 0;
+							o = _malloc(e) | 0;
 						if (o) {
 							c[j >> 2] = o;
 							c[b + 792 >> 2] = e;
@@ -65115,9 +65115,9 @@ function $(oa) {
 							break
 						}
 					}
-					xh(b, e) | 0;
+					png_crc_finish(b, e) | 0;
 					if (!(c[b + 212 >> 2] & 1048576))
-						_g(b, 4320);
+						png_err(b, 4320);
 					Zg(b, 4320);
 					i = f;
 					return
@@ -65140,7 +65140,7 @@ function $(oa) {
 					m = c[p >> 2] | 0;
 					while (1) {
 						k = (l | 0) == 0 ? -1 : l;
-						m = sk(m, o, k) | 0;
+						m = crc32(m, o, k) | 0;
 						if ((l | 0) == (k | 0))
 							break;
 						else {
@@ -65151,7 +65151,7 @@ function $(oa) {
 					c[p >> 2] = m
 				}
 			}
-			if (xh(b, 0) | 0) {
+			if (png_crc_finish(b, 0) | 0) {
 				i = f;
 				return
 			}
@@ -65212,12 +65212,12 @@ function $(oa) {
 					r = 4360;
 			while (0);
 			if (!(c[b + 212 >> 2] & 1048576))
-				_g(b, r);
+				png_err(b, r);
 			Zg(b, r);
 			i = f;
 			return
 		}
-		function wh(b, d, e) {
+		function png_handle_iTXt(b, d, e) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -65244,15 +65244,15 @@ function $(oa) {
 			j = b + 756 | 0;
 			k = c[j >> 2] | 0;
 			if ((k | 0) == 1) {
-				xh(b, e) | 0;
+				png_crc_finish(b, e) | 0;
 				i = f;
 				return
 			} else if (k)
 				l = 3;
 			if ((l | 0) == 3 ? (m = k + -1 | 0, c[j >> 2] = m, (m | 0) == 1) : 0) {
-				xh(b, e) | 0;
+				png_crc_finish(b, e) | 0;
 				if (!(c[b + 212 >> 2] & 1048576))
-					_g(b, 4768);
+					png_err(b, 4768);
 				Zg(b, 4768);
 				i = f;
 				return
@@ -65260,7 +65260,7 @@ function $(oa) {
 			m = b + 208 | 0;
 			j = c[m >> 2] | 0;
 			if (!(j & 1))
-				_g(b, 4136);
+				png_err(b, 4136);
 			if (j & 4)
 				c[m >> 2] = j | 8;
 			j = e + 1 | 0;
@@ -65275,7 +65275,7 @@ function $(oa) {
 						if (b) {
 							n = c[b + 724 >> 2] | 0;
 							if (!n) {
-								wx(k);
+								_free(k);
 								l = 17;
 								break
 							} else {
@@ -65296,7 +65296,7 @@ function $(oa) {
 						if ((b | 0) != 0 ? (k = c[b + 720 >> 2] | 0, (k | 0) != 0) : 0)
 							p = FUNCTION_TABLE_iii[k & 31](b, j) | 0;
 						else
-							p = vx(j) | 0;
+							p = _malloc(j) | 0;
 						if (p) {
 							c[m >> 2] = p;
 							c[b + 792 >> 2] = j;
@@ -65305,9 +65305,9 @@ function $(oa) {
 						}
 					}
 					Zg(b, 7472);
-					xh(b, e) | 0;
+					png_crc_finish(b, e) | 0;
 					if (!(c[b + 212 >> 2] & 1048576))
-						_g(b, 4320);
+						png_err(b, 4320);
 					Zg(b, 4320);
 					i = f;
 					return
@@ -65330,7 +65330,7 @@ function $(oa) {
 					l = c[q >> 2] | 0;
 					while (1) {
 						k = (j | 0) == 0 ? -1 : j;
-						l = sk(l, p, k) | 0;
+						l = crc32(l, p, k) | 0;
 						if ((j | 0) == (k | 0))
 							break;
 						else {
@@ -65341,7 +65341,7 @@ function $(oa) {
 					c[q >> 2] = l
 				}
 			}
-			if (xh(b, 0) | 0) {
+			if (png_crc_finish(b, 0) | 0) {
 				i = f;
 				return
 			}
@@ -65462,12 +65462,12 @@ function $(oa) {
 					s = 4360;
 			while (0);
 			if (!(c[b + 212 >> 2] & 1048576))
-				_g(b, s);
+				png_err(b, s);
 			Zg(b, s);
 			i = f;
 			return
 		}
-		function xh(a, b) {
+		function png_crc_finish(a, b) {
 			a = a | 0;
 			b = b | 0;
 			var e = 0,
@@ -65526,7 +65526,7 @@ function $(oa) {
 								v = c[o >> 2] | 0;
 								while (1) {
 									w = (u | 0) == 0 ? -1 : u;
-									v = sk(v, s, w) | 0;
+									v = crc32(v, s, w) | 0;
 									if ((u | 0) == (w | 0))
 										break;
 									else {
@@ -65579,7 +65579,7 @@ function $(oa) {
 				return y | 0
 			}
 			if (!(f & 1048576))
-				_g(a, 4096);
+				png_err(a, 4096);
 			Zg(a, 4096);
 			y = 0;
 			i = e;
@@ -66322,11 +66322,11 @@ function $(oa) {
 					n = 0;
 					v = E;
 					while (1) {
-						qy(j | 0, v | 0, I | 0) | 0;
+						_memcpy(j | 0, v | 0, I | 0) | 0;
 						E = J;
 						g = 0;
 						while (1) {
-							qy(E | 0, j | 0, I | 0) | 0;
+							_memcpy(E | 0, j | 0, I | 0) | 0;
 							g = g + 1 | 0;
 							if ((g | 0) >= (l | 0))
 								break;
@@ -66702,7 +66702,7 @@ function $(oa) {
 								i = h;
 								return
 							}
-						qy(q | 0, H | 0, J | 0) | 0;
+						_memcpy(q | 0, H | 0, J | 0) | 0;
 						if (F >>> 0 > I >>> 0) {
 							V = q;
 							W = J;
@@ -66717,7 +66717,7 @@ function $(oa) {
 							V = V + I | 0;
 							X = X - I | 0;
 							W = W >>> 0 > X >>> 0 ? X : W;
-							qy(V | 0, Y | 0, W | 0) | 0
+							_memcpy(V | 0, Y | 0, W | 0) | 0
 						} while (X >>> 0 > I >>> 0);
 						i = h;
 						return
@@ -66730,7 +66730,7 @@ function $(oa) {
 					Z = da(n, k >>> 3) | 0;
 				else
 					Z = (r + 7 | 0) >>> 3;
-				qy(f | 0, m | 0, Z | 0) | 0
+				_memcpy(f | 0, m | 0, Z | 0) | 0
 			}
 			if (!x) {
 				i = h;
@@ -66820,7 +66820,7 @@ function $(oa) {
 			i = f;
 			return h | 0
 		}
-		function Dh(b, d) {
+		function PNGDecoder_LoadFromPacket(b, d) {
 			b = b | 0;
 			d = d | 0;
 			var e = 0,
@@ -66905,7 +66905,7 @@ function $(oa) {
 						break
 					}
 					c[h >> 2] = v | 24;
-					xh(b, r) | 0;
+					png_crc_finish(b, r) | 0;
 					if (!r)
 						continue;
 					if (!(c[k >> 2] & 1048576)) {
@@ -66939,7 +66939,7 @@ function $(oa) {
 							}
 							w = a[z + -1 >> 0] | 0;
 							if (w << 24 >> 24) {
-								eh(b, d, r, w & 255);
+								png_handle_unknown(b, d, r, w & 255);
 								if ((s | 0) != 1347179589)
 									if (t) {
 										x = 31;
@@ -66954,7 +66954,7 @@ function $(oa) {
 						}
 					while (0);
 					if ((s | 0) == 1347179589) {
-						fh(b, d, r);
+						png_handle_PLTE(b, d, r);
 						continue
 					}
 					if (t) {
@@ -66963,73 +66963,73 @@ function $(oa) {
 					}
 					do
 						if ((s | 0) == 1866876531) {
-							qh(b, d, r);
+							png_handle_oFFs(b, d, r);
 							continue a
 						} else if ((s | 0) == 1883789683) {
-							ph(b, d, r);
+							png_handle_pHYs(b, d, r);
 							continue a
 						} else if ((s | 0) == 2052348020) {
-							vh(b, d, r);
+							png_handle_zTXt(b, d, r);
 							continue a
 						} else if ((s | 0) == 1950960965) {
-							th(b, d, r);
+							png_handle_tIME(b, d, r);
 							continue a
 						} else if ((s | 0) == 1665684045) {
-							ih(b, d, r);
+							png_handle_cHRM(b, d, r);
 							continue a
 						} else if ((s | 0) == 1951551059) {
-							mh(b, d, r);
+							png_handle_tRNS(b, d, r);
 							continue a
 						} else if ((s | 0) == 1767135348) {
-							wh(b, d, r);
+							png_handle_iTXt(b, d, r);
 							continue a
 						} else if ((s | 0) == 1950701684) {
-							uh(b, d, r);
+							png_handle_tEXt(b, d, r);
 							continue a
 						} else if ((s | 0) == 1749635924) {
-							oh(b, d, r);
+							png_handle_hIST(b, d, r);
 							continue a
 						} else if ((s | 0) == 1649100612) {
-							nh(b, d, r);
+							png_handle_bKGD(b, d, r);
 							continue a
 						} else if ((s | 0) == 1934642260) {
-							lh(b, d, r);
+							png_handle_sPLT(b, d, r);
 							continue a
 						} else if ((s | 0) == 1766015824) {
-							kh(b, d, r);
+							png_handle_iCCP(b, d, r);
 							continue a
 						} else if ((s | 0) == 1933787468) {
-							sh(b, d, r);
+							png_handle_sCAL(b, d, r);
 							continue a
 						} else if ((s | 0) == 1933723988) {
-							hh(b, d, r);
+							png_handle_sBIT(b, d, r);
 							continue a
 						} else if ((s | 0) == 1883455820) {
-							rh(b, d, r);
+							png_handle_pCAL(b, d, r);
 							continue a
 						} else if ((s | 0) == 1732332865) {
-							gh(b, d, r);
+							png_handle_gAMA(b, d, r);
 							continue a
 						} else if ((s | 0) == 1934772034) {
-							jh(b, d, r);
+							png_handle_sRGB(b, d, r);
 							continue a
 						} else {
-							eh(b, d, r, 0);
+							png_handle_unknown(b, d, r, 0);
 							continue a
 						}
 					while (0)
 				}
 			}
 			if ((x | 0) == 5)
-				_g(b, 3336);
+				png_err(b, 3336);
 			else if ((x | 0) == 7)
-				_g(b, 3368);
+				png_err(b, 3368);
 			else if ((x | 0) == 10)
-				_g(b, 3400);
+				png_err(b, 3400);
 			else if ((x | 0) == 18)
-				_g(b, 4112);
+				png_err(b, 4112);
 			else if ((x | 0) == 21)
-				_g(b, 4128);
+				png_err(b, 4128);
 			else if ((x | 0) == 31) {
 				c[b + 408 >> 2] = 0;
 				i = e;
@@ -67138,7 +67138,7 @@ function $(oa) {
 			h = e + 4 | 0;
 			j = a + 376 | 0;
 			c[j >> 2] = (d[e + 5 >> 0] | 0) << 16 | (d[h >> 0] | 0) << 24 | (d[e + 6 >> 0] | 0) << 8 | (d[e + 7 >> 0] | 0);
-			e = sk(0, 0, 0) | 0;
+			e = crc32(0, 0, 0) | 0;
 			k = a + 412 | 0;
 			c[k >> 2] = e;
 			l = c[j >> 2] | 0;
@@ -67156,7 +67156,7 @@ function $(oa) {
 			} else
 				n = 8;
 			if ((n | 0) == 8) {
-				c[k >> 2] = sk(e, h, 4) | 0;
+				c[k >> 2] = crc32(e, h, 4) | 0;
 				o = c[j >> 2] | 0;
 				p = 1
 			}
@@ -67174,7 +67174,7 @@ function $(oa) {
 					o = o >>> 8
 			}
 			if ((n | 0) == 10)
-				_g(a, 5056);
+				png_err(a, 5056);
 			else if ((n | 0) == 12) {
 				c[f >> 2] = 65;
 				i = b;
@@ -67336,7 +67336,7 @@ function $(oa) {
 					if (!(q | (j | 0) == 0)) {
 						s = c[e + 724 >> 2] | 0;
 						if (!s) {
-							wx(j);
+							_free(j);
 							break
 						} else {
 							FUNCTION_TABLE_vii[s & 127](e, j);
@@ -67350,7 +67350,7 @@ function $(oa) {
 					if (!(q | (s | 0) == 0)) {
 						p = c[e + 724 >> 2] | 0;
 						if (!p) {
-							wx(s);
+							_free(s);
 							break
 						} else {
 							FUNCTION_TABLE_vii[p & 127](e, s);
@@ -67365,7 +67365,7 @@ function $(oa) {
 								Eg(e, 3264);
 							s = c[e + 720 >> 2] | 0;
 							if (!s)
-								w = vx(t) | 0;
+								w = _malloc(t) | 0;
 							else
 								w = FUNCTION_TABLE_iii[s & 31](e, t) | 0;
 							if (!w)
@@ -67381,13 +67381,13 @@ function $(oa) {
 							Eg(e, 3264);
 						s = c[e + 720 >> 2] | 0;
 						if (!s)
-							z = vx(t) | 0;
+							z = _malloc(t) | 0;
 						else
 							z = FUNCTION_TABLE_iii[s & 31](e, t) | 0;
 						if (!z)
 							Eg(e, 3264);
 						else {
-							sy(z | 0, 0, t | 0) | 0;
+							_memset(z | 0, 0, t | 0) | 0;
 							x = z;
 							y = 61;
 							break
@@ -67407,7 +67407,7 @@ function $(oa) {
 								Eg(e, 3264);
 							z = c[e + 720 >> 2] | 0;
 							if (!z)
-								C = vx(t) | 0;
+								C = _malloc(t) | 0;
 							else
 								C = FUNCTION_TABLE_iii[z & 31](e, t) | 0;
 							if (!C)
@@ -67431,14 +67431,14 @@ function $(oa) {
 			t = c[e + 364 >> 2] | 0;
 			if ((t | 0) == -1)
 				Eg(e, 5544);
-			sy(c[e + 380 >> 2] | 0, 0, t + 1 | 0) | 0;
+			_memset(c[e + 380 >> 2] | 0, 0, t + 1 | 0) | 0;
 			t = e + 788 | 0;
 			v = c[t >> 2] | 0;
 			do
 				if ((v | 0) != 0 ? (c[e + 792 >> 2] = 0, c[t >> 2] = 0, (e | 0) != 0) : 0) {
 					A = c[e + 724 >> 2] | 0;
 					if (!A) {
-						wx(v);
+						_free(v);
 						break
 					} else {
 						FUNCTION_TABLE_vii[A & 127](e, v);
@@ -67608,7 +67608,7 @@ function $(oa) {
 				y = o;
 				z = q
 			}
-			qy(c[x >> 2] | 0, z | 0, y + 1 | 0) | 0;
+			_memcpy(c[x >> 2] | 0, z | 0, y + 1 | 0) | 0;
 			if ((c[b + 708 >> 2] & 4 | 0) != 0 ? (a[b + 712 >> 0] | 0) == 64 : 0)
 				Kh(h, (c[l >> 2] | 0) + 1 | 0);
 			y = b + 216 | 0;
@@ -67674,7 +67674,7 @@ function $(oa) {
 				return
 			}
 			do
-				if ((a[b + 432 >> 0] | 0) != 0 ? (c[f >> 2] = 0, sy(c[b + 380 >> 2] | 0, 0, (c[b + 364 >> 2] | 0) + 1 | 0) | 0, g = b + 433 | 0, j = (a[g >> 0] | 0) + 1 << 24 >> 24, a[g >> 0] = j, (j & 255) <= 6) : 0) {
+				if ((a[b + 432 >> 0] | 0) != 0 ? (c[f >> 2] = 0, _memset(c[b + 380 >> 2] | 0, 0, (c[b + 364 >> 2] | 0) + 1 | 0) | 0, g = b + 433 | 0, j = (a[g >> 0] | 0) + 1 << 24 >> 24, a[g >> 0] = j, (j & 255) <= 6) : 0) {
 					k = (c[b + 348 >> 2] | 0) + -1 | 0;
 					l = b + 368 | 0;
 					m = (c[b + 216 >> 2] & 2 | 0) == 0;
@@ -67727,7 +67727,7 @@ function $(oa) {
 			c[b + 224 >> 2] = 0;
 			c[b + 228 >> 2] = 0;
 			c[t >> 2] = 0;
-			xh(b, c[b + 408 >> 2] | 0) | 0;
+			png_crc_finish(b, c[b + 408 >> 2] | 0) | 0;
 			i = e;
 			return
 		}
@@ -67793,7 +67793,7 @@ function $(oa) {
 					while (1) {
 						if (d)
 							break;
-						xh(a, 0) | 0;
+						png_crc_finish(a, 0) | 0;
 						b = Fh(a) | 0;
 						c[m >> 2] = b;
 						if ((c[n >> 2] | 0) == 1229209940)
@@ -67814,7 +67814,7 @@ function $(oa) {
 								if (!q) {
 									A = c[w >> 2] | 0;
 									if (!A) {
-										wx(b);
+										_free(b);
 										y = 13;
 										break
 									} else {
@@ -67838,7 +67838,7 @@ function $(oa) {
 						if (!q ? (b = c[s >> 2] | 0, (b | 0) != 0) : 0)
 							C = FUNCTION_TABLE_iii[b & 31](a, z) | 0;
 						else
-							C = vx(z) | 0;
+							C = _malloc(z) | 0;
 						if (!C) {
 							y = 20;
 							break
@@ -67865,7 +67865,7 @@ function $(oa) {
 							A = c[v >> 2] | 0;
 							while (1) {
 								E = (d | 0) == 0 ? -1 : d;
-								A = sk(A, b, E) | 0;
+								A = crc32(A, b, E) | 0;
 								if ((d | 0) == (E | 0))
 									break;
 								else {
@@ -67908,7 +67908,7 @@ function $(oa) {
 			if ((y | 0) == 6)
 				Eg(a, 5472);
 			else if ((y | 0) == 20)
-				_g(a, 7472);
+				png_err(a, 7472);
 			else if ((y | 0) == 23)
 				Eg(a, 3688);
 			else if ((y | 0) == 35) {
@@ -67922,7 +67922,7 @@ function $(oa) {
 				do
 					if ((y | 0) == 37)
 						if (!(h & 1048576))
-							_g(a, 5496);
+							png_err(a, 5496);
 						else {
 							Zg(a, 5496);
 							break
@@ -67935,7 +67935,7 @@ function $(oa) {
 				if (l)
 					Eg(a, 5472);
 				if (!(c[u >> 2] & 1048576))
-					_g(a, 5520);
+					png_err(a, 5520);
 				Zg(a, 5520);
 				i = e;
 				return
@@ -68003,9 +68003,9 @@ function $(oa) {
 						I = h;
 				while (0);
 				if (l)
-					_g(a, I);
+					png_err(a, I);
 				if (!(c[u >> 2] & 1048576))
-					_g(a, I);
+					png_err(a, I);
 				Zg(a, I);
 				i = e;
 				return
@@ -68253,7 +68253,7 @@ function $(oa) {
 					c[b + 224 >> 2] = 0;
 					c[b + 228 >> 2] = 0;
 					c[o >> 2] = 0;
-					xh(b, c[b + 408 >> 2] | 0) | 0
+					png_crc_finish(b, c[b + 408 >> 2] | 0) | 0
 				}
 			}
 			if ((a[b + 435 >> 0] | 0) == 3 ? (c[b + 424 >> 2] | 0) > (e[b + 420 >> 1] | 0) : 0)
@@ -68275,7 +68275,7 @@ function $(oa) {
 							break b
 						}
 						c[n >> 2] = v | 24;
-						xh(b, t) | 0;
+						png_crc_finish(b, t) | 0;
 						if (t) {
 							if (!(c[s >> 2] & 1048576)) {
 								r = 22;
@@ -68381,7 +68381,7 @@ function $(oa) {
 										Pg(b, 3400)
 									}
 								while (0);
-								eh(b, d, t, y);
+								png_handle_unknown(b, d, t, y);
 								if ((u | 0) != 1347179589)
 									break c;
 								c[n >> 2] = c[n >> 2] | 2;
@@ -68436,121 +68436,121 @@ function $(oa) {
 								r = 0;
 								if (!((t | 0) == 0 ? (c[n >> 2] & 8192 | 0) == 0 : 0))
 									Pg(b, 3400);
-								xh(b, t) | 0;
+								png_crc_finish(b, t) | 0;
 								break c;
 								break
 							}
 						case 42: {
 								r = 0;
-								fh(b, d, t);
+								png_handle_PLTE(b, d, t);
 								break c;
 								break
 							}
 						case 43: {
 								r = 0;
-								nh(b, d, t);
+								png_handle_bKGD(b, d, t);
 								break c;
 								break
 							}
 						case 44: {
 								r = 0;
-								ih(b, d, t);
+								png_handle_cHRM(b, d, t);
 								break c;
 								break
 							}
 						case 45: {
 								r = 0;
-								gh(b, d, t);
+								png_handle_gAMA(b, d, t);
 								break c;
 								break
 							}
 						case 46: {
 								r = 0;
-								oh(b, d, t);
+								png_handle_hIST(b, d, t);
 								break c;
 								break
 							}
 						case 47: {
 								r = 0;
-								qh(b, d, t);
+								png_handle_oFFs(b, d, t);
 								break c;
 								break
 							}
 						case 48: {
 								r = 0;
-								rh(b, d, t);
+								png_handle_pCAL(b, d, t);
 								break c;
 								break
 							}
 						case 49: {
 								r = 0;
-								sh(b, d, t);
+								png_handle_sCAL(b, d, t);
 								break c;
 								break
 							}
 						case 50: {
 								r = 0;
-								ph(b, d, t);
+								png_handle_pHYs(b, d, t);
 								break c;
 								break
 							}
 						case 51: {
 								r = 0;
-								hh(b, d, t);
+								png_handle_sBIT(b, d, t);
 								break c;
 								break
 							}
 						case 52: {
 								r = 0;
-								jh(b, d, t);
+								png_handle_sRGB(b, d, t);
 								break c;
 								break
 							}
 						case 53: {
 								r = 0;
-								kh(b, d, t);
+								png_handle_iCCP(b, d, t);
 								break c;
 								break
 							}
 						case 54: {
 								r = 0;
-								lh(b, d, t);
+								png_handle_sPLT(b, d, t);
 								break c;
 								break
 							}
 						case 55: {
 								r = 0;
-								uh(b, d, t);
+								png_handle_tEXt(b, d, t);
 								break c;
 								break
 							}
 						case 56: {
 								r = 0;
-								th(b, d, t);
+								png_handle_tIME(b, d, t);
 								break c;
 								break
 							}
 						case 57: {
 								r = 0;
-								mh(b, d, t);
+								png_handle_tRNS(b, d, t);
 								break c;
 								break
 							}
 						case 58: {
 								r = 0;
-								vh(b, d, t);
+								png_handle_zTXt(b, d, t);
 								break c;
 								break
 							}
 						case 59: {
 								r = 0;
-								wh(b, d, t);
+								png_handle_iTXt(b, d, t);
 								break c;
 								break
 							}
 						case 60: {
 								r = 0;
-								eh(b, d, t, 0);
+								png_handle_unknown(b, d, t, 0);
 								break c;
 								break
 							}
@@ -68563,9 +68563,9 @@ function $(oa) {
 				}
 			}
 			if ((r | 0) == 19)
-				_g(b, 4112);
+				png_err(b, 4112);
 			else if ((r | 0) == 22)
-				_g(b, 4128);
+				png_err(b, 4128);
 			else if ((r | 0) == 62) {
 				i = f;
 				return
@@ -68595,11 +68595,11 @@ function $(oa) {
 			do
 				if ((d | 0) != 0 ? (h = c[d >> 2] | 0, (h | 0) != 0) : 0) {
 					c[d >> 2] = 0;
-					Kg(g, h, 32767, -1);
-					sy(h | 0, 0, 268) | 0;
+					png_free_data_part_68_564940(g, h, 32767, -1);
+					_memset(h | 0, 0, 268) | 0;
 					j = c[g + 724 >> 2] | 0;
 					if (!j) {
-						wx(h);
+						_free(h);
 						break
 					} else {
 						FUNCTION_TABLE_vii[j & 127](g, h);
@@ -68610,11 +68610,11 @@ function $(oa) {
 			do
 				if ((b | 0) != 0 ? (d = c[b >> 2] | 0, (d | 0) != 0) : 0) {
 					c[b >> 2] = 0;
-					Kg(g, d, 32767, -1);
-					sy(d | 0, 0, 268) | 0;
+					png_free_data_part_68_564940(g, d, 32767, -1);
+					_memset(d | 0, 0, 268) | 0;
 					h = c[g + 724 >> 2] | 0;
 					if (!h) {
-						wx(d);
+						_free(d);
 						break
 					} else {
 						FUNCTION_TABLE_vii[h & 127](g, d);
@@ -68629,7 +68629,7 @@ function $(oa) {
 				if (a) {
 					b = c[g + 724 >> 2] | 0;
 					if (!b) {
-						wx(a);
+						_free(a);
 						break
 					} else {
 						FUNCTION_TABLE_vii[b & 127](g, a);
@@ -68642,7 +68642,7 @@ function $(oa) {
 				if (a) {
 					b = c[g + 724 >> 2] | 0;
 					if (!b) {
-						wx(a);
+						_free(a);
 						break
 					} else {
 						FUNCTION_TABLE_vii[b & 127](g, a);
@@ -68655,7 +68655,7 @@ function $(oa) {
 				if (a) {
 					b = c[g + 724 >> 2] | 0;
 					if (!b) {
-						wx(a);
+						_free(a);
 						break
 					} else {
 						FUNCTION_TABLE_vii[b & 127](g, a);
@@ -68668,7 +68668,7 @@ function $(oa) {
 				if (a) {
 					b = c[g + 724 >> 2] | 0;
 					if (!b) {
-						wx(a);
+						_free(a);
 						break
 					} else {
 						FUNCTION_TABLE_vii[b & 127](g, a);
@@ -68681,7 +68681,7 @@ function $(oa) {
 				if (a) {
 					b = c[g + 724 >> 2] | 0;
 					if (!b) {
-						wx(a);
+						_free(a);
 						break
 					} else {
 						FUNCTION_TABLE_vii[b & 127](g, a);
@@ -68694,7 +68694,7 @@ function $(oa) {
 				if ((c[a >> 2] & 4096 | 0) != 0 ? (b = c[g + 416 >> 2] | 0, (b | 0) != 0) : 0) {
 					d = c[g + 724 >> 2] | 0;
 					if (!d) {
-						wx(b);
+						_free(b);
 						break
 					} else {
 						FUNCTION_TABLE_vii[d & 127](g, b);
@@ -68708,7 +68708,7 @@ function $(oa) {
 				if ((b & 8192 | 0) != 0 ? (d = c[g + 528 >> 2] | 0, (d | 0) != 0) : 0) {
 					h = c[g + 724 >> 2] | 0;
 					if (!h) {
-						wx(d);
+						_free(d);
 						break
 					} else {
 						FUNCTION_TABLE_vii[h & 127](g, d);
@@ -68723,7 +68723,7 @@ function $(oa) {
 				if (a) {
 					b = c[g + 724 >> 2] | 0;
 					if (!b) {
-						wx(a);
+						_free(a);
 						break
 					} else {
 						FUNCTION_TABLE_vii[b & 127](g, a);
@@ -68736,7 +68736,7 @@ function $(oa) {
 				if (a) {
 					b = c[g + 724 >> 2] | 0;
 					if (!b) {
-						wx(a);
+						_free(a);
 						break
 					} else {
 						FUNCTION_TABLE_vii[b & 127](g, a);
@@ -68749,7 +68749,7 @@ function $(oa) {
 				if (a) {
 					b = c[g + 724 >> 2] | 0;
 					if (!b) {
-						wx(a);
+						_free(a);
 						break
 					} else {
 						FUNCTION_TABLE_vii[b & 127](g, a);
@@ -68757,11 +68757,11 @@ function $(oa) {
 					}
 				}
 			while (0);
-			qy(f | 0, g | 0, 900) | 0;
-			sy(g | 0, 0, 900) | 0;
+			_memcpy(f | 0, g | 0, 900) | 0;
+			_memset(g | 0, 0, 900) | 0;
 			a = c[f + 724 >> 2] | 0;
 			if (!a)
-				wx(g);
+				_free(g);
 			else
 				FUNCTION_TABLE_vii[a & 127](f, g);
 			$g(f);
@@ -73196,7 +73196,7 @@ function $(oa) {
 							if (n) {
 								o = c[d + 724 >> 2] | 0;
 								if (!o) {
-									wx(n);
+									_free(n);
 									break
 								} else {
 									FUNCTION_TABLE_vii[o & 127](d, n);
@@ -73213,16 +73213,16 @@ function $(oa) {
 					c[l >> 2] = m & -4097;
 					n = c[d + 720 >> 2] | 0;
 					if (!n)
-						q = vx(768) | 0;
+						q = _malloc(768) | 0;
 					else
 						q = FUNCTION_TABLE_iii[n & 31](d, 768) | 0;
 					if (!q)
 						Eg(d, 3264);
-					sy(q | 0, 0, 768) | 0;
+					_memset(q | 0, 0, 768) | 0;
 					n = d + 416 | 0;
 					c[n >> 2] = q;
 					if (k) {
-						qy(q | 0, f | 0, g * 3 | 0) | 0;
+						_memcpy(q | 0, f | 0, g * 3 | 0) | 0;
 						r = c[n >> 2] | 0
 					} else
 						r = q;
@@ -73282,20 +73282,20 @@ function $(oa) {
 			if (((2147483647 - m | 0) >= (f | 0) ? (o = m + f | 0, o >>> 0 <= 268435455) : 0) ? (q = o << 4, (q | 0) != 0) : 0) {
 				o = c[b + 720 >> 2] | 0;
 				if (!o)
-					r = vx(q) | 0;
+					r = _malloc(q) | 0;
 				else
 					r = FUNCTION_TABLE_iii[o & 31](b, q) | 0;
 				if (r) {
 					q = m << 4;
 					if (n)
-						qy(r | 0, k | 0, q | 0) | 0;
-					sy(r + q | 0, 0, f << 4 | 0) | 0;
+						_memcpy(r | 0, k | 0, q | 0) | 0;
+					_memset(r + q | 0, 0, f << 4 | 0) | 0;
 					q = c[j >> 2] | 0;
 					do
 						if (q) {
 							k = c[b + 724 >> 2] | 0;
 							if (!k) {
-								wx(q);
+								_free(q);
 								break
 							} else {
 								FUNCTION_TABLE_vii[k & 127](b, q);
@@ -73318,20 +73318,20 @@ function $(oa) {
 						r = c[m >> 2] | 0;
 						if ((r | 0) != 0 ? (o = m + 8 | 0, (c[o >> 2] | 0) != 0) : 0) {
 							a[f + 4 >> 0] = a[m + 4 >> 0] | 0;
-							s = (py(r | 0) | 0) + 1 | 0;
+							s = (_strlen(r | 0) | 0) + 1 | 0;
 							if (!s) {
 								t = 28;
 								break
 							}
 							r = c[d >> 2] | 0;
 							if (!r)
-								u = vx(s) | 0;
+								u = _malloc(s) | 0;
 							else
 								u = FUNCTION_TABLE_iii[r & 31](b, s) | 0;
 							c[f >> 2] = u;
 							if (!u)
 								break;
-							qy(u | 0, c[m >> 2] | 0, s | 0) | 0;
+							_memcpy(u | 0, c[m >> 2] | 0, s | 0) | 0;
 							s = m + 12 | 0;
 							r = c[s >> 2] | 0;
 							if ((r | 0) < 1) {
@@ -73349,7 +73349,7 @@ function $(oa) {
 							}
 							r = c[d >> 2] | 0;
 							if (!r)
-								w = vx(v) | 0;
+								w = _malloc(v) | 0;
 							else
 								w = FUNCTION_TABLE_iii[r & 31](b, v) | 0;
 							c[f + 8 >> 2] = w;
@@ -73358,7 +73358,7 @@ function $(oa) {
 								break
 							}
 							c[f + 12 >> 2] = c[s >> 2];
-							qy(w | 0, c[o >> 2] | 0, (c[s >> 2] | 0) * 10 | 0) | 0;
+							_memcpy(w | 0, c[o >> 2] | 0, (c[s >> 2] | 0) * 10 | 0) | 0;
 							c[n >> 2] = c[n >> 2] | 8192;
 							c[l >> 2] = (c[l >> 2] | 0) + 1;
 							x = f + 16 | 0
@@ -73412,7 +73412,7 @@ function $(oa) {
 						if ((t | 0) == 42 ? (x = c[f >> 2] | 0, (x | 0) != 0) : 0) {
 							m = c[b + 724 >> 2] | 0;
 							if (!m) {
-								wx(x);
+								_free(x);
 								break
 							} else {
 								FUNCTION_TABLE_vii[m & 127](b, x);
@@ -73467,7 +73467,7 @@ function $(oa) {
 						if (r) {
 							s = c[f + 724 >> 2] | 0;
 							if (!s) {
-								wx(r);
+								_free(r);
 								break
 							} else {
 								FUNCTION_TABLE_vii[s & 127](f, r);
@@ -73483,7 +73483,7 @@ function $(oa) {
 				c[n >> 2] = q & -8193;
 				q = c[f + 720 >> 2] | 0;
 				if (!q)
-					t = vx(256) | 0;
+					t = _malloc(256) | 0;
 				else
 					t = FUNCTION_TABLE_iii[q & 31](f, 256) | 0;
 				if (!t)
@@ -73491,7 +73491,7 @@ function $(oa) {
 				c[g + 156 >> 2] = t;
 				c[f + 528 >> 2] = t;
 				if ((j + -1 | 0) >>> 0 < 256)
-					qy(t | 0, h | 0, j | 0) | 0
+					_memcpy(t | 0, h | 0, j | 0) | 0
 			}
 			if (!k) {
 				b[g + 22 >> 1] = j;
@@ -73585,7 +73585,7 @@ function $(oa) {
 					if (n) {
 						o = c[a + 724 >> 2] | 0;
 						if (!o) {
-							wx(n);
+							_free(n);
 							break
 						} else {
 							FUNCTION_TABLE_vii[o & 127](a, n);
@@ -73601,7 +73601,7 @@ function $(oa) {
 			c[k >> 2] = m & -9;
 			m = c[a + 720 >> 2] | 0;
 			if (!m)
-				q = vx(512) | 0;
+				q = _malloc(512) | 0;
 			else
 				q = FUNCTION_TABLE_iii[m & 31](a, 512) | 0;
 			if (q) {
@@ -73681,7 +73681,7 @@ function $(oa) {
 				i = m;
 				return
 			}
-			r = (py(e | 0) | 0) + 1 | 0;
+			r = (_strlen(e | 0) | 0) + 1 | 0;
 			if (h >>> 0 > 3)
 				Eg(b, 5680);
 			if (j >>> 0 > 255)
@@ -73695,7 +73695,7 @@ function $(oa) {
 							u = 15;
 							break
 						}
-						v = py(t | 0) | 0;
+						v = _strlen(t | 0) | 0;
 						c[n >> 2] = 0;
 						c[o >> 2] = 0;
 						if (!(Wg(t, v, n, o) | 0)) {
@@ -73723,37 +73723,37 @@ function $(oa) {
 				o = b + 720 | 0;
 				s = c[o >> 2] | 0;
 				if (!s)
-					x = vx(r) | 0;
+					x = _malloc(r) | 0;
 				else
 					x = FUNCTION_TABLE_iii[s & 31](b, r) | 0;
 				if (x) {
 					c[d + 208 >> 2] = x;
-					qy(x | 0, e | 0, r | 0) | 0;
+					_memcpy(x | 0, e | 0, r | 0) | 0;
 					c[d + 212 >> 2] = f;
 					c[d + 216 >> 2] = g;
 					a[d + 228 >> 0] = h;
 					a[d + 229 >> 0] = j;
-					h = (py(k | 0) | 0) + 1 | 0;
+					h = (_strlen(k | 0) | 0) + 1 | 0;
 					if (h) {
 						g = c[o >> 2] | 0;
 						if (!g)
-							y = vx(h) | 0;
+							y = _malloc(h) | 0;
 						else
 							y = FUNCTION_TABLE_iii[g & 31](b, h) | 0;
 						if (y) {
 							c[d + 220 >> 2] = y;
-							qy(y | 0, k | 0, h | 0) | 0;
+							_memcpy(y | 0, k | 0, h | 0) | 0;
 							h = (j << 2) + 4 | 0;
 							if (h) {
 								k = c[o >> 2] | 0;
 								if (!k)
-									z = vx(h) | 0;
+									z = _malloc(h) | 0;
 								else
 									z = FUNCTION_TABLE_iii[k & 31](b, h) | 0;
 								if (z) {
 									k = d + 224 | 0;
 									c[k >> 2] = z;
-									sy(z | 0, 0, h | 0) | 0;
+									_memset(z | 0, 0, h | 0) | 0;
 									b: do
 										if (q) {
 											h = b + 172 | 0;
@@ -73761,11 +73761,11 @@ function $(oa) {
 											y = 0;
 											while (1) {
 												g = l + (y << 2) | 0;
-												f = (py(c[g >> 2] | 0) | 0) + 1 | 0;
+												f = (_strlen(c[g >> 2] | 0) | 0) + 1 | 0;
 												if (f) {
 													r = c[o >> 2] | 0;
 													if (!r)
-														A = vx(f) | 0;
+														A = _malloc(f) | 0;
 													else
 														A = FUNCTION_TABLE_iii[r & 31](b, f) | 0;
 													if (A)
@@ -73795,7 +73795,7 @@ function $(oa) {
 												r = c[(c[k >> 2] | 0) + (y << 2) >> 2] | 0;
 												if (!r)
 													break;
-												qy(r | 0, c[g >> 2] | 0, f | 0) | 0;
+												_memcpy(r | 0, c[g >> 2] | 0, f | 0) | 0;
 												y = y + 1 | 0;
 												if ((y | 0) >= (j | 0))
 													break b
@@ -73922,7 +73922,7 @@ function $(oa) {
 				Eg(b, 5944);
 			if (!f)
 				Eg(b, 5968);
-			l = py(f | 0) | 0;
+			l = _strlen(f | 0) | 0;
 			if (!l)
 				Eg(b, 5968);
 			if ((a[f >> 0] | 0) == 45)
@@ -73938,7 +73938,7 @@ function $(oa) {
 				Eg(b, 5968);
 			if (!g)
 				Eg(b, 5992);
-			m = py(g | 0) | 0;
+			m = _strlen(g | 0) | 0;
 			if (!m)
 				Eg(b, 5992);
 			if ((a[g >> 0] | 0) == 45)
@@ -73958,25 +73958,25 @@ function $(oa) {
 				l = b + 720 | 0;
 				n = c[l >> 2] | 0;
 				if (!n)
-					o = vx(e) | 0;
+					o = _malloc(e) | 0;
 				else
 					o = FUNCTION_TABLE_iii[n & 31](b, e) | 0;
 				if (o) {
 					n = d + 256 | 0;
 					c[n >> 2] = o;
-					qy(o | 0, f | 0, e | 0) | 0;
+					_memcpy(o | 0, f | 0, e | 0) | 0;
 					e = m + 1 | 0;
 					do
 						if (e) {
 							m = c[l >> 2] | 0;
 							if (!m)
-								q = vx(e) | 0;
+								q = _malloc(e) | 0;
 							else
 								q = FUNCTION_TABLE_iii[m & 31](b, e) | 0;
 							if (!q)
 								break;
 							c[d + 260 >> 2] = q;
-							qy(q | 0, g | 0, e | 0) | 0;
+							_memcpy(q | 0, g | 0, e | 0) | 0;
 							m = d + 8 | 0;
 							c[m >> 2] = c[m >> 2] | 16384;
 							m = d + 232 | 0;
@@ -74000,7 +74000,7 @@ function $(oa) {
 						if (g) {
 							q = c[b + 724 >> 2] | 0;
 							if (!q) {
-								wx(g);
+								_free(g);
 								break
 							} else {
 								FUNCTION_TABLE_vii[q & 127](b, g);
@@ -74107,20 +74107,20 @@ function $(oa) {
 						if (!((m | 0) < (q | 0) | o >>> 0 > 153391689) ? (m = o * 28 | 0, (m | 0) != 0) : 0) {
 							s = c[b + 720 >> 2] | 0;
 							if (!s)
-								t = vx(m) | 0;
+								t = _malloc(m) | 0;
 							else
 								t = FUNCTION_TABLE_iii[s & 31](b, m) | 0;
 							if (t) {
 								m = l * 28 | 0;
 								if (r)
-									qy(t | 0, p | 0, m | 0) | 0;
-								sy(t + m | 0, 0, q * 28 | 0) | 0;
+									_memcpy(t | 0, p | 0, m | 0) | 0;
+								_memset(t + m | 0, 0, q * 28 | 0) | 0;
 								q = c[n >> 2] | 0;
 								do
 									if (q) {
 										m = c[b + 724 >> 2] | 0;
 										if (!m) {
-											wx(q);
+											_free(q);
 											break
 										} else {
 											FUNCTION_TABLE_vii[m & 127](b, q);
@@ -74164,19 +74164,19 @@ function $(oa) {
 							Ng(b, 6128, 1);
 							break
 						}
-						r = py(q | 0) | 0;
+						r = _strlen(q | 0) | 0;
 						if ((p | 0) >= 1) {
 							s = c[e + (j * 28 | 0) + 20 >> 2] | 0;
 							if (!s)
 								w = 0;
 							else
-								w = py(s | 0) | 0;
+								w = _strlen(s | 0) | 0;
 							s = c[e + (j * 28 | 0) + 24 >> 2] | 0;
 							if (!s) {
 								x = 0;
 								y = w
 							} else {
-								x = py(s | 0) | 0;
+								x = _strlen(s | 0) | 0;
 								y = w
 							}
 						} else {
@@ -74186,7 +74186,7 @@ function $(oa) {
 						s = e + (j * 28 | 0) + 8 | 0;
 						z = c[s >> 2] | 0;
 						if ((z | 0) != 0 ? (a[z >> 0] | 0) != 0 : 0) {
-							A = py(z | 0) | 0;
+							A = _strlen(z | 0) | 0;
 							c[t >> 2] = p;
 							B = A
 						} else
@@ -74212,25 +74212,25 @@ function $(oa) {
 						}
 						A = c[d >> 2] | 0;
 						if (!A)
-							D = vx(p) | 0;
+							D = _malloc(p) | 0;
 						else
 							D = FUNCTION_TABLE_iii[A & 31](b, p) | 0;
 						p = v + (u * 28 | 0) + 4 | 0;
 						c[p >> 2] = D;
 						if (!D)
 							break a;
-						qy(D | 0, c[l >> 2] | 0, r | 0) | 0;
+						_memcpy(D | 0, c[l >> 2] | 0, r | 0) | 0;
 						a[(c[p >> 2] | 0) + r >> 0] = 0;
 						if ((c[m >> 2] | 0) > 0) {
 							A = (c[p >> 2] | 0) + (r + 1) | 0;
 							z = v + (u * 28 | 0) + 20 | 0;
 							c[z >> 2] = A;
-							qy(A | 0, c[e + (j * 28 | 0) + 20 >> 2] | 0, y | 0) | 0;
+							_memcpy(A | 0, c[e + (j * 28 | 0) + 20 >> 2] | 0, y | 0) | 0;
 							a[(c[z >> 2] | 0) + y >> 0] = 0;
 							A = (c[z >> 2] | 0) + (y + 1) | 0;
 							z = v + (u * 28 | 0) + 24 | 0;
 							c[z >> 2] = A;
-							qy(A | 0, c[e + (j * 28 | 0) + 24 >> 2] | 0, x | 0) | 0;
+							_memcpy(A | 0, c[e + (j * 28 | 0) + 24 >> 2] | 0, x | 0) | 0;
 							a[(c[z >> 2] | 0) + x >> 0] = 0;
 							A = (c[z >> 2] | 0) + (x + 1) | 0;
 							c[v + (u * 28 | 0) + 8 >> 2] = A;
@@ -74245,7 +74245,7 @@ function $(oa) {
 						if (!B)
 							F = E;
 						else {
-							qy(E | 0, c[s >> 2] | 0, B | 0) | 0;
+							_memcpy(E | 0, c[s >> 2] | 0, B | 0) | 0;
 							F = c[v + (u * 28 | 0) + 8 >> 2] | 0
 						}
 						a[F + B >> 0] = 0;
@@ -74317,20 +74317,20 @@ function $(oa) {
 			if (((2147483647 - n | 0) >= (g | 0) ? (q = n + g | 0, q >>> 0 <= 214748364) : 0) ? (r = q * 20 | 0, (r | 0) != 0) : 0) {
 				q = c[b + 720 >> 2] | 0;
 				if (!q)
-					s = vx(r) | 0;
+					s = _malloc(r) | 0;
 				else
 					s = FUNCTION_TABLE_iii[q & 31](b, r) | 0;
 				if (s) {
 					r = n * 20 | 0;
 					if (o)
-						qy(s | 0, l | 0, r | 0) | 0;
-					sy(s + r | 0, 0, g * 20 | 0) | 0;
+						_memcpy(s | 0, l | 0, r | 0) | 0;
+					_memset(s + r | 0, 0, g * 20 | 0) | 0;
 					r = c[k >> 2] | 0;
 					do
 						if (r) {
 							l = c[b + 724 >> 2] | 0;
 							if (!l) {
-								wx(r);
+								_free(r);
 								break
 							} else {
 								FUNCTION_TABLE_vii[l & 127](b, r);
@@ -74399,7 +74399,7 @@ function $(oa) {
 							if (q) {
 								v = c[o >> 2] | 0;
 								if (!v)
-									w = vx(q) | 0;
+									w = _malloc(q) | 0;
 								else
 									w = FUNCTION_TABLE_iii[v & 31](b, q) | 0;
 								c[f + 8 >> 2] = w;
@@ -74408,7 +74408,7 @@ function $(oa) {
 									x = f;
 									break
 								} else {
-									qy(w | 0, c[g + 8 >> 2] | 0, c[s >> 2] | 0) | 0;
+									_memcpy(w | 0, c[g + 8 >> 2] | 0, c[s >> 2] | 0) | 0;
 									c[f + 12 >> 2] = c[s >> 2];
 									t = 39;
 									break
@@ -75504,13 +75504,13 @@ function $(oa) {
 					o = a + 720 | 0;
 					p = c[o >> 2] | 0;
 					if (!p)
-						q = vx(m) | 0;
+						q = _malloc(m) | 0;
 					else
 						q = FUNCTION_TABLE_iii[p & 31](a, m) | 0;
 					if (!q)
 						Eg(a, 3264);
 					else {
-						sy(q | 0, 0, m | 0) | 0;
+						_memset(q | 0, 0, m | 0) | 0;
 						r = q;
 						s = o;
 						break
@@ -75530,7 +75530,7 @@ function $(oa) {
 				if (!n) {
 					e = c[s >> 2] | 0;
 					if (!e)
-						v = vx(512) | 0;
+						v = _malloc(512) | 0;
 					else
 						v = FUNCTION_TABLE_iii[e & 31](a, 512) | 0;
 					if (!v) {
@@ -75680,7 +75680,7 @@ function $(oa) {
 			if (h) {
 				j = c[b + 724 >> 2] | 0;
 				if (!j)
-					wx(h);
+					_free(h);
 				else
 					FUNCTION_TABLE_vii[j & 127](b, h);
 				c[g >> 2] = 0
@@ -75709,7 +75709,7 @@ function $(oa) {
 						if (b) {
 							h = c[b + 720 >> 2] | 0;
 							if (!h)
-								m = vx(d) | 0;
+								m = _malloc(d) | 0;
 							else
 								m = FUNCTION_TABLE_iii[h & 31](b, d) | 0;
 							if (!m) {
@@ -75740,9 +75740,9 @@ function $(oa) {
 				if ((l | 0) == 19) {
 					n = (d | 0) != 0;
 					if ((k | 0) == 0 & n) {
-						xh(b, d) | 0;
+						png_crc_finish(b, d) | 0;
 						if (!(c[b + 212 >> 2] & 1048576))
-							_g(b, 7408);
+							png_err(b, 7408);
 						Zg(b, 7408);
 						o = 0;
 						i = e;
@@ -75765,7 +75765,7 @@ function $(oa) {
 						f = c[n >> 2] | 0;
 						while (1) {
 							h = (m | 0) == 0 ? -1 : m;
-							f = sk(f, g, h) | 0;
+							f = crc32(f, g, h) | 0;
 							if ((m | 0) == (h | 0))
 								break;
 							else {
@@ -75777,7 +75777,7 @@ function $(oa) {
 					}
 				}
 			while (0);
-			xh(b, 0) | 0;
+			png_crc_finish(b, 0) | 0;
 			o = 1;
 			i = e;
 			return o | 0
@@ -75989,7 +75989,7 @@ function $(oa) {
 							u = c[o >> 2] | 0;
 							while (1) {
 								v = (t | 0) == 0 ? -1 : t;
-								u = sk(u, q, v) | 0;
+								u = crc32(u, q, v) | 0;
 								if ((t | 0) == (v | 0))
 									break;
 								else {
@@ -76174,7 +76174,7 @@ function $(oa) {
 							if (!r ? (s = c[b + 720 >> 2] | 0, (s | 0) != 0) : 0)
 								t = FUNCTION_TABLE_iii[s & 31](b, q) | 0;
 							else
-								t = vx(q) | 0;
+								t = _malloc(q) | 0;
 							if (t) {
 								s = Gi(b, c[j >> 2] | 0, (c[d >> 2] | 0) + e | 0, h, t + e | 0, f) | 0;
 								if (!s) {
@@ -76184,7 +76184,7 @@ function $(oa) {
 									if ((l | 0) == (c[f >> 2] | 0)) {
 										a[t + (l + e) >> 0] = 0;
 										if (e)
-											qy(t | 0, c[d >> 2] | 0, e | 0) | 0;
+											_memcpy(t | 0, c[d >> 2] | 0, e | 0) | 0;
 										l = c[d >> 2] | 0;
 										c[d >> 2] = t;
 										c[b + 792 >> 2] = q;
@@ -76202,7 +76202,7 @@ function $(oa) {
 									if (!(r | (v | 0) == 0)) {
 										s = c[b + 724 >> 2] | 0;
 										if (!s) {
-											wx(v);
+											_free(v);
 											break
 										} else {
 											FUNCTION_TABLE_vii[s & 127](b, v);
@@ -76215,7 +76215,7 @@ function $(oa) {
 									break
 								}
 								if (!(c[b + 212 >> 2] & 1048576))
-									_g(b, 4296);
+									png_err(b, 4296);
 								else {
 									Zg(b, 4296);
 									p = 1;
@@ -76813,9 +76813,9 @@ function $(oa) {
 			c[2040] = (c[2040] | 0) + j;
 			j = Ek() | 0;
 			a = Cy(j | 0, H | 0, 1e6, 0) | 0;
-			j = ly(a | 0, H | 0, g | 0, f | 0) | 0;
+			j = _i64Subtract(a | 0, H | 0, g | 0, f | 0) | 0;
 			f = 8168;
-			g = ky(j | 0, H | 0, c[f >> 2] | 0, c[f + 4 >> 2] | 0) | 0;
+			g = _i64Add(j | 0, H | 0, c[f >> 2] | 0, c[f + 4 >> 2] | 0) | 0;
 			f = 8168;
 			c[f >> 2] = g;
 			c[f + 4 >> 2] = H;
@@ -76840,7 +76840,7 @@ function $(oa) {
 			j = rw(d, 58) | 0;
 			do
 				if (j) {
-					uy(h | 0, d | 0) | 0;
+					_strcpy(h | 0, d | 0) | 0;
 					a[h + (j - d) >> 0] = 0;
 					k = Yx(j + 1 | 0) | 0;
 					if ((k + -1 | 0) >>> 0 < 65535) {
@@ -76873,7 +76873,7 @@ function $(oa) {
 			h = c[e >> 2] | 0;
 			j = (c[d >> 2] | 0) - h | 0;
 			if (f >>> 0 <= j >>> 0) {
-				ry(h | 0, l | 0, f | 0) | 0;
+				_memmove(h | 0, l | 0, f | 0) | 0;
 				k = (c[e >> 2] | 0) + f | 0;
 				o = c[d >> 2] | 0;
 				if ((k | 0) != (o | 0)) {
@@ -76881,7 +76881,7 @@ function $(oa) {
 					c[d >> 2] = (c[d >> 2] | 0) + (k - o)
 				}
 			} else {
-				ry(h | 0, l | 0, j | 0) | 0;
+				_memmove(h | 0, l | 0, j | 0) | 0;
 				Ud(e, l + ((c[d >> 2] | 0) - (c[e >> 2] | 0)) | 0, l + f | 0) | 0
 			}
 			c[e + 16 >> 2] = 0;
@@ -76947,12 +76947,12 @@ function $(oa) {
 					x = c[g >> 2] | 0;
 					y = (c[w >> 2] | 0) - x | 0;
 					if (v >>> 0 > y >>> 0) {
-						ry(x | 0, s | 0, y | 0) | 0;
+						_memmove(x | 0, s | 0, y | 0) | 0;
 						Ud(g, s + ((c[w >> 2] | 0) - (c[g >> 2] | 0)) | 0, u) | 0;
 						z = g;
 						break
 					}
-					ry(x | 0, s | 0, v | 0) | 0;
+					_memmove(x | 0, s | 0, v | 0) | 0;
 					s = (c[g >> 2] | 0) + v | 0;
 					v = c[w >> 2] | 0;
 					if ((s | 0) != (v | 0)) {
@@ -77417,7 +77417,7 @@ function $(oa) {
 			i = g;
 			return o | 0
 		}
-		function aj(b, d, e) {
+		function _filesystem_js_handle_callback_F(b, d, e) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -77500,7 +77500,7 @@ function $(oa) {
 			i = f;
 			return
 		}
-		function bj(b, d, e, f, g) {
+		function _filesystem_js_handle_callback_FDS(b, d, e, f, g) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -77591,7 +77591,7 @@ function $(oa) {
 			i = h;
 			return
 		}
-		function cj(b, d, e, f, g) {
+		function _filesystem_js_handle_callback_FE(b, d, e, f, g) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -77682,7 +77682,7 @@ function $(oa) {
 			i = h;
 			return
 		}
-		function dj(b, d) {
+		function _filesystem_js_handle_callback(b, d) {
 			b = b | 0;
 			d = d | 0;
 			var e = 0,
@@ -77761,7 +77761,7 @@ function $(oa) {
 			i = e;
 			return
 		}
-		function ej(b, e, f, g) {
+		function _filesystem_js_handle_callback_LIST(b, e, f, g) {
 			b = b | 0;
 			e = e | 0;
 			f = f | 0;
@@ -77822,7 +77822,7 @@ function $(oa) {
 			s = (c[g + 4 >> 2] | 0) + r | 0;
 			t = r + 4 | 0;
 			c[q >> 2] = t;
-			r = jy(d[s >> 0] | d[s + 1 >> 0] << 8 | d[s + 2 >> 0] << 16 | d[s + 3 >> 0] << 24 | 0) | 0;
+			r = _llvm_bswap_i32(d[s >> 0] | d[s + 1 >> 0] << 8 | d[s + 2 >> 0] << 16 | d[s + 3 >> 0] << 24 | 0) | 0;
 			a: do
 				if ((r | 0) > 0) {
 					s = l + 20 | 0;
@@ -77856,7 +77856,7 @@ function $(oa) {
 						do
 							if (!(a[G + C >> 0] | 0)) {
 								H = G + F | 0;
-								I = py(H | 0) | 0;
+								I = _strlen(H | 0) | 0;
 								if (!I) {
 									J = C + 2 | 0;
 									c[q >> 2] = J;
@@ -77890,7 +77890,7 @@ function $(oa) {
 						H = N + 4 | 0;
 						c[q >> 2] = H;
 						I = B;
-						c[I >> 2] = jy(d[G >> 0] | d[G + 1 >> 0] << 8 | d[G + 2 >> 0] << 16 | d[G + 3 >> 0] << 24 | 0) | 0;
+						c[I >> 2] = _llvm_bswap_i32(d[G >> 0] | d[G + 1 >> 0] << 8 | d[G + 2 >> 0] << 16 | d[G + 3 >> 0] << 24 | 0) | 0;
 						c[I + 4 >> 2] = 0;
 						c[q >> 2] = N + 12;
 						I = F + H | 0;
@@ -78000,7 +78000,7 @@ function $(oa) {
 			i = h;
 			return
 		}
-		function fj() {
+		function ___cxx_global_var_init7() {
 			var b = 0,
 			d = 0;
 			b = i;
@@ -78016,7 +78016,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function gj() {
+		function ___cxx_global_var_init8() {
 			var b = 0,
 			d = 0;
 			b = i;
@@ -78038,7 +78038,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function hj() {
+		function __GLOBAL__I_a404() {
 			var a = 0,
 			b = 0;
 			a = i;
@@ -78612,7 +78612,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function qj() {
+		function __GLOBAL__I_a431() {
 			var b = 0;
 			b = i;
 			c[2168] = 8676;
@@ -78772,7 +78772,7 @@ function $(oa) {
 					q = k;
 					r = l
 				}
-				qy(c[q + 4 >> 2] | 0, c[(c[g >> 2] | 0) + 4 >> 2] | 0, c[j >> 2] | 0) | 0;
+				_memcpy(c[q + 4 >> 2] | 0, c[(c[g >> 2] | 0) + 4 >> 2] | 0, c[j >> 2] | 0) | 0;
 				if (r) {
 					l = r + 4 | 0;
 					c[l >> 2] = (c[l >> 2] | 0) + 1
@@ -78786,7 +78786,7 @@ function $(oa) {
 				o = r;
 				p = (c[(c[g >> 2] | 0) + 4 >> 2] | 0) + (c[j >> 2] | 0) | 0
 			}
-			qy(p | 0, b | 0, d | 0) | 0;
+			_memcpy(p | 0, b | 0, d | 0) | 0;
 			c[n >> 2] = (c[n >> 2] | 0) + d;
 			if (!o) {
 				i = e;
@@ -78859,7 +78859,7 @@ function $(oa) {
 				l = f
 			}
 			f = k + 4 | 0;
-			qy(c[f >> 2] | 0, c[(c[g >> 2] | 0) + 4 >> 2] | 0, c[h >> 2] | 0) | 0;
+			_memcpy(c[f >> 2] | 0, c[(c[g >> 2] | 0) + 4 >> 2] | 0, c[h >> 2] | 0) | 0;
 			if ((c[e >> 2] | 0) > 0) {
 				m = 0;
 				do {
@@ -78970,7 +78970,7 @@ function $(oa) {
 				if ((o | 0) != 256) {
 					o = m + -1 | 0;
 					if (o)
-						sy((c[j >> 2] | 0) + 1 | 0, 0, o | 0) | 0;
+						_memset((c[j >> 2] | 0) + 1 | 0, 0, o | 0) | 0;
 					a[c[j >> 2] >> 0] = 0;
 					o = (c[j >> 2] | 0) + m | 0;
 					c[j >> 2] = o;
@@ -79204,7 +79204,7 @@ function $(oa) {
 						j = a + 12 | 0;
 					else {
 						k = a + 12 | 0;
-						qy((c[(c[a + 8 >> 2] | 0) + 4 >> 2] | 0) + (c[k >> 2] | 0) | 0, b | 0, d | 0) | 0;
+						_memcpy((c[(c[a + 8 >> 2] | 0) + 4 >> 2] | 0) + (c[k >> 2] | 0) | 0, b | 0, d | 0) | 0;
 						j = k
 					}
 					c[j >> 2] = (c[j >> 2] | 0) + d;
@@ -79227,7 +79227,7 @@ function $(oa) {
 						p = a + 12 | 0;
 					else {
 						j = a + 12 | 0;
-						qy((c[(c[a + 8 >> 2] | 0) + 4 >> 2] | 0) + (c[j >> 2] | 0) | 0, b | 0, d | 0) | 0;
+						_memcpy((c[(c[a + 8 >> 2] | 0) + 4 >> 2] | 0) + (c[j >> 2] | 0) | 0, b | 0, d | 0) | 0;
 						p = j
 					}
 					c[p >> 2] = (c[p >> 2] | 0) + d;
@@ -79252,7 +79252,7 @@ function $(oa) {
 						t = h
 					} else {
 						p = a + 12 | 0;
-						qy((c[(c[a + 8 >> 2] | 0) + 4 >> 2] | 0) + (c[p >> 2] | 0) | 0, b | 0, o | 0) | 0;
+						_memcpy((c[(c[a + 8 >> 2] | 0) + 4 >> 2] | 0) + (c[p >> 2] | 0) | 0, b | 0, o | 0) | 0;
 						s = p;
 						t = c[a >> 2] | 0
 					}
@@ -79277,7 +79277,7 @@ function $(oa) {
 					x = q;
 					y = 0
 				} else {
-					qy(c[(c[a + 8 >> 2] | 0) + 4 >> 2] | 0, b + g | 0, t | 0) | 0;
+					_memcpy(c[(c[a + 8 >> 2] | 0) + 4 >> 2] | 0, b + g | 0, t | 0) | 0;
 					w = c[a >> 2] | 0;
 					x = c[f >> 2] | 0;
 					y = c[h >> 2] | 0
@@ -79311,7 +79311,7 @@ function $(oa) {
 				g = a + 8 | 0;
 			else {
 				h = a + 8 | 0;
-				qy((c[(c[a + 4 >> 2] | 0) + 4 >> 2] | 0) + (c[h >> 2] | 0) | 0, b + d | 0, e | 0) | 0;
+				_memcpy((c[(c[a + 4 >> 2] | 0) + 4 >> 2] | 0) + (c[h >> 2] | 0) | 0, b + d | 0, e | 0) | 0;
 				g = h
 			}
 			c[g >> 2] = (c[g >> 2] | 0) + e;
@@ -79349,7 +79349,7 @@ function $(oa) {
 						k = 0;
 					else
 						k = c[j + 4 >> 2] | 0;
-					qy(b | 0, k + g | 0, d | 0) | 0;
+					_memcpy(b | 0, k + g | 0, d | 0) | 0;
 					c[f >> 2] = (c[f >> 2] | 0) + d;
 					l = a + 32 | 0;
 					m = c[l >> 2] | 0;
@@ -79366,7 +79366,7 @@ function $(oa) {
 					o = 0;
 				else
 					o = c[h + 4 >> 2] | 0;
-				qy(b | 0, o + g | 0, d | 0) | 0;
+				_memcpy(b | 0, o + g | 0, d | 0) | 0;
 				c[f >> 2] = (c[f >> 2] | 0) + d;
 				l = a + 32 | 0;
 				m = c[l >> 2] | 0;
@@ -79382,7 +79382,7 @@ function $(oa) {
 					p = 0;
 				else
 					p = c[h + 4 >> 2] | 0;
-				qy(b | 0, p + g | 0, k - g | 0) | 0;
+				_memcpy(b | 0, p + g | 0, k - g | 0) | 0;
 				q = c[f >> 2] | 0;
 				r = c[a >> 2] | 0
 			} else {
@@ -79394,7 +79394,7 @@ function $(oa) {
 				s = 0;
 			else
 				s = c[k + 4 >> 2] | 0;
-			qy(b + (r - q) | 0, s | 0, d - r + q | 0) | 0;
+			_memcpy(b + (r - q) | 0, s | 0, d - r + q | 0) | 0;
 			c[f >> 2] = d - (c[a >> 2] | 0) + (c[f >> 2] | 0);
 			l = a + 32 | 0;
 			m = c[l >> 2] | 0;
@@ -79491,7 +79491,7 @@ function $(oa) {
 			c[a + 8 >> 2] = 0;
 			c[a + 12 >> 2] = 0;
 			c[a + 16 >> 2] = 0;
-			qy(c[g + 4 >> 2] | 0, d | 0, b | 0) | 0;
+			_memcpy(c[g + 4 >> 2] | 0, d | 0, b | 0) | 0;
 			i = e;
 			return
 		}
@@ -79515,7 +79515,7 @@ function $(oa) {
 				k = b
 			} else
 				k = h + 4 | 0;
-			qy((c[k >> 2] | 0) + (c[j >> 2] | 0) | 0, d | 0, e | 0) | 0;
+			_memcpy((c[k >> 2] | 0) + (c[j >> 2] | 0) | 0, d | 0, e | 0) | 0;
 			d = (c[j >> 2] | 0) + e | 0;
 			c[j >> 2] = d + 1;
 			a[(c[k >> 2] | 0) + d >> 0] = 0;
@@ -79540,7 +79540,7 @@ function $(oa) {
 			else
 				g = c[f + 4 >> 2] | 0;
 			f = a + 8 | 0;
-			qy(g | 0, (c[(c[a + 4 >> 2] | 0) + 4 >> 2] | 0) + (c[f >> 2] | 0) | 0, d | 0) | 0;
+			_memcpy(g | 0, (c[(c[a + 4 >> 2] | 0) + 4 >> 2] | 0) + (c[f >> 2] | 0) | 0, d | 0) | 0;
 			c[f >> 2] = (c[f >> 2] | 0) + d;
 			f = b + 8 | 0;
 			c[f >> 2] = (c[f >> 2] | 0) + d;
@@ -79560,7 +79560,7 @@ function $(oa) {
 				return
 			}
 			g = a + 8 | 0;
-			qy(b + d | 0, (c[(c[a + 4 >> 2] | 0) + 4 >> 2] | 0) + (c[g >> 2] | 0) | 0, e | 0) | 0;
+			_memcpy(b + d | 0, (c[(c[a + 4 >> 2] | 0) + 4 >> 2] | 0) + (c[g >> 2] | 0) | 0, e | 0) | 0;
 			c[g >> 2] = (c[g >> 2] | 0) + e;
 			i = f;
 			return
@@ -79730,17 +79730,17 @@ function $(oa) {
 			f = a + 32 | 0;
 			g = 0;
 			while (1) {
-				h = ty(d[f >> 0] | 0 | 0, 0, 56) | 0;
+				h = _bitshift64Shl(d[f >> 0] | 0 | 0, 0, 56) | 0;
 				j = H;
-				k = ty(d[f + 1 >> 0] | 0 | 0, 0, 48) | 0;
+				k = _bitshift64Shl(d[f + 1 >> 0] | 0 | 0, 0, 48) | 0;
 				l = H | j;
-				j = ty(d[f + 2 >> 0] | 0 | 0, 0, 40) | 0;
+				j = _bitshift64Shl(d[f + 2 >> 0] | 0 | 0, 0, 40) | 0;
 				m = l | H | (d[f + 3 >> 0] | 0);
-				l = ty(d[f + 4 >> 0] | 0 | 0, 0, 24) | 0;
+				l = _bitshift64Shl(d[f + 4 >> 0] | 0 | 0, 0, 24) | 0;
 				n = m | H;
-				m = ty(d[f + 5 >> 0] | 0 | 0, 0, 16) | 0;
+				m = _bitshift64Shl(d[f + 5 >> 0] | 0 | 0, 0, 16) | 0;
 				o = n | H;
-				n = ty(d[f + 6 >> 0] | 0 | 0, 0, 8) | 0;
+				n = _bitshift64Shl(d[f + 6 >> 0] | 0 | 0, 0, 8) | 0;
 				p = e + (g << 3) | 0;
 				c[p >> 2] = (k | h | j | l | m) ^ n ^ (d[f + 7 >> 0] | 0);
 				c[p + 4 >> 2] = o ^ H;
@@ -79813,102 +79813,102 @@ function $(oa) {
 			_ = c[a + 4 >> 2] | 0;
 			a = Z ^ c[X >> 2];
 			$ = _ ^ c[X + 4 >> 2];
-			X = ny(k | 0, q | 0, 8) | 0;
-			aa = ny(k | 0, q | 0, 16) | 0;
-			ba = ny(k | 0, q | 0, 24) | 0;
-			ca = ny(k | 0, q | 0, 40) | 0;
-			da = ny(k | 0, q | 0, 48) | 0;
-			ea = ny(k | 0, q | 0, 56) | 0;
-			fa = ny(p | 0, n | 0, 8) | 0;
-			ga = ny(p | 0, n | 0, 16) | 0;
-			ha = ny(p | 0, n | 0, 24) | 0;
-			ia = ny(p | 0, n | 0, 40) | 0;
-			ja = ny(p | 0, n | 0, 48) | 0;
-			ka = ny(p | 0, n | 0, 56) | 0;
-			la = ny(v | 0, w | 0, 8) | 0;
-			ma = ny(v | 0, w | 0, 16) | 0;
-			na = ny(v | 0, w | 0, 24) | 0;
-			oa = ny(v | 0, w | 0, 40) | 0;
-			pa = ny(v | 0, w | 0, 48) | 0;
-			qa = ny(v | 0, w | 0, 56) | 0;
-			ra = ny(B | 0, C | 0, 8) | 0;
-			sa = ny(B | 0, C | 0, 16) | 0;
-			ta = ny(B | 0, C | 0, 24) | 0;
-			ua = ny(B | 0, C | 0, 40) | 0;
-			va = ny(B | 0, C | 0, 48) | 0;
-			wa = ny(B | 0, C | 0, 56) | 0;
-			xa = ny(I | 0, J | 0, 8) | 0;
-			ya = ny(I | 0, J | 0, 16) | 0;
-			za = ny(I | 0, J | 0, 24) | 0;
-			Aa = ny(I | 0, J | 0, 40) | 0;
-			Ba = ny(I | 0, J | 0, 48) | 0;
-			Ca = ny(I | 0, J | 0, 56) | 0;
-			Da = ny(O | 0, P | 0, 8) | 0;
-			Ea = ny(O | 0, P | 0, 16) | 0;
-			Fa = ny(O | 0, P | 0, 24) | 0;
-			Ga = ny(O | 0, P | 0, 40) | 0;
-			Ha = ny(O | 0, P | 0, 48) | 0;
-			Ia = ny(O | 0, P | 0, 56) | 0;
-			Ja = ny(U | 0, V | 0, 8) | 0;
-			Ka = ny(U | 0, V | 0, 16) | 0;
-			La = ny(U | 0, V | 0, 24) | 0;
-			Ma = ny(U | 0, V | 0, 40) | 0;
-			Na = ny(U | 0, V | 0, 48) | 0;
-			Oa = ny(U | 0, V | 0, 56) | 0;
-			Pa = ny(Z | 0, _ | 0, 8) | 0;
-			Qa = ny(Z | 0, _ | 0, 16) | 0;
-			Ra = ny(Z | 0, _ | 0, 24) | 0;
-			Sa = ny(Z | 0, _ | 0, 40) | 0;
-			Ta = ny(Z | 0, _ | 0, 48) | 0;
-			Ua = ny(Z | 0, _ | 0, 56) | 0;
-			Va = ny(o | 0, m | 0, 8) | 0;
-			Wa = ny(o | 0, m | 0, 16) | 0;
-			Xa = ny(o | 0, m | 0, 24) | 0;
-			Ya = ny(o | 0, m | 0, 40) | 0;
-			Za = ny(o | 0, m | 0, 48) | 0;
-			_a = ny(o | 0, m | 0, 56) | 0;
-			$a = ny(h | 0, r | 0, 8) | 0;
-			ab = ny(h | 0, r | 0, 16) | 0;
-			bb = ny(h | 0, r | 0, 24) | 0;
-			cb = ny(h | 0, r | 0, 40) | 0;
-			db = ny(h | 0, r | 0, 48) | 0;
-			eb = ny(h | 0, r | 0, 56) | 0;
-			fb = ny(u | 0, x | 0, 8) | 0;
-			gb = ny(u | 0, x | 0, 16) | 0;
-			hb = ny(u | 0, x | 0, 24) | 0;
-			ib = ny(u | 0, x | 0, 40) | 0;
-			jb = ny(u | 0, x | 0, 48) | 0;
-			kb = ny(u | 0, x | 0, 56) | 0;
-			lb = ny(A | 0, D | 0, 8) | 0;
-			mb = ny(A | 0, D | 0, 16) | 0;
-			nb = ny(A | 0, D | 0, 24) | 0;
-			ob = ny(A | 0, D | 0, 40) | 0;
-			pb = ny(A | 0, D | 0, 48) | 0;
-			qb = ny(A | 0, D | 0, 56) | 0;
-			rb = ny(G | 0, K | 0, 8) | 0;
-			sb = ny(G | 0, K | 0, 16) | 0;
-			tb = ny(G | 0, K | 0, 24) | 0;
-			ub = ny(G | 0, K | 0, 40) | 0;
-			vb = ny(G | 0, K | 0, 48) | 0;
-			wb = ny(G | 0, K | 0, 56) | 0;
-			xb = ny(N | 0, Q | 0, 8) | 0;
-			yb = ny(N | 0, Q | 0, 16) | 0;
-			zb = ny(N | 0, Q | 0, 24) | 0;
-			Ab = ny(N | 0, Q | 0, 40) | 0;
-			Bb = ny(N | 0, Q | 0, 48) | 0;
-			Cb = ny(N | 0, Q | 0, 56) | 0;
-			Db = ny(T | 0, W | 0, 8) | 0;
-			Eb = ny(T | 0, W | 0, 16) | 0;
-			Fb = ny(T | 0, W | 0, 24) | 0;
-			Gb = ny(T | 0, W | 0, 40) | 0;
-			Hb = ny(T | 0, W | 0, 48) | 0;
-			Ib = ny(T | 0, W | 0, 56) | 0;
-			Jb = ny(a | 0, $ | 0, 8) | 0;
-			Kb = ny(a | 0, $ | 0, 16) | 0;
-			Lb = ny(a | 0, $ | 0, 24) | 0;
-			Mb = ny(a | 0, $ | 0, 40) | 0;
-			Nb = ny(a | 0, $ | 0, 48) | 0;
-			Ob = ny(a | 0, $ | 0, 56) | 0;
+			X = _bitshift64Lshr(k | 0, q | 0, 8) | 0;
+			aa = _bitshift64Lshr(k | 0, q | 0, 16) | 0;
+			ba = _bitshift64Lshr(k | 0, q | 0, 24) | 0;
+			ca = _bitshift64Lshr(k | 0, q | 0, 40) | 0;
+			da = _bitshift64Lshr(k | 0, q | 0, 48) | 0;
+			ea = _bitshift64Lshr(k | 0, q | 0, 56) | 0;
+			fa = _bitshift64Lshr(p | 0, n | 0, 8) | 0;
+			ga = _bitshift64Lshr(p | 0, n | 0, 16) | 0;
+			ha = _bitshift64Lshr(p | 0, n | 0, 24) | 0;
+			ia = _bitshift64Lshr(p | 0, n | 0, 40) | 0;
+			ja = _bitshift64Lshr(p | 0, n | 0, 48) | 0;
+			ka = _bitshift64Lshr(p | 0, n | 0, 56) | 0;
+			la = _bitshift64Lshr(v | 0, w | 0, 8) | 0;
+			ma = _bitshift64Lshr(v | 0, w | 0, 16) | 0;
+			na = _bitshift64Lshr(v | 0, w | 0, 24) | 0;
+			oa = _bitshift64Lshr(v | 0, w | 0, 40) | 0;
+			pa = _bitshift64Lshr(v | 0, w | 0, 48) | 0;
+			qa = _bitshift64Lshr(v | 0, w | 0, 56) | 0;
+			ra = _bitshift64Lshr(B | 0, C | 0, 8) | 0;
+			sa = _bitshift64Lshr(B | 0, C | 0, 16) | 0;
+			ta = _bitshift64Lshr(B | 0, C | 0, 24) | 0;
+			ua = _bitshift64Lshr(B | 0, C | 0, 40) | 0;
+			va = _bitshift64Lshr(B | 0, C | 0, 48) | 0;
+			wa = _bitshift64Lshr(B | 0, C | 0, 56) | 0;
+			xa = _bitshift64Lshr(I | 0, J | 0, 8) | 0;
+			ya = _bitshift64Lshr(I | 0, J | 0, 16) | 0;
+			za = _bitshift64Lshr(I | 0, J | 0, 24) | 0;
+			Aa = _bitshift64Lshr(I | 0, J | 0, 40) | 0;
+			Ba = _bitshift64Lshr(I | 0, J | 0, 48) | 0;
+			Ca = _bitshift64Lshr(I | 0, J | 0, 56) | 0;
+			Da = _bitshift64Lshr(O | 0, P | 0, 8) | 0;
+			Ea = _bitshift64Lshr(O | 0, P | 0, 16) | 0;
+			Fa = _bitshift64Lshr(O | 0, P | 0, 24) | 0;
+			Ga = _bitshift64Lshr(O | 0, P | 0, 40) | 0;
+			Ha = _bitshift64Lshr(O | 0, P | 0, 48) | 0;
+			Ia = _bitshift64Lshr(O | 0, P | 0, 56) | 0;
+			Ja = _bitshift64Lshr(U | 0, V | 0, 8) | 0;
+			Ka = _bitshift64Lshr(U | 0, V | 0, 16) | 0;
+			La = _bitshift64Lshr(U | 0, V | 0, 24) | 0;
+			Ma = _bitshift64Lshr(U | 0, V | 0, 40) | 0;
+			Na = _bitshift64Lshr(U | 0, V | 0, 48) | 0;
+			Oa = _bitshift64Lshr(U | 0, V | 0, 56) | 0;
+			Pa = _bitshift64Lshr(Z | 0, _ | 0, 8) | 0;
+			Qa = _bitshift64Lshr(Z | 0, _ | 0, 16) | 0;
+			Ra = _bitshift64Lshr(Z | 0, _ | 0, 24) | 0;
+			Sa = _bitshift64Lshr(Z | 0, _ | 0, 40) | 0;
+			Ta = _bitshift64Lshr(Z | 0, _ | 0, 48) | 0;
+			Ua = _bitshift64Lshr(Z | 0, _ | 0, 56) | 0;
+			Va = _bitshift64Lshr(o | 0, m | 0, 8) | 0;
+			Wa = _bitshift64Lshr(o | 0, m | 0, 16) | 0;
+			Xa = _bitshift64Lshr(o | 0, m | 0, 24) | 0;
+			Ya = _bitshift64Lshr(o | 0, m | 0, 40) | 0;
+			Za = _bitshift64Lshr(o | 0, m | 0, 48) | 0;
+			_a = _bitshift64Lshr(o | 0, m | 0, 56) | 0;
+			$a = _bitshift64Lshr(h | 0, r | 0, 8) | 0;
+			ab = _bitshift64Lshr(h | 0, r | 0, 16) | 0;
+			bb = _bitshift64Lshr(h | 0, r | 0, 24) | 0;
+			cb = _bitshift64Lshr(h | 0, r | 0, 40) | 0;
+			db = _bitshift64Lshr(h | 0, r | 0, 48) | 0;
+			eb = _bitshift64Lshr(h | 0, r | 0, 56) | 0;
+			fb = _bitshift64Lshr(u | 0, x | 0, 8) | 0;
+			gb = _bitshift64Lshr(u | 0, x | 0, 16) | 0;
+			hb = _bitshift64Lshr(u | 0, x | 0, 24) | 0;
+			ib = _bitshift64Lshr(u | 0, x | 0, 40) | 0;
+			jb = _bitshift64Lshr(u | 0, x | 0, 48) | 0;
+			kb = _bitshift64Lshr(u | 0, x | 0, 56) | 0;
+			lb = _bitshift64Lshr(A | 0, D | 0, 8) | 0;
+			mb = _bitshift64Lshr(A | 0, D | 0, 16) | 0;
+			nb = _bitshift64Lshr(A | 0, D | 0, 24) | 0;
+			ob = _bitshift64Lshr(A | 0, D | 0, 40) | 0;
+			pb = _bitshift64Lshr(A | 0, D | 0, 48) | 0;
+			qb = _bitshift64Lshr(A | 0, D | 0, 56) | 0;
+			rb = _bitshift64Lshr(G | 0, K | 0, 8) | 0;
+			sb = _bitshift64Lshr(G | 0, K | 0, 16) | 0;
+			tb = _bitshift64Lshr(G | 0, K | 0, 24) | 0;
+			ub = _bitshift64Lshr(G | 0, K | 0, 40) | 0;
+			vb = _bitshift64Lshr(G | 0, K | 0, 48) | 0;
+			wb = _bitshift64Lshr(G | 0, K | 0, 56) | 0;
+			xb = _bitshift64Lshr(N | 0, Q | 0, 8) | 0;
+			yb = _bitshift64Lshr(N | 0, Q | 0, 16) | 0;
+			zb = _bitshift64Lshr(N | 0, Q | 0, 24) | 0;
+			Ab = _bitshift64Lshr(N | 0, Q | 0, 40) | 0;
+			Bb = _bitshift64Lshr(N | 0, Q | 0, 48) | 0;
+			Cb = _bitshift64Lshr(N | 0, Q | 0, 56) | 0;
+			Db = _bitshift64Lshr(T | 0, W | 0, 8) | 0;
+			Eb = _bitshift64Lshr(T | 0, W | 0, 16) | 0;
+			Fb = _bitshift64Lshr(T | 0, W | 0, 24) | 0;
+			Gb = _bitshift64Lshr(T | 0, W | 0, 40) | 0;
+			Hb = _bitshift64Lshr(T | 0, W | 0, 48) | 0;
+			Ib = _bitshift64Lshr(T | 0, W | 0, 56) | 0;
+			Jb = _bitshift64Lshr(a | 0, $ | 0, 8) | 0;
+			Kb = _bitshift64Lshr(a | 0, $ | 0, 16) | 0;
+			Lb = _bitshift64Lshr(a | 0, $ | 0, 24) | 0;
+			Mb = _bitshift64Lshr(a | 0, $ | 0, 40) | 0;
+			Nb = _bitshift64Lshr(a | 0, $ | 0, 48) | 0;
+			Ob = _bitshift64Lshr(a | 0, $ | 0, 56) | 0;
 			Pb = p;
 			p = ga;
 			ga = ha;
@@ -80213,102 +80213,102 @@ function $(oa) {
 				Db = c[Rb >> 2] ^ Ja ^ c[Sb >> 2] ^ c[Wb >> 2] ^ c[Jb >> 2] ^ c[Vb >> 2] ^ c[Tb >> 2] ^ c[Ub >> 2] ^ c[Yb >> 2];
 				Lb = c[Rb + 4 >> 2] ^ Ra ^ c[Sb + 4 >> 2] ^ c[Wb + 4 >> 2] ^ c[Jb + 4 >> 2] ^ c[Vb + 4 >> 2] ^ c[Tb + 4 >> 2] ^ c[Ub + 4 >> 2] ^ c[Yb + 4 >> 2];
 				Ua = Ua + 1 | 0;
-				ea = ny(fa | 0, ba | 0, 8) | 0;
-				k = ny(fa | 0, ba | 0, 16) | 0;
-				aa = ny(fa | 0, ba | 0, 24) | 0;
-				q = ny(fa | 0, ba | 0, 40) | 0;
-				ca = ny(fa | 0, ba | 0, 48) | 0;
-				da = ny(fa | 0, ba | 0, 56) | 0;
-				ka = ny(Pb | 0, ha | 0, 8) | 0;
-				p = ny(Pb | 0, ha | 0, 16) | 0;
-				ga = ny(Pb | 0, ha | 0, 24) | 0;
-				n = ny(Pb | 0, ha | 0, 40) | 0;
-				ia = ny(Pb | 0, ha | 0, 48) | 0;
-				ja = ny(Pb | 0, ha | 0, 56) | 0;
-				qa = ny(X | 0, na | 0, 8) | 0;
-				v = ny(X | 0, na | 0, 16) | 0;
-				ma = ny(X | 0, na | 0, 24) | 0;
-				w = ny(X | 0, na | 0, 40) | 0;
-				oa = ny(X | 0, na | 0, 48) | 0;
-				pa = ny(X | 0, na | 0, 56) | 0;
-				wa = ny(la | 0, ta | 0, 8) | 0;
-				B = ny(la | 0, ta | 0, 16) | 0;
-				sa = ny(la | 0, ta | 0, 24) | 0;
-				C = ny(la | 0, ta | 0, 40) | 0;
-				ua = ny(la | 0, ta | 0, 48) | 0;
-				va = ny(la | 0, ta | 0, 56) | 0;
-				Ca = ny(ra | 0, za | 0, 8) | 0;
-				I = ny(ra | 0, za | 0, 16) | 0;
-				ya = ny(ra | 0, za | 0, 24) | 0;
-				J = ny(ra | 0, za | 0, 40) | 0;
-				Aa = ny(ra | 0, za | 0, 48) | 0;
-				Ba = ny(ra | 0, za | 0, 56) | 0;
-				Ia = ny(xa | 0, Fa | 0, 8) | 0;
-				O = ny(xa | 0, Fa | 0, 16) | 0;
-				Ea = ny(xa | 0, Fa | 0, 24) | 0;
-				P = ny(xa | 0, Fa | 0, 40) | 0;
-				Ga = ny(xa | 0, Fa | 0, 48) | 0;
-				Ha = ny(xa | 0, Fa | 0, 56) | 0;
-				Oa = ny(Da | 0, La | 0, 8) | 0;
-				U = ny(Da | 0, La | 0, 16) | 0;
-				Ka = ny(Da | 0, La | 0, 24) | 0;
-				V = ny(Da | 0, La | 0, 40) | 0;
-				Ma = ny(Da | 0, La | 0, 48) | 0;
-				Na = ny(Da | 0, La | 0, 56) | 0;
-				Sa = ny(Ja | 0, Ra | 0, 8) | 0;
-				Z = ny(Ja | 0, Ra | 0, 16) | 0;
-				Qa = ny(Ja | 0, Ra | 0, 24) | 0;
-				_ = ny(Ja | 0, Ra | 0, 40) | 0;
-				Pa = ny(Ja | 0, Ra | 0, 48) | 0;
-				Ta = ny(Ja | 0, Ra | 0, 56) | 0;
-				_a = ny(Qb | 0, Xa | 0, 8) | 0;
-				o = ny(Qb | 0, Xa | 0, 16) | 0;
-				Wa = ny(Qb | 0, Xa | 0, 24) | 0;
-				m = ny(Qb | 0, Xa | 0, 40) | 0;
-				Ya = ny(Qb | 0, Xa | 0, 48) | 0;
-				Za = ny(Qb | 0, Xa | 0, 56) | 0;
-				eb = ny(Va | 0, bb | 0, 8) | 0;
-				h = ny(Va | 0, bb | 0, 16) | 0;
-				ab = ny(Va | 0, bb | 0, 24) | 0;
-				r = ny(Va | 0, bb | 0, 40) | 0;
-				cb = ny(Va | 0, bb | 0, 48) | 0;
-				db = ny(Va | 0, bb | 0, 56) | 0;
-				kb = ny($a | 0, hb | 0, 8) | 0;
-				u = ny($a | 0, hb | 0, 16) | 0;
-				gb = ny($a | 0, hb | 0, 24) | 0;
-				x = ny($a | 0, hb | 0, 40) | 0;
-				ib = ny($a | 0, hb | 0, 48) | 0;
-				jb = ny($a | 0, hb | 0, 56) | 0;
-				qb = ny(fb | 0, nb | 0, 8) | 0;
-				A = ny(fb | 0, nb | 0, 16) | 0;
-				mb = ny(fb | 0, nb | 0, 24) | 0;
-				D = ny(fb | 0, nb | 0, 40) | 0;
-				ob = ny(fb | 0, nb | 0, 48) | 0;
-				pb = ny(fb | 0, nb | 0, 56) | 0;
-				wb = ny(lb | 0, tb | 0, 8) | 0;
-				G = ny(lb | 0, tb | 0, 16) | 0;
-				sb = ny(lb | 0, tb | 0, 24) | 0;
-				K = ny(lb | 0, tb | 0, 40) | 0;
-				ub = ny(lb | 0, tb | 0, 48) | 0;
-				vb = ny(lb | 0, tb | 0, 56) | 0;
-				Cb = ny(rb | 0, zb | 0, 8) | 0;
-				N = ny(rb | 0, zb | 0, 16) | 0;
-				yb = ny(rb | 0, zb | 0, 24) | 0;
-				Q = ny(rb | 0, zb | 0, 40) | 0;
-				Ab = ny(rb | 0, zb | 0, 48) | 0;
-				Bb = ny(rb | 0, zb | 0, 56) | 0;
-				Ib = ny(xb | 0, Fb | 0, 8) | 0;
-				T = ny(xb | 0, Fb | 0, 16) | 0;
-				Eb = ny(xb | 0, Fb | 0, 24) | 0;
-				W = ny(xb | 0, Fb | 0, 40) | 0;
-				Gb = ny(xb | 0, Fb | 0, 48) | 0;
-				Hb = ny(xb | 0, Fb | 0, 56) | 0;
-				Ob = ny(Db | 0, Lb | 0, 8) | 0;
-				a = ny(Db | 0, Lb | 0, 16) | 0;
-				Kb = ny(Db | 0, Lb | 0, 24) | 0;
-				$ = ny(Db | 0, Lb | 0, 40) | 0;
-				Mb = ny(Db | 0, Lb | 0, 48) | 0;
-				Nb = ny(Db | 0, Lb | 0, 56) | 0
+				ea = _bitshift64Lshr(fa | 0, ba | 0, 8) | 0;
+				k = _bitshift64Lshr(fa | 0, ba | 0, 16) | 0;
+				aa = _bitshift64Lshr(fa | 0, ba | 0, 24) | 0;
+				q = _bitshift64Lshr(fa | 0, ba | 0, 40) | 0;
+				ca = _bitshift64Lshr(fa | 0, ba | 0, 48) | 0;
+				da = _bitshift64Lshr(fa | 0, ba | 0, 56) | 0;
+				ka = _bitshift64Lshr(Pb | 0, ha | 0, 8) | 0;
+				p = _bitshift64Lshr(Pb | 0, ha | 0, 16) | 0;
+				ga = _bitshift64Lshr(Pb | 0, ha | 0, 24) | 0;
+				n = _bitshift64Lshr(Pb | 0, ha | 0, 40) | 0;
+				ia = _bitshift64Lshr(Pb | 0, ha | 0, 48) | 0;
+				ja = _bitshift64Lshr(Pb | 0, ha | 0, 56) | 0;
+				qa = _bitshift64Lshr(X | 0, na | 0, 8) | 0;
+				v = _bitshift64Lshr(X | 0, na | 0, 16) | 0;
+				ma = _bitshift64Lshr(X | 0, na | 0, 24) | 0;
+				w = _bitshift64Lshr(X | 0, na | 0, 40) | 0;
+				oa = _bitshift64Lshr(X | 0, na | 0, 48) | 0;
+				pa = _bitshift64Lshr(X | 0, na | 0, 56) | 0;
+				wa = _bitshift64Lshr(la | 0, ta | 0, 8) | 0;
+				B = _bitshift64Lshr(la | 0, ta | 0, 16) | 0;
+				sa = _bitshift64Lshr(la | 0, ta | 0, 24) | 0;
+				C = _bitshift64Lshr(la | 0, ta | 0, 40) | 0;
+				ua = _bitshift64Lshr(la | 0, ta | 0, 48) | 0;
+				va = _bitshift64Lshr(la | 0, ta | 0, 56) | 0;
+				Ca = _bitshift64Lshr(ra | 0, za | 0, 8) | 0;
+				I = _bitshift64Lshr(ra | 0, za | 0, 16) | 0;
+				ya = _bitshift64Lshr(ra | 0, za | 0, 24) | 0;
+				J = _bitshift64Lshr(ra | 0, za | 0, 40) | 0;
+				Aa = _bitshift64Lshr(ra | 0, za | 0, 48) | 0;
+				Ba = _bitshift64Lshr(ra | 0, za | 0, 56) | 0;
+				Ia = _bitshift64Lshr(xa | 0, Fa | 0, 8) | 0;
+				O = _bitshift64Lshr(xa | 0, Fa | 0, 16) | 0;
+				Ea = _bitshift64Lshr(xa | 0, Fa | 0, 24) | 0;
+				P = _bitshift64Lshr(xa | 0, Fa | 0, 40) | 0;
+				Ga = _bitshift64Lshr(xa | 0, Fa | 0, 48) | 0;
+				Ha = _bitshift64Lshr(xa | 0, Fa | 0, 56) | 0;
+				Oa = _bitshift64Lshr(Da | 0, La | 0, 8) | 0;
+				U = _bitshift64Lshr(Da | 0, La | 0, 16) | 0;
+				Ka = _bitshift64Lshr(Da | 0, La | 0, 24) | 0;
+				V = _bitshift64Lshr(Da | 0, La | 0, 40) | 0;
+				Ma = _bitshift64Lshr(Da | 0, La | 0, 48) | 0;
+				Na = _bitshift64Lshr(Da | 0, La | 0, 56) | 0;
+				Sa = _bitshift64Lshr(Ja | 0, Ra | 0, 8) | 0;
+				Z = _bitshift64Lshr(Ja | 0, Ra | 0, 16) | 0;
+				Qa = _bitshift64Lshr(Ja | 0, Ra | 0, 24) | 0;
+				_ = _bitshift64Lshr(Ja | 0, Ra | 0, 40) | 0;
+				Pa = _bitshift64Lshr(Ja | 0, Ra | 0, 48) | 0;
+				Ta = _bitshift64Lshr(Ja | 0, Ra | 0, 56) | 0;
+				_a = _bitshift64Lshr(Qb | 0, Xa | 0, 8) | 0;
+				o = _bitshift64Lshr(Qb | 0, Xa | 0, 16) | 0;
+				Wa = _bitshift64Lshr(Qb | 0, Xa | 0, 24) | 0;
+				m = _bitshift64Lshr(Qb | 0, Xa | 0, 40) | 0;
+				Ya = _bitshift64Lshr(Qb | 0, Xa | 0, 48) | 0;
+				Za = _bitshift64Lshr(Qb | 0, Xa | 0, 56) | 0;
+				eb = _bitshift64Lshr(Va | 0, bb | 0, 8) | 0;
+				h = _bitshift64Lshr(Va | 0, bb | 0, 16) | 0;
+				ab = _bitshift64Lshr(Va | 0, bb | 0, 24) | 0;
+				r = _bitshift64Lshr(Va | 0, bb | 0, 40) | 0;
+				cb = _bitshift64Lshr(Va | 0, bb | 0, 48) | 0;
+				db = _bitshift64Lshr(Va | 0, bb | 0, 56) | 0;
+				kb = _bitshift64Lshr($a | 0, hb | 0, 8) | 0;
+				u = _bitshift64Lshr($a | 0, hb | 0, 16) | 0;
+				gb = _bitshift64Lshr($a | 0, hb | 0, 24) | 0;
+				x = _bitshift64Lshr($a | 0, hb | 0, 40) | 0;
+				ib = _bitshift64Lshr($a | 0, hb | 0, 48) | 0;
+				jb = _bitshift64Lshr($a | 0, hb | 0, 56) | 0;
+				qb = _bitshift64Lshr(fb | 0, nb | 0, 8) | 0;
+				A = _bitshift64Lshr(fb | 0, nb | 0, 16) | 0;
+				mb = _bitshift64Lshr(fb | 0, nb | 0, 24) | 0;
+				D = _bitshift64Lshr(fb | 0, nb | 0, 40) | 0;
+				ob = _bitshift64Lshr(fb | 0, nb | 0, 48) | 0;
+				pb = _bitshift64Lshr(fb | 0, nb | 0, 56) | 0;
+				wb = _bitshift64Lshr(lb | 0, tb | 0, 8) | 0;
+				G = _bitshift64Lshr(lb | 0, tb | 0, 16) | 0;
+				sb = _bitshift64Lshr(lb | 0, tb | 0, 24) | 0;
+				K = _bitshift64Lshr(lb | 0, tb | 0, 40) | 0;
+				ub = _bitshift64Lshr(lb | 0, tb | 0, 48) | 0;
+				vb = _bitshift64Lshr(lb | 0, tb | 0, 56) | 0;
+				Cb = _bitshift64Lshr(rb | 0, zb | 0, 8) | 0;
+				N = _bitshift64Lshr(rb | 0, zb | 0, 16) | 0;
+				yb = _bitshift64Lshr(rb | 0, zb | 0, 24) | 0;
+				Q = _bitshift64Lshr(rb | 0, zb | 0, 40) | 0;
+				Ab = _bitshift64Lshr(rb | 0, zb | 0, 48) | 0;
+				Bb = _bitshift64Lshr(rb | 0, zb | 0, 56) | 0;
+				Ib = _bitshift64Lshr(xb | 0, Fb | 0, 8) | 0;
+				T = _bitshift64Lshr(xb | 0, Fb | 0, 16) | 0;
+				Eb = _bitshift64Lshr(xb | 0, Fb | 0, 24) | 0;
+				W = _bitshift64Lshr(xb | 0, Fb | 0, 40) | 0;
+				Gb = _bitshift64Lshr(xb | 0, Fb | 0, 48) | 0;
+				Hb = _bitshift64Lshr(xb | 0, Fb | 0, 56) | 0;
+				Ob = _bitshift64Lshr(Db | 0, Lb | 0, 8) | 0;
+				a = _bitshift64Lshr(Db | 0, Lb | 0, 16) | 0;
+				Kb = _bitshift64Lshr(Db | 0, Lb | 0, 24) | 0;
+				$ = _bitshift64Lshr(Db | 0, Lb | 0, 40) | 0;
+				Mb = _bitshift64Lshr(Db | 0, Lb | 0, 48) | 0;
+				Nb = _bitshift64Lshr(Db | 0, Lb | 0, 56) | 0
 			} while ((Ua | 0) != 11);
 			Ua = e;
 			e = g;
@@ -80433,7 +80433,7 @@ function $(oa) {
 				s = g + r | 0;
 				t = (o & 255) + q + (d[s >> 0] | 0) | 0;
 				a[s >> 0] = t;
-				o = ny(o | 0, p | 0, 8) | 0;
+				o = _bitshift64Lshr(o | 0, p | 0, 8) | 0;
 				if ((r | 0) <= 0)
 					break;
 				else {
@@ -80545,13 +80545,13 @@ function $(oa) {
 				}
 			} else {
 				if (l >>> 0 < 64)
-					sy(e + l + 32 | 0, 0, 63 - k | 0) | 0;
+					_memset(e + l + 32 | 0, 0, 63 - k | 0) | 0;
 				Rj(e);
 				m = 0;
 				n = 6
 			}
 			if ((n | 0) == 6)
-				sy(e + m + 32 | 0, 0, 32 - m | 0) | 0;
+				_memset(e + m + 32 | 0, 0, 32 - m | 0) | 0;
 			m = e + 64 | 0;
 			n = e + 0 | 0;
 			k = m + 32 | 0;
@@ -80566,23 +80566,23 @@ function $(oa) {
 			while (1) {
 				m = e + (f << 3) + 104 | 0;
 				k = m;
-				l = ny(c[k >> 2] | 0, c[k + 4 >> 2] | 0, 56) | 0;
+				l = _bitshift64Lshr(c[k >> 2] | 0, c[k + 4 >> 2] | 0, 56) | 0;
 				a[n >> 0] = l;
 				l = m;
-				k = ny(c[l >> 2] | 0, c[l + 4 >> 2] | 0, 48) | 0;
+				k = _bitshift64Lshr(c[l >> 2] | 0, c[l + 4 >> 2] | 0, 48) | 0;
 				a[n + 1 >> 0] = k;
 				k = m;
-				l = ny(c[k >> 2] | 0, c[k + 4 >> 2] | 0, 40) | 0;
+				l = _bitshift64Lshr(c[k >> 2] | 0, c[k + 4 >> 2] | 0, 40) | 0;
 				a[n + 2 >> 0] = l;
 				a[n + 3 >> 0] = c[m + 4 >> 2];
 				l = m;
-				k = ny(c[l >> 2] | 0, c[l + 4 >> 2] | 0, 24) | 0;
+				k = _bitshift64Lshr(c[l >> 2] | 0, c[l + 4 >> 2] | 0, 24) | 0;
 				a[n + 4 >> 0] = k;
 				k = m;
-				l = ny(c[k >> 2] | 0, c[k + 4 >> 2] | 0, 16) | 0;
+				l = _bitshift64Lshr(c[k >> 2] | 0, c[k + 4 >> 2] | 0, 16) | 0;
 				a[n + 5 >> 0] = l;
 				l = m;
-				k = ny(c[l >> 2] | 0, c[l + 4 >> 2] | 0, 8) | 0;
+				k = _bitshift64Lshr(c[l >> 2] | 0, c[l + 4 >> 2] | 0, 8) | 0;
 				a[n + 6 >> 0] = k;
 				a[n + 7 >> 0] = c[m >> 2];
 				f = f + 1 | 0;
@@ -80971,7 +80971,7 @@ function $(oa) {
 						i = l;
 						return W | 0
 					} else if ((O | 0) == 39) {
-						qy(y | 0, L | 0, M | 0) | 0;
+						_memcpy(y | 0, L | 0, M | 0) | 0;
 						c[x >> 2] = M;
 						c[h >> 2] = (c[h >> 2] | 0) + M;
 						c[k >> 2] = 3;
@@ -81062,7 +81062,7 @@ function $(oa) {
 				c[f >> 2] = (c[f >> 2] | 0) + l;
 				r = c[n >> 2] | 0;
 				u = r - s | 0;
-				qy(q | 0, (c[p >> 2] | 0) + s | 0, u | 0) | 0;
+				_memcpy(q | 0, (c[p >> 2] | 0) + s | 0, u | 0) | 0;
 				c[d >> 2] = (c[d >> 2] | 0) + u;
 				if (t) {
 					v = t;
@@ -83123,7 +83123,7 @@ function $(oa) {
 			h = (c[f >> 2] | 0) - e | 0;
 			j = (c[g >> 2] | 0) + (0 - (h >> 2) << 2) | 0;
 			c[g >> 2] = j;
-			qy(j | 0, e | 0, h | 0) | 0;
+			_memcpy(j | 0, e | 0, h | 0) | 0;
 			h = c[a >> 2] | 0;
 			c[a >> 2] = c[g >> 2];
 			c[g >> 2] = h;
@@ -84257,7 +84257,7 @@ function $(oa) {
 			else
 				k = j - g | 0;
 			j = k >>> 0 < d >>> 0 ? k : d;
-			qy(b | 0, g | 0, j | 0) | 0;
+			_memcpy(b | 0, g | 0, j | 0) | 0;
 			c[a + 4 >> 2] = g + j;
 			b = g + k | 0;
 			c[a + 8 >> 2] = b;
@@ -84292,19 +84292,19 @@ function $(oa) {
 			e = i;
 			i = i + 16 | 0;
 			f = e;
-			g = vx(240) | 0;
+			g = _malloc(240) | 0;
 			do
 				if (g) {
 					c[f >> 2] = c[d >> 2];
 					h = _vsnprintf(g, 240, b, f) | 0;
 					if (h >>> 0 < 240) {
-						j = yx(g, h + 1 | 0) | 0;
+						j = _realloc(g, h + 1 | 0) | 0;
 						c[a >> 2] = (j | 0) != 0 ? j : g;
 						k = h;
 						break
 					}
-					wx(g);
-					if ((h | 0) >= 0 ? (j = h + 1 | 0, h = vx(j) | 0, c[a >> 2] = h, (h | 0) != 0) : 0)
+					_free(g);
+					if ((h | 0) >= 0 ? (j = h + 1 | 0, h = _malloc(j) | 0, c[a >> 2] = h, (h | 0) != 0) : 0)
 						k = _vsnprintf(h, j, b, d) | 0;
 					else
 						k = -1
@@ -84788,7 +84788,7 @@ function $(oa) {
 											G = (L | 0) == 99;
 											e: do
 												if ((L & 239 | 0) == 99) {
-													sy(n | 0, -1, 257) | 0;
+													_memset(n | 0, -1, 257) | 0;
 													a[n >> 0] = 0;
 													if ((L | 0) == 115) {
 														a[x >> 0] = 0;
@@ -84805,7 +84805,7 @@ function $(oa) {
 													O = (a[M >> 0] | 0) == 94;
 													P = O & 1;
 													Q = O ? Z + 2 | 0 : M;
-													sy(n | 0, O & 1 | 0, 257) | 0;
+													_memset(n | 0, O & 1 | 0, 257) | 0;
 													a[n >> 0] = 0;
 													O = a[Q >> 0] | 0;
 													if (O << 24 >> 24 == 45) {
@@ -84871,7 +84871,7 @@ function $(oa) {
 											f: do
 												if (Aa) {
 													if (za) {
-														Da = vx(Q << 2) | 0;
+														Da = _malloc(Q << 2) | 0;
 														if (!Da) {
 															$ = V;
 															aa = 0;
@@ -84957,7 +84957,7 @@ function $(oa) {
 															}
 														}
 														P = Fa << 1 | 1;
-														O = yx(Ga, P << 2) | 0;
+														O = _realloc(Ga, P << 2) | 0;
 														if (!O) {
 															$ = V;
 															aa = 0;
@@ -85014,7 +85014,7 @@ function $(oa) {
 													}
 												} else {
 													if (za) {
-														Ga = vx(Q) | 0;
+														Ga = _malloc(Q) | 0;
 														if (!Ga) {
 															$ = V;
 															aa = 0;
@@ -85045,7 +85045,7 @@ function $(oa) {
 																Ga = Ga + 1 | 0
 															} while ((Ga | 0) != (Ua | 0));
 															Ga = Ua << 1 | 1;
-															Fa = yx(Va, Ga) | 0;
+															Fa = _realloc(Va, Ga) | 0;
 															if (!Fa) {
 																$ = V;
 																aa = Va;
@@ -85346,8 +85346,8 @@ function $(oa) {
 				i = k;
 				return r | 0
 			}
-			wx(qa);
-			wx(ra);
+			_free(qa);
+			_free(ra);
 			r = pa;
 			i = k;
 			return r | 0
@@ -85402,7 +85402,7 @@ function $(oa) {
 			e = i;
 			f = d & 255;
 			if (!f) {
-				g = b + (py(b | 0) | 0) | 0;
+				g = b + (_strlen(b | 0) | 0) | 0;
 				i = e;
 				return g | 0
 			}
@@ -86577,7 +86577,7 @@ function $(oa) {
 			i = g;
 			return
 		}
-		function ox(a, b, d) {
+		function ___cxa_can_catch(a, b, d) {
 			a = a | 0;
 			b = b | 0;
 			d = d | 0;
@@ -86598,7 +86598,7 @@ function $(oa) {
 			i = e;
 			return b | 0
 		}
-		function px(a) {
+		function ___cxa_is_pointer_type(a) {
 			a = a | 0;
 			var b = 0,
 			c = 0;
@@ -86694,14 +86694,14 @@ function $(oa) {
 			var b = 0;
 			b = i;
 			i = i + 16 | 0;
-			wx(a);
+			_free(a);
 			if (!(cc(c[34710] | 0, 0) | 0)) {
 				i = b;
 				return
 			} else
 				yw(138968, b)
 		}
-		function vx(a) {
+		function _malloc(a) {
 			a = a | 0;
 			var b = 0,
 			d = 0,
@@ -88218,7 +88218,7 @@ function $(oa) {
 			i = b;
 			return p | 0
 		}
-		function wx(a) {
+		function _free(a) {
 			a = a | 0;
 			var b = 0,
 			d = 0,
@@ -88759,7 +88759,7 @@ function $(oa) {
 			i = b;
 			return
 		}
-		function xx(a, b) {
+		function _calloc(a, b) {
 			a = a | 0;
 			b = b | 0;
 			var d = 0,
@@ -88774,7 +88774,7 @@ function $(oa) {
 					f = e
 			} else
 				f = 0;
-			e = vx(f) | 0;
+			e = _malloc(f) | 0;
 			if (!e) {
 				i = d;
 				return e | 0
@@ -88783,11 +88783,11 @@ function $(oa) {
 				i = d;
 				return e | 0
 			}
-			sy(e | 0, 0, f | 0) | 0;
+			_memset(e | 0, 0, f | 0) | 0;
 			i = d;
 			return e | 0
 		}
-		function yx(a, b) {
+		function _realloc(a, b) {
 			a = a | 0;
 			b = b | 0;
 			var d = 0,
@@ -88813,18 +88813,18 @@ function $(oa) {
 						e = g + 8 | 0;
 						break
 					}
-					g = vx(b) | 0;
+					g = _malloc(b) | 0;
 					if (!g)
 						e = 0;
 					else {
 						h = c[a + -4 >> 2] | 0;
 						j = (h & -8) - ((h & 3 | 0) == 0 ? 8 : 4) | 0;
-						qy(g | 0, a | 0, (j >>> 0 < b >>> 0 ? j : b) | 0) | 0;
-						wx(a);
+						_memcpy(g | 0, a | 0, (j >>> 0 < b >>> 0 ? j : b) | 0) | 0;
+						_free(a);
 						e = g
 					}
 				} else
-					e = vx(b) | 0;
+					e = _malloc(b) | 0;
 			while (0);
 			i = d;
 			return e | 0
@@ -88836,7 +88836,7 @@ function $(oa) {
 			d = 0;
 			c = i;
 			if (a >>> 0 < 9)
-				d = vx(b) | 0;
+				d = _malloc(b) | 0;
 			else
 				d = ey(a, b) | 0;
 			i = c;
@@ -89076,7 +89076,7 @@ function $(oa) {
 								I = A;
 								break
 							}
-							t = ky(D | 0, z | 0, p | 0, f | 0) | 0;
+							t = _i64Add(D | 0, z | 0, p | 0, f | 0) | 0;
 							f = H;
 							z = c[m >> 2] | 0;
 							if (z >>> 0 < (c[n >> 2] | 0) >>> 0) {
@@ -89147,7 +89147,7 @@ function $(oa) {
 							U = 0;
 							V = v
 						}
-						C = ny(-1, -1, y | 0) | 0;
+						C = _bitshift64Lshr(-1, -1, y | 0) | 0;
 						I = H;
 						if ((S & 255) >>> 0 >= u >>> 0 | (T >>> 0 > I >>> 0 | (T | 0) == (I | 0) & U >>> 0 > C >>> 0)) {
 							M = u;
@@ -89162,7 +89162,7 @@ function $(oa) {
 							Y = S
 						}
 						while (1) {
-							G = ty(W | 0, X | 0, y | 0) | 0;
+							G = _bitshift64Shl(W | 0, X | 0, y | 0) | 0;
 							F = H;
 							E = Y & 255 | G;
 							G = c[m >> 2] | 0;
@@ -89238,7 +89238,7 @@ function $(oa) {
 								w = 72;
 								break a
 							}
-							e = ky(p | 0, 0, J | 0, A | 0) | 0;
+							e = _i64Add(p | 0, 0, J | 0, A | 0) | 0;
 							A = H;
 							J = c[m >> 2] | 0;
 							if (J >>> 0 < (c[n >> 2] | 0) >>> 0) {
@@ -89291,7 +89291,7 @@ function $(oa) {
 			if (!(K >>> 0 < h >>> 0 | (K | 0) == (h | 0) & L >>> 0 < g >>> 0)) {
 				if (!((g & 1 | 0) != 0 | 0 != 0 | (s | 0) != 0)) {
 					c[(bc() | 0) >> 2] = 34;
-					m = ky(g | 0, h | 0, -1, -1) | 0;
+					m = _i64Add(g | 0, h | 0, -1, -1) | 0;
 					k = H;
 					l = m;
 					H = k;
@@ -89308,7 +89308,7 @@ function $(oa) {
 				}
 			}
 			g = ((s | 0) < 0) << 31 >> 31;
-			h = ly(L ^ s | 0, K ^ g | 0, s | 0, g | 0) | 0;
+			h = _i64Subtract(L ^ s | 0, K ^ g | 0, s | 0, g | 0) | 0;
 			k = H;
 			l = h;
 			H = k;
@@ -89779,7 +89779,7 @@ function $(oa) {
 												X = d[q >> 0] | 0
 											} else
 												X = Gx(b) | 0;
-											q = ky(u | 0, o | 0, -1, -1) | 0;
+											q = _i64Add(u | 0, o | 0, -1, -1) | 0;
 											n = H;
 											if ((X | 0) == 48) {
 												u = q;
@@ -89880,7 +89880,7 @@ function $(oa) {
 												na = V
 											}
 										while (0);
-										o = ky(L | 0, K | 0, 1, 0) | 0;
+										o = _i64Add(L | 0, K | 0, 1, 0) | 0;
 										Z = M;
 										_ = N;
 										$ = o;
@@ -89944,7 +89944,7 @@ function $(oa) {
 									p = U;
 									while (1) {
 										oa = p << 4;
-										o = ky(o | 0, q | 0, 1, 0) | 0;
+										o = _i64Add(o | 0, q | 0, 1, 0) | 0;
 										q = H;
 										if (!((q | 0) < 0 | (q | 0) == 0 & o >>> 0 < 8)) {
 											pa = oa;
@@ -89988,9 +89988,9 @@ function $(oa) {
 										ra = 0
 									}
 								while (0);
-								o = ty(u | 0, n | 0, 2) | 0;
-								p = ky(o | 0, H | 0, -32, -1) | 0;
-								o = ky(p | 0, H | 0, qa | 0, ra | 0) | 0;
+								o = _bitshift64Shl(u | 0, n | 0, 2) | 0;
+								p = _i64Add(o | 0, H | 0, -32, -1) | 0;
+								o = _i64Add(p | 0, H | 0, qa | 0, ra | 0) | 0;
 								p = H;
 								if (!pa) {
 									l =  + (r | 0) * 0.0;
@@ -90026,7 +90026,7 @@ function $(oa) {
 											va = ta | 1
 										}
 										wa = ja + ua;
-										ta = ky(q | 0, oa | 0, -1, -1) | 0;
+										ta = _i64Add(q | 0, oa | 0, -1, -1) | 0;
 										xa = H;
 										if ((va | 0) > -1) {
 											q = ta;
@@ -90047,8 +90047,8 @@ function $(oa) {
 									Aa = pa;
 									Ba = V
 								}
-								sa = ly(32, 0, k | 0, ((k | 0) < 0) << 31 >> 31 | 0) | 0;
-								oa = ky(ya | 0, za | 0, sa | 0, H | 0) | 0;
+								sa = _i64Subtract(32, 0, k | 0, ((k | 0) < 0) << 31 >> 31 | 0) | 0;
+								oa = _i64Add(ya | 0, za | 0, sa | 0, H | 0) | 0;
 								sa = H;
 								if (0 > (sa | 0) | 0 == (sa | 0) & j >>> 0 > oa >>> 0)
 									if ((oa | 0) < 0) {
@@ -90126,7 +90126,7 @@ function $(oa) {
 								q = 0;
 								u = 0;
 								while (1) {
-									xa = ky(q | 0, u | 0, -1, -1) | 0;
+									xa = _i64Add(q | 0, u | 0, -1, -1) | 0;
 									ta = H;
 									Na = c[e >> 2] | 0;
 									if (Na >>> 0 < (c[m >> 2] | 0) >>> 0) {
@@ -90188,7 +90188,7 @@ function $(oa) {
 											} else
 												break d;
 										else {
-											gb = ky(Na | 0, Pa | 0, 1, 0) | 0;
+											gb = _i64Add(Na | 0, Pa | 0, 1, 0) | 0;
 											hb = H;
 											ib = (xa | 0) != 48;
 											if ((Xa | 0) >= 125) {
@@ -90347,7 +90347,7 @@ function $(oa) {
 										Ob = Va
 									}
 								while (0);
-								Va = ky(Nb | 0, Ob | 0, q | 0, n | 0) | 0;
+								Va = _i64Add(Nb | 0, Ob | 0, q | 0, n | 0) | 0;
 								Pb = Va;
 								Qb = pb;
 								Rb = H;
@@ -90529,8 +90529,8 @@ function $(oa) {
 									while (1) {
 										Va = Xa & 127;
 										Qa = h + (Va << 2) | 0;
-										xa = ty(c[Qa >> 2] | 0, 0, 29) | 0;
-										Na = ky(xa | 0, H | 0, Wa | 0, 0) | 0;
+										xa = _bitshift64Shl(c[Qa >> 2] | 0, 0, 29) | 0;
+										Na = _i64Add(xa | 0, H | 0, Wa | 0, 0) | 0;
 										xa = H;
 										if (xa >>> 0 > 0 | (xa | 0) == 0 & Na >>> 0 > 1e9) {
 											Ra = Cy(Na | 0, xa | 0, 1e9, 0) | 0;
@@ -90591,8 +90591,8 @@ function $(oa) {
 									while (1) {
 										q = Ua & 127;
 										u = h + (q << 2) | 0;
-										Xa = ty(c[u >> 2] | 0, 0, 29) | 0;
-										Wa = ky(Xa | 0, H | 0, Sa | 0, 0) | 0;
+										Xa = _bitshift64Shl(c[u >> 2] | 0, 0, 29) | 0;
+										Wa = _i64Add(Xa | 0, H | 0, Sa | 0, 0) | 0;
 										Xa = H;
 										if (Xa >>> 0 > 0 | (Xa | 0) == 0 & Wa >>> 0 > 1e9) {
 											Va = Cy(Wa | 0, Xa | 0, 1e9, 0) | 0;
@@ -91016,15 +91016,15 @@ function $(oa) {
 			h[k >> 3] = b;
 			g = c[k >> 2] | 0;
 			j = c[k + 4 >> 2] | 0;
-			l = ny(e | 0, f | 0, 52) | 0;
+			l = _bitshift64Lshr(e | 0, f | 0, 52) | 0;
 			m = l & 2047;
-			l = ny(g | 0, j | 0, 52) | 0;
+			l = _bitshift64Lshr(g | 0, j | 0, 52) | 0;
 			n = l & 2047;
 			l = f & -2147483648;
-			o = ty(g | 0, j | 0, 1) | 0;
+			o = _bitshift64Shl(g | 0, j | 0, 1) | 0;
 			p = H;
 			if (!((o | 0) == 0 & (p | 0) == 0) ? (q = j & 2147483647, !(q >>> 0 > 2146435072 | (q | 0) == 2146435072 & g >>> 0 > 0 | (m | 0) == 2047)) : 0) {
-				q = ty(e | 0, f | 0, 1) | 0;
+				q = _bitshift64Shl(e | 0, f | 0, 1) | 0;
 				r = H;
 				if (!(r >>> 0 > p >>> 0 | (r | 0) == (p | 0) & q >>> 0 > o >>> 0)) {
 					if (!((q | 0) == (o | 0) & (r | 0) == (p | 0))) {
@@ -91037,7 +91037,7 @@ function $(oa) {
 					return +s
 				}
 				if (!m) {
-					p = ty(e | 0, f | 0, 12) | 0;
+					p = _bitshift64Shl(e | 0, f | 0, 12) | 0;
 					r = H;
 					if ((r | 0) > -1 | (r | 0) == -1 & p >>> 0 > 4294967295) {
 						o = p;
@@ -91045,7 +91045,7 @@ function $(oa) {
 						r = 0;
 						while (1) {
 							q = r + -1 | 0;
-							o = ty(o | 0, p | 0, 1) | 0;
+							o = _bitshift64Shl(o | 0, p | 0, 1) | 0;
 							p = H;
 							if (!((p | 0) > -1 | (p | 0) == -1 & o >>> 0 > 4294967295)) {
 								t = q;
@@ -91055,7 +91055,7 @@ function $(oa) {
 						}
 					} else
 						t = 0;
-					r = ty(e | 0, f | 0, 1 - t | 0) | 0;
+					r = _bitshift64Shl(e | 0, f | 0, 1 - t | 0) | 0;
 					u = r;
 					v = H;
 					w = t
@@ -91065,7 +91065,7 @@ function $(oa) {
 					w = m
 				}
 				if (!n) {
-					m = ty(g | 0, j | 0, 12) | 0;
+					m = _bitshift64Shl(g | 0, j | 0, 12) | 0;
 					f = H;
 					if ((f | 0) > -1 | (f | 0) == -1 & m >>> 0 > 4294967295) {
 						e = m;
@@ -91073,7 +91073,7 @@ function $(oa) {
 						f = 0;
 						while (1) {
 							t = f + -1 | 0;
-							e = ty(e | 0, m | 0, 1) | 0;
+							e = _bitshift64Shl(e | 0, m | 0, 1) | 0;
 							m = H;
 							if (!((m | 0) > -1 | (m | 0) == -1 & e >>> 0 > 4294967295)) {
 								x = t;
@@ -91083,7 +91083,7 @@ function $(oa) {
 						}
 					} else
 						x = 0;
-					f = ty(g | 0, j | 0, 1 - x | 0) | 0;
+					f = _bitshift64Shl(g | 0, j | 0, 1 - x | 0) | 0;
 					y = f;
 					z = H;
 					A = x
@@ -91092,7 +91092,7 @@ function $(oa) {
 					z = j & 1048575 | 1048576;
 					A = n
 				}
-				n = ly(u | 0, v | 0, y | 0, z | 0) | 0;
+				n = _i64Subtract(u | 0, v | 0, y | 0, z | 0) | 0;
 				j = H;
 				g = (j | 0) > -1 | (j | 0) == -1 & n >>> 0 > 4294967295;
 				a: do
@@ -91115,10 +91115,10 @@ function $(oa) {
 								B = m;
 								C = t
 							}
-							o = ty(B | 0, C | 0, 1) | 0;
+							o = _bitshift64Shl(B | 0, C | 0, 1) | 0;
 							p = H;
 							q = r + -1 | 0;
-							D = ly(o | 0, p | 0, y | 0, z | 0) | 0;
+							D = _i64Subtract(o | 0, p | 0, y | 0, z | 0) | 0;
 							E = H;
 							F = (E | 0) > -1 | (E | 0) == -1 & D >>> 0 > 4294967295;
 							if ((q | 0) > (A | 0)) {
@@ -91168,7 +91168,7 @@ function $(oa) {
 					J = N;
 					K = M;
 					while (1) {
-						L = ty(I | 0, J | 0, 1) | 0;
+						L = _bitshift64Shl(I | 0, J | 0, 1) | 0;
 						z = H;
 						y = K + -1 | 0;
 						if (z >>> 0 < 1048576 | (z | 0) == 1048576 & L >>> 0 < 0) {
@@ -91188,13 +91188,13 @@ function $(oa) {
 					R = M
 				}
 				if ((R | 0) > 0) {
-					M = ky(P | 0, Q | 0, 0, -1048576) | 0;
+					M = _i64Add(P | 0, Q | 0, 0, -1048576) | 0;
 					N = H;
-					O = ty(R | 0, 0, 52) | 0;
+					O = _bitshift64Shl(R | 0, 0, 52) | 0;
 					S = N | H;
 					T = M | O
 				} else {
-					O = ny(P | 0, Q | 0, 1 - R | 0) | 0;
+					O = _bitshift64Lshr(P | 0, Q | 0, 1 - R | 0) | 0;
 					S = H;
 					T = O
 				}
@@ -91235,7 +91235,7 @@ function $(oa) {
 			h[k >> 3] = a;
 			e = c[k >> 2] | 0;
 			f = c[k + 4 >> 2] | 0;
-			g = ny(e | 0, f | 0, 52) | 0;
+			g = _bitshift64Lshr(e | 0, f | 0, 52) | 0;
 			j = g & 2047;
 			if (!j) {
 				if (a != 0.0) {
@@ -91310,7 +91310,7 @@ function $(oa) {
 				j = b;
 				l = a
 			}
-			b = ty(j + 1023 | 0, 0, 52) | 0;
+			b = _bitshift64Shl(j + 1023 | 0, 0, 52) | 0;
 			j = H;
 			c[k >> 2] = b;
 			c[k + 4 >> 2] = j;
@@ -91544,7 +91544,7 @@ function $(oa) {
 					o = 0
 				}
 			while (0);
-			qy(n | 0, m | 0, l | 0) | 0;
+			_memcpy(n | 0, m | 0, l | 0) | 0;
 			c[h >> 2] = (c[h >> 2] | 0) + l;
 			k = o + l | 0;
 			i = f;
@@ -92052,7 +92052,7 @@ function $(oa) {
 			g = c[f >> 2] | 0;
 			h = (c[a + 16 >> 2] | 0) - g | 0;
 			a = h >>> 0 > d >>> 0 ? d : h;
-			qy(g | 0, b | 0, a | 0) | 0;
+			_memcpy(g | 0, b | 0, a | 0) | 0;
 			c[f >> 2] = (c[f >> 2] | 0) + a;
 			i = e;
 			return d | 0
@@ -92375,7 +92375,7 @@ function $(oa) {
 				h = 16;
 			else
 				h = b + 11 & -8;
-			b = vx(f + 12 + h | 0) | 0;
+			b = _malloc(f + 12 + h | 0) | 0;
 			if (!b) {
 				g = 0;
 				i = d;
@@ -93029,8 +93029,8 @@ function $(oa) {
 				while (1) {
 					l = By(m | 0, j | 0, 10, 0) | 0;
 					b = H;
-					g = ky(k | 0, ((k | 0) < 0) << 31 >> 31 | 0, -48, -1) | 0;
-					t = ky(g | 0, H | 0, l | 0, b | 0) | 0;
+					g = _i64Add(k | 0, ((k | 0) < 0) << 31 >> 31 | 0, -48, -1) | 0;
+					t = _i64Add(g | 0, H | 0, l | 0, b | 0) | 0;
 					b = H;
 					l = c[f >> 2] | 0;
 					if (l >>> 0 < (c[h >> 2] | 0) >>> 0) {
@@ -93066,7 +93066,7 @@ function $(oa) {
 			if (c[h >> 2] | 0)
 				c[f >> 2] = (c[f >> 2] | 0) + -1;
 			f = (n | 0) != 0;
-			n = ly(0, 0, v | 0, w | 0) | 0;
+			n = _i64Subtract(0, 0, v | 0, w | 0) | 0;
 			o = f ? H : w;
 			p = f ? n : v;
 			H = o;
@@ -93950,7 +93950,7 @@ function $(oa) {
 								_ = (ua | 0) > (aa | 0);
 								if ((ha & 8192 | 0) == 0 & _) {
 									ma = ua - aa | 0;
-									sy(s | 0, 32, (ma >>> 0 > 256 ? 256 : ma) | 0) | 0;
+									_memset(s | 0, 32, (ma >>> 0 > 256 ? 256 : ma) | 0) | 0;
 									if (ma >>> 0 > 255) {
 										Ya = ma;
 										do {
@@ -93966,7 +93966,7 @@ function $(oa) {
 								Ux(Xa, 3, e) | 0;
 								if ((ha & 73728 | 0) == 8192 & _) {
 									Ya = ua - aa | 0;
-									sy(s | 0, 32, (Ya >>> 0 > 256 ? 256 : Ya) | 0) | 0;
+									_memset(s | 0, 32, (Ya >>> 0 > 256 ? 256 : Ya) | 0) | 0;
 									if (Ya >>> 0 > 255) {
 										_a = Ya;
 										do {
@@ -94134,7 +94134,7 @@ function $(oa) {
 								aa = (ua | 0) > (ab | 0);
 								if ((_ | 0) == 0 & aa) {
 									db = ua - ab | 0;
-									sy(s | 0, 32, (db >>> 0 > 256 ? 256 : db) | 0) | 0;
+									_memset(s | 0, 32, (db >>> 0 > 256 ? 256 : db) | 0) | 0;
 									if (db >>> 0 > 255) {
 										kb = db;
 										do {
@@ -94149,7 +94149,7 @@ function $(oa) {
 								Ux(bb, cb, e) | 0;
 								if ((_ | 0) == 65536 & aa) {
 									kb = ua - ab | 0;
-									sy(s | 0, 48, (kb >>> 0 > 256 ? 256 : kb) | 0) | 0;
+									_memset(s | 0, 48, (kb >>> 0 > 256 ? 256 : kb) | 0) | 0;
 									if (kb >>> 0 > 255) {
 										tb = kb;
 										do {
@@ -94166,7 +94166,7 @@ function $(oa) {
 								cb = r - eb | 0;
 								bb = rb - cb - tb | 0;
 								if ((bb | 0) > 0) {
-									sy(s | 0, 48, (bb >>> 0 > 256 ? 256 : bb) | 0) | 0;
+									_memset(s | 0, 48, (bb >>> 0 > 256 ? 256 : bb) | 0) | 0;
 									if (bb >>> 0 > 255) {
 										tb = bb;
 										do {
@@ -94181,7 +94181,7 @@ function $(oa) {
 								Ux(eb, cb, e) | 0;
 								if ((_ | 0) == 8192 & aa) {
 									tb = ua - ab | 0;
-									sy(s | 0, 32, (tb >>> 0 > 256 ? 256 : tb) | 0) | 0;
+									_memset(s | 0, 32, (tb >>> 0 > 256 ? 256 : tb) | 0) | 0;
 									if (tb >>> 0 > 255) {
 										Ya = tb;
 										do {
@@ -94236,8 +94236,8 @@ function $(oa) {
 											db = 0;
 											Ab = kb;
 											do {
-												Bb = ty(c[Ab >> 2] | 0, 0, bb | 0) | 0;
-												Cb = ky(Bb | 0, H | 0, db | 0, 0) | 0;
+												Bb = _bitshift64Shl(c[Ab >> 2] | 0, 0, bb | 0) | 0;
+												Cb = _i64Add(Bb | 0, H | 0, db | 0, 0) | 0;
 												Bb = H;
 												Db = Dy(Cb | 0, Bb | 0, 1e9, 0) | 0;
 												c[Ab >> 2] = Db;
@@ -94686,7 +94686,7 @@ function $(oa) {
 							tb = (ua | 0) > (Db | 0);
 							if ((kb | 0) == 0 & tb) {
 								Ab = ua - Db | 0;
-								sy(s | 0, 32, (Ab >>> 0 > 256 ? 256 : Ab) | 0) | 0;
+								_memset(s | 0, 32, (Ab >>> 0 > 256 ? 256 : Ab) | 0) | 0;
 								if (Ab >>> 0 > 255) {
 									eb = Ab;
 									do {
@@ -94701,7 +94701,7 @@ function $(oa) {
 							Ux(Va, Ua, e) | 0;
 							if ((kb | 0) == 65536 & tb) {
 								eb = ua - Db | 0;
-								sy(s | 0, 48, (eb >>> 0 > 256 ? 256 : eb) | 0) | 0;
+								_memset(s | 0, 48, (eb >>> 0 > 256 ? 256 : eb) | 0) | 0;
 								if (eb >>> 0 > 255) {
 									cb = eb;
 									do {
@@ -94819,7 +94819,7 @@ function $(oa) {
 										Jc = rc;
 									if ((Jc | 0) <= 0)
 										break;
-									sy(s | 0, 48, (Jc >>> 0 > 256 ? 256 : Jc) | 0) | 0;
+									_memset(s | 0, 48, (Jc >>> 0 > 256 ? 256 : Jc) | 0) | 0;
 									if (Jc >>> 0 > 255) {
 										cb = Jc;
 										do {
@@ -94897,7 +94897,7 @@ function $(oa) {
 											} while (Bb >>> 0 < cb >>> 0 & (Ab | 0) > -1);
 											if ((Ab | 0) <= 0)
 												break;
-											sy(s | 0, 48, (Ab >>> 0 > 256 ? 256 : Ab) | 0) | 0;
+											_memset(s | 0, 48, (Ab >>> 0 > 256 ? 256 : Ab) | 0) | 0;
 											if (Ab >>> 0 > 255) {
 												Bb = Ab;
 												do {
@@ -94915,7 +94915,7 @@ function $(oa) {
 							while (0);
 							if ((kb | 0) == 8192 & tb) {
 								ab = ua - Db | 0;
-								sy(s | 0, 32, (ab >>> 0 > 256 ? 256 : ab) | 0) | 0;
+								_memset(s | 0, 32, (ab >>> 0 > 256 ? 256 : ab) | 0) | 0;
 								if (ab >>> 0 > 255) {
 									Ya = ab;
 									do {
@@ -94955,7 +94955,7 @@ function $(oa) {
 								while (1) {
 									eb = kb + -1 | 0;
 									a[eb >> 0] = _ & 7 | 48;
-									_ = ny(_ | 0, _a | 0, 3) | 0;
+									_ = _bitshift64Lshr(_ | 0, _a | 0, 3) | 0;
 									_a = H;
 									if ((_ | 0) == 0 & (_a | 0) == 0) {
 										Uc = eb;
@@ -94978,7 +94978,7 @@ function $(oa) {
 					case 105:
 					case 100: {
 							if ((Ia | 0) < 0) {
-								kb = ly(0, 0, Ha | 0, Ia | 0) | 0;
+								kb = _i64Subtract(0, 0, Ha | 0, Ia | 0) | 0;
 								Qc = H;
 								Rc = kb;
 								Sc = 1;
@@ -95057,7 +95057,7 @@ function $(oa) {
 							do {
 								R = R + -1 | 0;
 								a[R >> 0] = d[141352 + (Z & 15) >> 0] | la;
-								Z = ny(Z | 0, ga | 0, 4) | 0;
+								Z = _bitshift64Lshr(Z | 0, ga | 0, 4) | 0;
 								ga = H
 							} while (!((Z | 0) == 0 & (ga | 0) == 0));
 							if (!(Ma & 8)) {
@@ -95238,7 +95238,7 @@ function $(oa) {
 					la = (ua | 0) > (kd | 0);
 					if (($ | 0) == 0 & la) {
 						Z = ua - kd | 0;
-						sy(s | 0, 32, (Z >>> 0 > 256 ? 256 : Z) | 0) | 0;
+						_memset(s | 0, 32, (Z >>> 0 > 256 ? 256 : Z) | 0) | 0;
 						if (Z >>> 0 > 255) {
 							R = Z;
 							do {
@@ -95272,7 +95272,7 @@ function $(oa) {
 					while (0);
 					if (($ | 0) == 8192 & la) {
 						Z = ua - kd | 0;
-						sy(s | 0, 32, (Z >>> 0 > 256 ? 256 : Z) | 0) | 0;
+						_memset(s | 0, 32, (Z >>> 0 > 256 ? 256 : Z) | 0) | 0;
 						if (Z >>> 0 > 255) {
 							ha = Z;
 							do {
@@ -95300,7 +95300,7 @@ function $(oa) {
 				kb = (ga | 0) > (R | 0);
 				if ((Ya | 0) == 0 & kb) {
 					_a = ga - R | 0;
-					sy(s | 0, 32, (_a >>> 0 > 256 ? 256 : _a) | 0) | 0;
+					_memset(s | 0, 32, (_a >>> 0 > 256 ? 256 : _a) | 0) | 0;
 					if (_a >>> 0 > 255) {
 						_ = _a;
 						do {
@@ -95315,7 +95315,7 @@ function $(oa) {
 				Ux(gd, fd, e) | 0;
 				if ((Ya | 0) == 65536 & kb) {
 					_ = ga - R | 0;
-					sy(s | 0, 48, (_ >>> 0 > 256 ? 256 : _) | 0) | 0;
+					_memset(s | 0, 48, (_ >>> 0 > 256 ? 256 : _) | 0) | 0;
 					if (_ >>> 0 > 255) {
 						la = _;
 						do {
@@ -95329,7 +95329,7 @@ function $(oa) {
 				}
 				if (($ | 0) > (ha | 0)) {
 					la = $ - ha | 0;
-					sy(s | 0, 48, (la >>> 0 > 256 ? 256 : la) | 0) | 0;
+					_memset(s | 0, 48, (la >>> 0 > 256 ? 256 : la) | 0) | 0;
 					if (la >>> 0 > 255) {
 						_a = la;
 						do {
@@ -95352,7 +95352,7 @@ function $(oa) {
 					continue
 				}
 				_a = ga - R | 0;
-				sy(s | 0, 32, (_a >>> 0 > 256 ? 256 : _a) | 0) | 0;
+				_memset(s | 0, 32, (_a >>> 0 > 256 ? 256 : _a) | 0) | 0;
 				if (_a >>> 0 > 255) {
 					$ = _a;
 					do {
@@ -95534,12 +95534,12 @@ function $(oa) {
 			}
 			return 0
 		}
-		function iy() {}
-		function jy(a) {
+		function runPostSets() {}
+		function _llvm_bswap_i32(a) {
 			a = a | 0;
 			return (a & 255) << 24 | (a >> 8 & 255) << 16 | (a >> 16 & 255) << 8 | a >>> 24 | 0
 		}
-		function ky(a, b, c, d) {
+		function _i64Add(a, b, c, d) {
 			a = a | 0;
 			b = b | 0;
 			c = c | 0;
@@ -95548,7 +95548,7 @@ function $(oa) {
 			e = a + c >>> 0;
 			return (H = b + d + (e >>> 0 < a >>> 0 | 0) >>> 0, e | 0) | 0
 		}
-		function ly(a, b, c, d) {
+		function _i64Subtract(a, b, c, d) {
 			a = a | 0;
 			b = b | 0;
 			c = c | 0;
@@ -95558,7 +95558,7 @@ function $(oa) {
 			e = b - d - (c >>> 0 > a >>> 0 | 0) >>> 0;
 			return (H = e, a - c >>> 0 | 0) | 0
 		}
-		function my(a, b, d) {
+		function _saveSetjmp(a, b, d) {
 			a = a | 0;
 			b = b | 0;
 			d = d | 0;
@@ -95656,7 +95656,7 @@ function $(oa) {
 			ea(0);
 			return 0
 		}
-		function ny(a, b, c) {
+		function _bitshift64Lshr(a, b, c) {
 			a = a | 0;
 			b = b | 0;
 			c = c | 0;
@@ -95667,7 +95667,7 @@ function $(oa) {
 			H = 0;
 			return b >>> c - 32 | 0
 		}
-		function oy(a, b) {
+		function _testSetjmp(a, b) {
 			a = a | 0;
 			b = b | 0;
 			var d = 0,
@@ -95682,7 +95682,7 @@ function $(oa) {
 			}
 			return 0
 		}
-		function py(b) {
+		function _strlen(b) {
 			b = b | 0;
 			var c = 0;
 			c = b;
@@ -95690,7 +95690,7 @@ function $(oa) {
 				c = c + 1 | 0;
 			return c - b | 0
 		}
-		function qy(b, d, e) {
+		function _memcpy(b, d, e) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -95722,7 +95722,7 @@ function $(oa) {
 			}
 			return f | 0
 		}
-		function ry(b, c, d) {
+		function _memmove(b, c, d) {
 			b = b | 0;
 			c = c | 0;
 			d = d | 0;
@@ -95739,10 +95739,10 @@ function $(oa) {
 				}
 				b = e
 			} else
-				qy(b, c, d) | 0;
+				_memcpy(b, c, d) | 0;
 			return b | 0
 		}
-		function sy(b, d, e) {
+		function _memset(b, d, e) {
 			b = b | 0;
 			d = d | 0;
 			e = e | 0;
@@ -95774,7 +95774,7 @@ function $(oa) {
 			}
 			return b - e | 0
 		}
-		function ty(a, b, c) {
+		function _bitshift64Shl(a, b, c) {
 			a = a | 0;
 			b = b | 0;
 			c = c | 0;
@@ -95785,7 +95785,7 @@ function $(oa) {
 			H = a << c - 32;
 			return 0
 		}
-		function uy(b, c) {
+		function _strcpy(b, c) {
 			b = b | 0;
 			c = c | 0;
 			var d = 0;
@@ -95864,11 +95864,11 @@ function $(oa) {
 			f = ((b | 0) < 0 ? -1 : 0) >> 31 | ((b | 0) < 0 ? -1 : 0) << 1;
 			g = d >> 31 | ((d | 0) < 0 ? -1 : 0) << 1;
 			h = ((d | 0) < 0 ? -1 : 0) >> 31 | ((d | 0) < 0 ? -1 : 0) << 1;
-			i = ly(e ^ a, f ^ b, e, f) | 0;
+			i = _i64Subtract(e ^ a, f ^ b, e, f) | 0;
 			b = H;
 			a = g ^ e;
 			e = h ^ f;
-			f = ly((Ey(i, b, ly(g ^ c, h ^ d, g, h) | 0, H, 0) | 0) ^ a, H ^ e, a, e) | 0;
+			f = _i64Subtract((Ey(i, b, _i64Subtract(g ^ c, h ^ d, g, h) | 0, H, 0) | 0) ^ a, H ^ e, a, e) | 0;
 			return f | 0
 		}
 		function Ay(a, b, d, e) {
@@ -95890,10 +95890,10 @@ function $(oa) {
 			j = ((b | 0) < 0 ? -1 : 0) >> 31 | ((b | 0) < 0 ? -1 : 0) << 1;
 			k = e >> 31 | ((e | 0) < 0 ? -1 : 0) << 1;
 			l = ((e | 0) < 0 ? -1 : 0) >> 31 | ((e | 0) < 0 ? -1 : 0) << 1;
-			m = ly(h ^ a, j ^ b, h, j) | 0;
+			m = _i64Subtract(h ^ a, j ^ b, h, j) | 0;
 			b = H;
-			Ey(m, b, ly(k ^ d, l ^ e, k, l) | 0, H, g) | 0;
-			l = ly(c[g >> 2] ^ h, c[g + 4 >> 2] ^ j, h, j) | 0;
+			Ey(m, b, _i64Subtract(k ^ d, l ^ e, k, l) | 0, H, g) | 0;
+			l = _i64Subtract(c[g >> 2] ^ h, c[g + 4 >> 2] ^ j, h, j) | 0;
 			j = H;
 			i = f;
 			return (H = j, l) | 0
@@ -96114,7 +96114,7 @@ function $(oa) {
 			} else {
 				b = d | 0 | 0;
 				d = k | e & 0;
-				e = ky(b, d, -1, -1) | 0;
+				e = _i64Add(b, d, -1, -1) | 0;
 				k = H;
 				h = x;
 				x = w;
@@ -96128,11 +96128,11 @@ function $(oa) {
 					x = t | x << 1;
 					g = v << 1 | a >>> 31 | 0;
 					a = v >>> 31 | w << 1 | 0;
-					ly(e, k, g, a) | 0;
+					_i64Subtract(e, k, g, a) | 0;
 					i = H;
 					l = i >> 31 | ((i | 0) < 0 ? -1 : 0) << 1;
 					t = l & 1;
-					v = ly(g, a, l & b, (((i | 0) < 0 ? -1 : 0) >> 31 | ((i | 0) < 0 ? -1 : 0) << 1) & d) | 0;
+					v = _i64Subtract(g, a, l & b, (((i | 0) < 0 ? -1 : 0) >> 31 | ((i | 0) < 0 ? -1 : 0) << 1) & d) | 0;
 					w = H;
 					u = u - 1 | 0
 				} while ((u | 0) != 0);
@@ -96647,15 +96647,15 @@ function $(oa) {
 		}
 
 		// EMSCRIPTEN_END_FUNCS
-		var FUNCTION_TABLE_vi = [Zy, $c, _y, $y, az, pd, od, wd, Bd, Cd, Fd, Gd, Ad, Id, Jd, Kd, Gw, Ld, af, bf, ff, bz, cz, dz, nf, of, pf, ez, fz, gz, hz, iz, jz, kz, lz, mz, If, Jf, Kf, Lf, Mf, Nf, Of, Pf, Qf, Ik, Jk, Qk, Rk, Tk, Wk, Zk, $k, Vm, Nt, St, Fm, Xt, au, Ul, Tl, Em, Dm, Um, Tm, jn, hn, ln, kn, pn, on, rn, qn, un, tn, wn, vn, An, zn, Cn, Bn, Kn, Jn, xm, Ln, Vl, fu, Nn, Mn, _r, Tn, Sn, Yn, Xn, mo, lo, Go, Fo, Vo, Uo, gp, fp, Fp, Ep, bq, aq, gq, fq, kq, jq, vq, uq, Gq, Fq, Rq, Qq, ar, $q, jr, ir, pr, or, vr, ur, Br, Ar, Gr, Fr, Pr, Or, ss, rs, Lt, Ks, jt, it, lt, kt, On, Zr, as, Bs, Ss, _s, gt, ht, Cw, Bw, Jw, Iw, Mw, Lw, Ow, Sw, Rw, Uw, Xw, Vw, Ww, Yw, Zw, Md, Od, Zj, ig, kg, lg, mg, Ph, Qh, Oh, pi, xg, wx, ll, Pi, Qi, Ri, nj, oj, rj, sj, xl, Bl, El, cr, $r, xv, Ev, Fv, Gv, Hv, Iv, Jv, bm, pm, Gl, ux, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy];
+		var FUNCTION_TABLE_vi = [Zy, $c, _y, $y, az, pd, od, wd, Bd, Cd, Fd, Gd, Ad, Id, Jd, Kd, Gw, Ld, af, bf, ff, bz, cz, dz, nf, of, pf, ez, fz, gz, hz, iz, jz, kz, lz, mz, If, Jf, Kf, Lf, Mf, Nf, Of, Pf, Qf, Ik, Jk, Qk, Rk, Tk, Wk, Zk, $k, Vm, Nt, St, Fm, Xt, au, Ul, Tl, Em, Dm, Um, Tm, jn, hn, ln, kn, pn, on, rn, qn, un, tn, wn, vn, An, zn, Cn, Bn, Kn, Jn, xm, Ln, Vl, fu, Nn, Mn, _r, Tn, Sn, Yn, Xn, mo, lo, Go, Fo, Vo, Uo, gp, fp, Fp, Ep, bq, aq, gq, fq, kq, jq, vq, uq, Gq, Fq, Rq, Qq, ar, $q, jr, ir, pr, or, vr, ur, Br, Ar, Gr, Fr, Pr, Or, ss, rs, Lt, Ks, jt, it, lt, kt, On, Zr, as, Bs, Ss, _s, gt, ht, Cw, Bw, Jw, Iw, Mw, Lw, Ow, Sw, Rw, Uw, Xw, Vw, Ww, Yw, Zw, Md, Od, Zj, ig, kg, lg, mg, Ph, Qh, Oh, pi, xg, _free, ll, Pi, Qi, Ri, nj, oj, rj, sj, xl, Bl, El, cr, $r, xv, Ev, Fv, Gv, Hv, Iv, Jv, bm, pm, Gl, ux, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy, Zy];
 		var FUNCTION_TABLE_iiii = [nz, Ym, bn, Qt, fn, Im, Nm, _t, Rm, Ol, Pl, Rn, Wn, Cr, Hr, us, ws, zs, bs, is, ls, os, _w, cy, bh, oz, Fg, pk, Bk, xw, nz, nz];
 		var FUNCTION_TABLE_vid = [pz, ud, Qe, pz];
 		var FUNCTION_TABLE_viiiii = [qz, kx, jx, gx];
 		var FUNCTION_TABLE_iiiiiiiiii = [rz, ch];
 		var FUNCTION_TABLE_viiiiiii = [sz, Zn, _n, $n, ao, bo, co, eo, fo, go, ho, io, no, oo, po, qo, ro, so, to, uo, vo, wo, xo, Mo, Oo, Zo, $o, ip, jp, kp, mp, op, Hp, Ip, Jp, Lp, Np, tr, zr, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz, sz];
-		var FUNCTION_TABLE_vii = [tz, uz, qd, rd, vd, xd, Ed, Hd, $e, cf, df, Ce, ef, vz, wz, xz, yz, Yk, _k, Ot, Tt, Yt, bu, Hm, Xm, nq, oq, pq, qq, sq, tq, yq, zq, Aq, Bq, Dq, Eq, Jq, Kq, Lq, Mq, Oq, Pq, Uq, Vq, Wq, Xq, Zq, _q, Er, Jr, qt, st, ut, rt, tt, vt, zg, Ag, Dh, Lh, Mh, zz, Gg, Cj, qk, Ck, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz];
+		var FUNCTION_TABLE_vii = [tz, uz, qd, rd, vd, xd, Ed, Hd, $e, cf, df, Ce, ef, vz, wz, xz, yz, Yk, _k, Ot, Tt, Yt, bu, Hm, Xm, nq, oq, pq, qq, sq, tq, yq, zq, Aq, Bq, Dq, Eq, Jq, Kq, Lq, Mq, Oq, Pq, Uq, Vq, Wq, Xq, Zq, _q, Er, Jr, qt, st, ut, rt, tt, vt, zg, Ag, PNGDecoder_LoadFromPacket, Lh, Mh, zz, Gg, Cj, qk, Ck, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz, tz];
 		var FUNCTION_TABLE_viiiiiiiii = [Az, qp, Pp, Az];
-		var FUNCTION_TABLE_ii = [Bz, Cz, Dz, sd, Dd, Hw, Ez, Fz, Gz, Hz, Ok, Pk, Sk, Uk, Xk, Pt, an, cn, dn, $m, Ut, Vt, Zt, Mm, Om, Pm, Lm, cu, du, Nw, Fn, hp, xt, zt, Bt, Ht, Jt, Dt, Ft, Gp, yt, At, Ct, It, Kt, Et, Gt, lq, mq, rq, wq, xq, Cq, Hq, Iq, Nq, Sq, Tq, Yq, Os, Ps, Rs, mt, ot, nt, pt, Fs, Gs, Is, Ws, Xs, Zs, ct, dt, ft, Dw, Kw, Tw, Jg, vx, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz];
+		var FUNCTION_TABLE_ii = [Bz, Cz, Dz, sd, Dd, Hw, Ez, Fz, Gz, Hz, Ok, Pk, Sk, Uk, Xk, Pt, an, cn, dn, $m, Ut, Vt, Zt, Mm, Om, Pm, Lm, cu, du, Nw, Fn, hp, xt, zt, Bt, Ht, Jt, Dt, Ft, Gp, yt, At, Ct, It, Kt, Et, Gt, lq, mq, rq, wq, xq, Cq, Hq, Iq, Nq, Sq, Tq, Yq, Os, Ps, Rs, mt, ot, nt, pt, Fs, Gs, Is, Ws, Xs, Zs, ct, dt, ft, Dw, Kw, Tw, Jg, _malloc, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz, Bz];
 		var FUNCTION_TABLE_viiiiiid = [Iz, qr, wr, Iz];
 		var FUNCTION_TABLE_viii = [Jz, Mk, Nk, Vk, Hk, Nl, Gn, Bh, Bg, qi, Nh, Rh, Bi, Ci, Di, Fi, Ei, Oi, Jz, Jz, Jz, Jz, Jz, Jz, Jz, Jz, Jz, Jz, Jz, Jz, Jz, Jz];
 		var FUNCTION_TABLE_viiiiid = [Kz, Po, So, ap, cp, Kz, Kz, Kz];
@@ -96664,63 +96664,63 @@ function $(oa) {
 		var FUNCTION_TABLE_iiiii = [Nz, Kk, ys, ds, es, fs, ns, Ch, wg, Nz, Nz, Nz, Nz, Nz, Nz, Nz];
 		var FUNCTION_TABLE_viiiiiiii = [Oz, dq, hq, br, fr, kr, mr, Oz];
 		var FUNCTION_TABLE_viiiiii = [Pz, Qz, Rz, Sz, Tz, Zm, Jm, Ho, Io, No, To, Wo, Xo, _o, dp, Dr, Ir, nx, mx, lx, Pz, Pz, Pz, Pz, Pz, Pz, Pz, Pz, Pz, Pz, Pz, Pz];
-		var FUNCTION_TABLE_iii = [Uz, _e, en, Rt, Wt, gn, Qm, $t, eu, Sm, ts, vs, xs, gs, js, ms, xx, Hg, Vz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz];
+		var FUNCTION_TABLE_iii = [Uz, _e, en, Rt, Wt, gn, Qm, $t, eu, Sm, ts, vs, xs, gs, js, ms, _calloc, Hg, Vz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz, Uz];
 		var FUNCTION_TABLE_iiiiii = [Wz, Lk, Pn, Un, As, Ns, Qs, ps, Es, Hs, Vs, Ys, bt, et, Wz, Wz];
 		var FUNCTION_TABLE_viiii = [Xz, _m, Km, Qn, Vn, ax, bx, dx, zj, Aj, Bj, Xz, Xz, Xz, Xz, Xz];
 		return {
-			_strlen: py,
-			_main: Pc,
-			_taskrunner_receive_worker_finished: kd,
-			_taskrunner_receive_ready: gd,
-			_filesystem_js_handle_callback_LIST: ej,
-			_bitshift64Lshr: ny,
-			_calloc: xx,
-			_bitshift64Shl: ty,
-			_filesystem_js_handle_callback_FE: cj,
-			___cxa_is_pointer_type: px,
-			_taskrunner_receive_worker_serial: jd,
-			_memcpy: qy,
-			_taskrunner_receive_message: fd,
-			_i64Subtract: ly,
-			_memset: sy,
-			_realloc: yx,
-			_i64Add: ky,
-			___cxa_can_catch: ox,
-			_saveSetjmp: my,
-			_filesystem_js_handle_callback: dj,
-			_llvm_bswap_i32: jy,
-			_testSetjmp: oy,
-			_filesystem_js_handle_callback_F: aj,
-			_taskrunner_receive_serialized: cd,
-			_free: wx,
-			_memmove: ry,
-			_taskrunner_receive_response: id,
-			_malloc: vx,
-			_taskrunner_interval_callback: ad,
-			_filesystem_js_handle_callback_FDS: bj,
-			_strcpy: uy,
-			__ZL25HelperNxtGlobalInitializev: Nc,
-			___cxx_global_var_init13: Ue,
-			___cxx_global_var_init14: Ve,
-			___cxx_global_var_init15: We,
-			___cxx_global_var_init16: Xe,
-			___cxx_global_var_init17: Ye,
-			__GLOBAL__I_a: Ze,
-			__GLOBAL__I_a28: Cg,
-			___cxx_global_var_init7: fj,
-			___cxx_global_var_init8: gj,
-			__GLOBAL__I_a404: hj,
-			__GLOBAL__I_a431: qj,
-			__GLOBAL__I_a778: wl,
-			__GLOBAL__I_a794: Dl,
-			__GLOBAL__I_a948: Mt,
-			runPostSets: iy,
-			stackAlloc: Fc,
-			stackSave: Gc,
-			stackRestore: Hc,
-			setThrew: Ic,
-			setTempRet0: Lc,
-			getTempRet0: Mc,
+			_strlen: _strlen,
+			_main: _main,
+			_taskrunner_receive_worker_finished: _taskrunner_receive_worker_finished,
+			_taskrunner_receive_ready: _taskrunner_receive_ready,
+			_filesystem_js_handle_callback_LIST: _filesystem_js_handle_callback_LIST,
+			_bitshift64Lshr: _bitshift64Lshr,
+			_calloc: _calloc,
+			_bitshift64Shl: _bitshift64Shl,
+			_filesystem_js_handle_callback_FE: _filesystem_js_handle_callback_FE,
+			___cxa_is_pointer_type: ___cxa_is_pointer_type,
+			_taskrunner_receive_worker_serial: _taskrunner_receive_worker_serial,
+			_memcpy: _memcpy,
+			_taskrunner_receive_message: _taskrunner_receive_message,
+			_i64Subtract: _i64Subtract,
+			_memset: _memset,
+			_realloc: _realloc,
+			_i64Add: _i64Add,
+			___cxa_can_catch: ___cxa_can_catch,
+			_saveSetjmp: _saveSetjmp,
+			_filesystem_js_handle_callback: _filesystem_js_handle_callback,
+			_llvm_bswap_i32: _llvm_bswap_i32,
+			_testSetjmp: _testSetjmp,
+			_filesystem_js_handle_callback_F: _filesystem_js_handle_callback_F,
+			_taskrunner_receive_serialized: _taskrunner_receive_serialized,
+			_free: _free,
+			_memmove: _memmove,
+			_taskrunner_receive_response: _taskrunner_receive_response,
+			_malloc: _malloc,
+			_taskrunner_interval_callback: _taskrunner_interval_callback,
+			_filesystem_js_handle_callback_FDS: _filesystem_js_handle_callback_FDS,
+			_strcpy: _strcpy,
+			__ZL25HelperNxtGlobalInitializev: __ZL25HelperNxtGlobalInitializev,
+			___cxx_global_var_init13: ___cxx_global_var_init13,
+			___cxx_global_var_init14: ___cxx_global_var_init14,
+			___cxx_global_var_init15: ___cxx_global_var_init15,
+			___cxx_global_var_init16: ___cxx_global_var_init16,
+			___cxx_global_var_init17: ___cxx_global_var_init17,
+			__GLOBAL__I_a: __GLOBAL__I_a,
+			__GLOBAL__I_a28: __GLOBAL__I_a28,
+			___cxx_global_var_init7: ___cxx_global_var_init7,
+			___cxx_global_var_init8: ___cxx_global_var_init8,
+			__GLOBAL__I_a404: __GLOBAL__I_a404,
+			__GLOBAL__I_a431: __GLOBAL__I_a431,
+			__GLOBAL__I_a778: __GLOBAL__I_a778,
+			__GLOBAL__I_a794: __GLOBAL__I_a794,
+			__GLOBAL__I_a948: __GLOBAL__I_a948,
+			runPostSets: runPostSets,
+			stackAlloc: stackAlloc,
+			stackSave: stackSave,
+			stackRestore: stackRestore,
+			setThrew: setThrew,
+			setTempRet0: setTempRet0,
+			getTempRet0: getTempRet0,
 			dynCall_vi: dynCall_vi,
 			dynCall_iiii: dynCall_iiii,
 			dynCall_vid: dynCall_vid,
